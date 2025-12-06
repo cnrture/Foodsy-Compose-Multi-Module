@@ -9,93 +9,77 @@ import androidx.compose.ui.graphics.Color
 internal val LocalLightColors = staticCompositionLocalOf { lightColors() }
 internal val LocalDarkColors = staticCompositionLocalOf { darkColors() }
 
-internal fun darkColors(
-    onBackground: Color = Color(0xFFfffbf3),
-    background: Color = Color(0xFF111111),
-    blue: Color = Color(0xFF609DED),
-    lightBlue: Color = Color(0xFFBCD9FF).copy(alpha = 0.5f),
-    yellow: Color = Color(0xFFFFCB46),
-    lightYellow: Color = Color(0xFFFFECBC).copy(alpha = 0.5f),
-    green: Color = Color(0xFF2ED22A),
-    softGreen: Color = Color(0xFFC2F8B9).copy(alpha = 0.5f),
-    red: Color = Color(0xFFF45C5C),
-    softRed: Color = Color(0xFFFFD0BC).copy(alpha = 0.5f),
+internal fun lightColors(
+    brown: Color = Color(0xFF3F2D20),
+    green: Color = Color(0xFF84BD93),
+    orange: Color = Color(0xFFEF8829),
+    darkBrown: Color = Color(0xFF73665C),
+    lightBrown: Color = Color(0xFFD3BBAA),
+    beige: Color = Color(0xFFE6DCCD),
+    lightOrange: Color = Color(0xFFFFE2CD),
+    white: Color = Color(0xFFFFFAF0),
 ): FSColor = FSColor(
-    background = background,
-    onBackground = onBackground,
-    blue = blue,
-    lightBlue = lightBlue,
-    yellow = yellow,
-    lightYellow = lightYellow,
+    brown = brown,
     green = green,
-    softGreen = softGreen,
-    red = red,
-    softRed = softRed,
+    orange = orange,
+    darkBrown = darkBrown,
+    lightBrown = lightBrown,
+    beige = beige,
+    lightOrange = lightOrange,
+    white = white,
+)
+
+internal fun darkColors(
+    brown: Color = Color(0xFF3F2D20),
+    green: Color = Color(0xFF84BD93),
+    orange: Color = Color(0xFFEF8829),
+    darkBrown: Color = Color(0xFF73665C),
+    lightBrown: Color = Color(0xFFD3BBAA),
+    beige: Color = Color(0xFFE6DCCD),
+    lightOrange: Color = Color(0xFFFFE2CD),
+    white: Color = Color(0xFFFFFAF0),
+): FSColor = FSColor(
+    brown = brown,
+    green = green,
+    orange = orange,
+    darkBrown = darkBrown,
+    lightBrown = lightBrown,
+    beige = beige,
+    lightOrange = lightOrange,
+    white = white,
 )
 
 class FSColor(
-    background: Color,
-    onBackground: Color,
-    blue: Color,
-    lightBlue: Color,
-    yellow: Color,
-    lightYellow: Color,
+    brown: Color,
     green: Color,
-    softGreen: Color,
-    red: Color,
-    softRed: Color,
+    orange: Color,
+    darkBrown: Color,
+    lightBrown: Color,
+    beige: Color,
+    lightOrange: Color,
+    white: Color,
 ) {
-    private var _background: Color by mutableStateOf(background)
-    val background: Color = _background
-
-    private var _onBackground: Color by mutableStateOf(onBackground)
-    val onBackground: Color = _onBackground
-
-    private var _blue: Color by mutableStateOf(blue)
-    val blue: Color = _blue
-
-    private var _lightBlue: Color by mutableStateOf(lightBlue)
-    val lightBlue: Color = _lightBlue
-
-    private var _yellow: Color by mutableStateOf(yellow)
-    val yellow: Color = _yellow
-
-    private var _lightYellow: Color by mutableStateOf(lightYellow)
-    val lightYellow: Color = _lightYellow
+    private var _brown: Color by mutableStateOf(brown)
+    val brown: Color = _brown
 
     private var _green: Color by mutableStateOf(green)
     val green: Color = _green
 
-    private var _softGreen: Color by mutableStateOf(softGreen)
-    val softGreen: Color = _softGreen
+    private var _orange: Color by mutableStateOf(orange)
+    val orange: Color = _orange
 
-    private var _red: Color by mutableStateOf(red)
-    val red: Color = _red
+    private var _darkBrown: Color by mutableStateOf(darkBrown)
+    val darkBrown: Color = _darkBrown
 
-    private var _softRed: Color by mutableStateOf(softRed)
-    val softRed: Color = _softRed
+    private var _lightBrown: Color by mutableStateOf(lightBrown)
+    val lightBrown: Color = _lightBrown
+
+    private var _beige: Color by mutableStateOf(beige)
+    val beige: Color = _beige
+
+    private var _lightOrange: Color by mutableStateOf(lightOrange)
+    val lightOrange: Color = _lightOrange
+
+    private var _white: Color by mutableStateOf(white)
+    val white: Color = _white
 }
-
-internal fun lightColors(
-    background: Color = Color(0xFFfffbf3),
-    onBackground: Color = Color(0xFF111111),
-    blue: Color = Color(0xFF609DED),
-    lightBlue: Color = Color(0xFFBCD9FF),
-    yellow: Color = Color(0xFFFFCB46),
-    lightYellow: Color = Color(0xFFFFECBC),
-    green: Color = Color(0xFF2ED22A),
-    softGreen: Color = Color(0xFFC2F8B9),
-    red: Color = Color(0xFFF45C5C),
-    softRed: Color = Color(0xFFFFD0BC),
-): FSColor = FSColor(
-    background = background,
-    onBackground = onBackground,
-    blue = blue,
-    lightBlue = lightBlue,
-    yellow = yellow,
-    lightYellow = lightYellow,
-    green = green,
-    softGreen = softGreen,
-    red = red,
-    softRed = softRed,
-)
