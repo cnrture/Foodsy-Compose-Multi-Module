@@ -9,7 +9,63 @@ import com.canerture.core.ui.R
 internal val LocalIcons = staticCompositionLocalOf { FSIcons() }
 
 class FSIcons {
-    val arrowLeft: ImageVector
+    val arrowBack: ImageVector
         @Composable
-        get() = ImageVector.vectorResource(id = R.drawable.ic_launcher_background)
+        get() = ImageVector.vectorResource(id = R.drawable.ic_arrow_back)
+
+    val cartFilled: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_cart_filled)
+
+    val cartOutline: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_cart_outline)
+
+    val categoriesFilled: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_categories_filled)
+
+    val categoriesOutline: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_categories_outline)
+
+    val delete: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_delete)
+
+    val discountFilled: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_discount_filled)
+
+    val discountOutline: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_discount_outline)
+
+    val favoriteFilled: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_fav_filled)
+
+    val favoriteOutline: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_fav_outline)
+
+    val google: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_google)
+
+    val homeFilled: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_home_filled)
+
+    val homeOutline: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_home_outline)
+
+    val minus: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_minus)
+
+    val plus: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_plus)
 }
