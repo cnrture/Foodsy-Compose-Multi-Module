@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
                 Box {
                     Scaffold(
                         modifier = Modifier.fillMaxSize(),
-                        containerColor = FSTheme.colors.background,
+                        containerColor = FSTheme.colors.brown,
                         content = { innerPadding ->
                             FSNavGraph(
                                 modifier = Modifier
@@ -53,7 +53,7 @@ class MainActivity : ComponentActivity() {
                                 Column {
                                     HorizontalDivider(
                                         thickness = 2.dp,
-                                        color = FSTheme.colors.onBackground,
+                                        color = FSTheme.colors.brown,
                                     )
                                     FSBottomBar(
                                         navController = navController,

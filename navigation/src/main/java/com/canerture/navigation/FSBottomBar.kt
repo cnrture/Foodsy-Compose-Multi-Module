@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
@@ -24,9 +25,6 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.canerture.ui.components.FSText
-import com.canerture.ui.extensions.boldBorder
-import com.canerture.ui.extensions.conditional
 import com.canerture.ui.extensions.noRippleClickable
 import com.canerture.ui.theme.FSTheme
 
@@ -41,7 +39,7 @@ fun FSBottomBar(
     val currentRoute = navBackStackEntry?.destination?.route
     NavigationBar(
         modifier = Modifier.padding(horizontal = 16.dp),
-        containerColor = FSTheme.colors.background,
+        containerColor = FSTheme.colors.brown,
     ) {
         tabList.forEach { navItem ->
             val isSelected = currentRoute == navItem.route.getRoute()
@@ -51,10 +49,9 @@ fun FSBottomBar(
                         .wrapContentSize()
                         .weight(if (isSelected) 1f else 0.5f)
                         .background(
-                            color = if (isSelected) FSTheme.colors.blue else FSTheme.colors.background,
+                            color = if (isSelected) FSTheme.colors.brown else FSTheme.colors.brown,
                             shape = RoundedCornerShape(16.dp)
                         )
-                        .conditional(isSelected) { boldBorder() }
                         .noRippleClickable {
                             navController.navigate(navItem.route) {
                                 popUpTo(navController.graph.findStartDestination().id) {
@@ -75,15 +72,14 @@ fun FSBottomBar(
                         imageVector = ImageVector.vectorResource(
                             if (isSelected) navItem.selectedIcon else navItem.unselectedIcon
                         ),
-                        tint = if (isSelected) FSTheme.colors.background else FSTheme.colors.onBackground,
+                        tint = if (isSelected) FSTheme.colors.brown else FSTheme.colors.brown,
                         contentDescription = null,
                     )
                     AnimatedVisibility(isSelected) {
-                        FSText(
+                        Text(
                             modifier = Modifier.padding(start = 8.dp),
                             text = stringResource(navItem.title),
-                            style = FSTheme.typography.paragraph2,
-                            color = FSTheme.colors.background,
+                            color = FSTheme.colors.brown,
                         )
                     }
                 }
