@@ -25,7 +25,7 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
 include(":navigation")
 include(":core:ui")
-
+include(":core:common")
 
 // Features
 include(":feature:splash")

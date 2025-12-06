@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.quiz.jvm.library)
+    alias(libs.plugins.foodsy.jvm.library)
     id("org.jetbrains.kotlin.plugin.compose")
 }
 
