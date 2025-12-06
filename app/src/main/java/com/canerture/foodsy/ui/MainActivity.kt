@@ -4,30 +4,63 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.canerture.foodsy.navigation.NavigationGraph
-import com.canerture.foodsy.navigation.Screen.Splash
-import com.canerture.foodsy.ui.theme.MyappTheme
+import com.canerture.navigation.FSBottomBar
+import com.canerture.navigation.FSNavGraph
+import com.canerture.navigation.NavigationItem
+import com.canerture.ui.theme.FSTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            MyappTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    val navController = rememberNavController()
-                    val startDestination = Splash
-                    NavigationGraph(
-                        navController = navController,
-                        startDestination = startDestination,
-                        modifier = Modifier.padding(innerPadding)
+            val navController = rememberNavController()
+
+            val visibleBottomSheetScreen = NavigationItem.getNavigationRoutes()
+
+            val bottomBarVisibility =
+                navController.currentBackStackEntryAsState().value?.destination?.route in visibleBottomSheetScreen
+
+            FSTheme {
+                Box {
+                    Scaffold(
+                        modifier = Modifier.fillMaxSize(),
+                        containerColor = FSTheme.colors.background,
+                        content = { innerPadding ->
+                            FSNavGraph(
+                                modifier = Modifier
+                                    .fillMaxSize()
+                                    .padding(innerPadding),
+                                navController = navController,
+                            )
+                        },
+                        bottomBar = {
+                            AnimatedVisibility(bottomBarVisibility) {
+                                Column {
+                                    HorizontalDivider(
+                                        thickness = 2.dp,
+                                        color = FSTheme.colors.onBackground,
+                                    )
+                                    FSBottomBar(
+                                        navController = navController,
+                                    )
+                                }
+                            }
+                        }
                     )
                 }
             }

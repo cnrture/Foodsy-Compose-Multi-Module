@@ -23,4 +23,9 @@ dependencyResolutionManagement {
 rootProject.name = "Foodsy"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
- 
+include(":navigation")
+include(":core:ui")
+
+
+// Features
+include(":feature:splash")

@@ -23,7 +23,7 @@ class JvmLibraryConventionPlugin : Plugin<Project> {
 
             extensions.configure<KotlinJvmProjectExtension> {
                 compilerOptions.apply {
-                    jvmTarget.set(JvmTarget.JVM_21)
+                    jvmTarget.set(JvmTarget.JVM_17)
                 }
             }
         }
