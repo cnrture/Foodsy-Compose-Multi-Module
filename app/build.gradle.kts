@@ -7,10 +7,10 @@ plugins {
 }
 
 android {
-    namespace = "com.cnrture.foodsy"
+    namespace = "com.canerture.foodsy"
 
     defaultConfig {
-        applicationId = "com.cnrture.foodsy"
+        applicationId = "com.canerture.foodsy"
         versionCode = 1
         versionName = "1.0"
 
