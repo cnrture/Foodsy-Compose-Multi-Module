@@ -9,6 +9,10 @@ import com.canerture.core.ui.R
 internal val LocalIcons = staticCompositionLocalOf { FSIcons() }
 
 class FSIcons {
+    val logo: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_logo)
+
     val arrowBack: ImageVector
         @Composable
         get() = ImageVector.vectorResource(id = R.drawable.ic_arrow_back)

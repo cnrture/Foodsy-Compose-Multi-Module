@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
                 Box {
                     Scaffold(
                         modifier = Modifier.fillMaxSize(),
-                        containerColor = FSTheme.colors.brown,
+                        containerColor = FSTheme.colors.lightYellow,
                         content = { innerPadding ->
                             FSNavGraph(
                                 modifier = Modifier
