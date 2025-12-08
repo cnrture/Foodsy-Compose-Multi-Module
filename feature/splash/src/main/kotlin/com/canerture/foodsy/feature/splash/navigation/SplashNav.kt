@@ -11,7 +11,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data object Splash : Screen
 
-fun NavGraphBuilder.splashScreen() {
+fun NavGraphBuilder.splashRoute() {
     composable<Splash> {
         val viewModel = hiltViewModel<SplashViewModel>()
         val uiEffect = viewModel.uiEffect

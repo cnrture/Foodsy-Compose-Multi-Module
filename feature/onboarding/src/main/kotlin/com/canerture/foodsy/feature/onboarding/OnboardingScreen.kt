@@ -9,10 +9,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.sp
-import com.canerture.foodsy.common.collectWithLifecycle
 import com.canerture.foodsy.feature.onboarding.OnboardingContract.UiAction
 import com.canerture.foodsy.feature.onboarding.OnboardingContract.UiEffect
 import com.canerture.foodsy.feature.onboarding.OnboardingContract.UiState
+import com.canerture.ui.extensions.collectWithLifecycle
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 

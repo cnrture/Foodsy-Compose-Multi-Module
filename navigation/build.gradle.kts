@@ -13,6 +13,7 @@ dependencies {
     implementation(libs.kotlinx.serialization)
 
     implementation(projects.feature.splash)
+    implementation(projects.feature.onboarding)
 
     implementation(projects.core.ui)
 }

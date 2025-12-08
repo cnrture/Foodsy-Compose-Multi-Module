@@ -4,8 +4,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
+import com.canerture.foodsy.feature.onboarding.navigation.onboardingRoute
 import com.canerture.foodsy.feature.splash.navigation.Splash
-import com.canerture.foodsy.feature.splash.navigation.splashScreen
+import com.canerture.foodsy.feature.splash.navigation.splashRoute
 
 @Composable
 fun FSNavGraph(
@@ -17,7 +18,8 @@ fun FSNavGraph(
         startDestination = Splash,
         modifier = modifier,
     ) {
-        splashScreen()
+        splashRoute()
+        onboardingRoute()
         loginFlowNavigation(navController)
         mainFlowNavigation(navController)
     }
