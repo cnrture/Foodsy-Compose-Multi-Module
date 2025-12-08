@@ -34,6 +34,9 @@ dependencies {
     implementation(libs.navigation.compose)
 
     implementation(projects.navigation)
+
     implementation(projects.core.ui)
+
     implementation(projects.feature.splash)
+    implementation(projects.feature.onboarding)
 }

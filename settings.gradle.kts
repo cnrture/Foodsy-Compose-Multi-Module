@@ -29,3 +29,4 @@ include(":core:common")
 
 // Features
 include(":feature:splash")
+include(":feature:onboarding")
