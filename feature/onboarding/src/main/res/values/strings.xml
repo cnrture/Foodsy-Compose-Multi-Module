@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_one_title">Diverse and fresh food</string>
+    <string name="onboarding_one_title_span">and fresh food</string>
+    <string name="onboarding_one_description">With an extensive menu prepared by talented chefs, fresh quality food.</string>
+    <string name="onboarding_two_title">Easy to change dish ingredients</string>
+    <string name="onboarding_two_title_span">change dish ingredients</string>
+    <string name="onboarding_two_description">You are a foodie, you can add or subtract ingredients in the dish.</string>
+    <string name="onboarding_three_title">Delivery is given on time</string>
+    <string name="onboarding_three_title_span">is given on time</string>
+    <string name="onboarding_three_description">With an extensive menu prepared by talented chefs, fresh quality food.</string>
+    <string name="skip">Skip</string>
+</resources>

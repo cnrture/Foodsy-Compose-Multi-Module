@@ -4,7 +4,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.canerture.foodsy.feature.onboarding.OnboardingContract.UiAction
 import com.canerture.foodsy.feature.onboarding.OnboardingContract.UiEffect
-import com.canerture.foodsy.feature.onboarding.OnboardingContract.UiState
 import com.canerture.ui.delegate.mvi.MVI
 import com.canerture.ui.delegate.mvi.mvi
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -14,10 +13,13 @@ import javax.inject.Inject
 @HiltViewModel
 class OnboardingViewModel @Inject constructor() :
     ViewModel(),
-    MVI<UiState, UiAction, UiEffect> by mvi(UiState()) {
+    MVI<Unit, UiAction, UiEffect> by mvi(Unit) {
 
     override fun onAction(uiAction: UiAction) {
         viewModelScope.launch {
+            when (uiAction) {
+                UiAction.OnSkipClick -> Unit
+            }
         }
     }
 }
