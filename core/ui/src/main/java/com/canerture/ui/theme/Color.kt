@@ -19,6 +19,7 @@ internal fun lightColors(
     lightOrange: Color = Color(0xFFFFE2CD),
     lightYellow: Color = Color(0xFFFFF5E0),
     white: Color = Color(0xFFFFFAF0),
+    softPink: Color = Color(0xFFF5D3BB),
 ): FSColor = FSColor(
     brown = brown,
     green = green,
@@ -29,6 +30,7 @@ internal fun lightColors(
     lightOrange = lightOrange,
     lightYellow = lightYellow,
     white = white,
+    softPink = softPink,
 )
 
 internal fun darkColors(
@@ -41,6 +43,7 @@ internal fun darkColors(
     lightOrange: Color = Color(0xFFFFE2CD),
     lightYellow: Color = Color(0xFFFFF5E0),
     white: Color = Color(0xFFFFFAF0),
+    softPink: Color = Color(0xFFF5D3BB),
 ): FSColor = FSColor(
     brown = brown,
     green = green,
@@ -51,6 +54,7 @@ internal fun darkColors(
     lightOrange = lightOrange,
     lightYellow = lightYellow,
     white = white,
+    softPink = softPink,
 )
 
 class FSColor(
@@ -63,6 +67,7 @@ class FSColor(
     lightOrange: Color,
     lightYellow: Color,
     white: Color,
+    softPink: Color,
 ) {
     private var _brown: Color by mutableStateOf(brown)
     val brown: Color = _brown
@@ -90,4 +95,7 @@ class FSColor(
 
     private var _white: Color by mutableStateOf(white)
     val white: Color = _white
+
+    private var _softPink: Color by mutableStateOf(softPink)
+    val softPink: Color = _softPink
 }

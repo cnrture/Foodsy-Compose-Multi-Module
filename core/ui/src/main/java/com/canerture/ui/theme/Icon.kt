@@ -72,4 +72,20 @@ class FSIcons {
     val plus: ImageVector
         @Composable
         get() = ImageVector.vectorResource(id = R.drawable.ic_plus)
+
+    val search: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_search)
+
+    val filter: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_filter)
+
+    val visibilityOn: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_visibility_on)
+
+    val visibilityOff: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_visibility_off)
 }
