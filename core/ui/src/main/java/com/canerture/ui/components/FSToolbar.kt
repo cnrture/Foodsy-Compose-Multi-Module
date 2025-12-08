@@ -36,7 +36,7 @@ fun FSToolbar(
         FSText(
             modifier = Modifier.weight(1f),
             fullText = title,
-            spanTexts = listOf(titleSpan),
+            spanText = titleSpan,
             style = TextStyle(
                 fontSize = 30.sp,
                 fontWeight = FontWeight.Normal,

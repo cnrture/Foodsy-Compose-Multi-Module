@@ -88,4 +88,16 @@ class FSIcons {
     val visibilityOff: ImageVector
         @Composable
         get() = ImageVector.vectorResource(id = R.drawable.ic_visibility_off)
+
+    val onboardingOne: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_onboarding_one)
+
+    val onboardingTwo: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_onboarding_two)
+
+    val onboardingThree: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(id = R.drawable.ic_onboarding_three)
 }

@@ -42,7 +42,7 @@ fun FSText(
             ),
         ),
         overflow = overflow,
-        maxLines = maxLines
+        maxLines = maxLines,
     )
 }
 
@@ -50,7 +50,8 @@ fun FSText(
 fun FSText(
     modifier: Modifier = Modifier,
     fullText: String,
-    spanTexts: List<String>,
+    spanText: String,
+    color: Color = FSTheme.colors.brown,
     style: TextStyle = LocalTextStyle.current,
     spanStyle: SpanStyle = SpanStyle(),
     textAlign: TextAlign? = null,
@@ -59,20 +60,26 @@ fun FSText(
         text = buildAnnotatedString {
             withStyle(style = style.toSpanStyle()) {
                 append(fullText)
-                spanTexts.forEach {
-                    val mStartIndex = fullText.indexOf(it)
-                    val mEndIndex = mStartIndex.plus(it.length)
-                    addStyle(
-                        style = spanStyle,
-                        start = mStartIndex,
-                        end = mEndIndex,
-                    )
-                }
+                val mStartIndex = fullText.indexOf(spanText)
+                val mEndIndex = mStartIndex.plus(spanText.length)
+                addStyle(
+                    style = spanStyle,
+                    start = mStartIndex,
+                    end = mEndIndex,
+                )
             }
         },
         modifier = modifier,
         textAlign = textAlign,
-        style = style
+        style = style.merge(
+            color = color,
+            fontFamily = FontFamily(
+                Font(R.font.poppins_regular, FontWeight.Normal),
+                Font(R.font.poppins_medium, FontWeight.Medium),
+                Font(R.font.poppins_semi_bold, FontWeight.SemiBold),
+                Font(R.font.poppins_bold, FontWeight.Bold),
+            ),
+        ),
     )
 }
 
