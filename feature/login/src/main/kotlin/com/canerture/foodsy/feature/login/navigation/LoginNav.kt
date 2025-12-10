@@ -15,6 +15,7 @@ data object LoginRoute : Screen
 @Composable
 fun LoginRoute(
     onNavigateHome: () -> Unit,
+    onNavigateRegister: () -> Unit,
 ) {
     val viewModel = hiltViewModel<LoginViewModel>()
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
@@ -24,5 +25,6 @@ fun LoginRoute(
         uiEffect = uiEffect,
         onAction = viewModel::onAction,
         onNavigateHome = onNavigateHome,
+        onNavigateRegister = onNavigateRegister,
     )
 }

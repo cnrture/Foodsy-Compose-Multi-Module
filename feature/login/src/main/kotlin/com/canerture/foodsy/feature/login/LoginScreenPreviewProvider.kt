@@ -13,6 +13,8 @@ class LoginScreenPreviewProvider : PreviewParameterProvider<LoginContract.UiStat
             ),
             LoginContract.UiState(
                 isLoading = false,
+                email = "cnrture@gmail.com",
+                password = "password123",
             ),
         )
 }

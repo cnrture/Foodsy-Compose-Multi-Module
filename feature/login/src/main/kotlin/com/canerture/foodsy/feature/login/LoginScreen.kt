@@ -1,18 +1,37 @@
 package com.canerture.foodsy.feature.login
 
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.canerture.foodsy.feature.login.LoginContract.UiAction
 import com.canerture.foodsy.feature.login.LoginContract.UiEffect
 import com.canerture.foodsy.feature.login.LoginContract.UiState
+import com.canerture.ui.components.FSButton
+import com.canerture.ui.components.FSButtonType
+import com.canerture.ui.components.FSIcon
+import com.canerture.ui.components.FSLoading
+import com.canerture.ui.components.FSSpacer
+import com.canerture.ui.components.FSSpacerWeight
+import com.canerture.ui.components.FSText
+import com.canerture.ui.components.FSTextField
 import com.canerture.ui.extensions.collectWithLifecycle
+import com.canerture.ui.extensions.noRippleClickable
+import com.canerture.ui.theme.FSTheme
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 
@@ -22,18 +41,25 @@ fun LoginScreen(
     uiEffect: Flow<UiEffect>,
     onAction: (UiAction) -> Unit,
     onNavigateHome: () -> Unit,
+    onNavigateRegister: () -> Unit,
 ) {
     uiEffect.collectWithLifecycle { effect ->
         when (effect) {
-            is UiEffect.NavigateToHome -> onNavigateHome()
+            UiEffect.NavigateToHome -> onNavigateHome()
+            UiEffect.NavigateToRegister -> onNavigateRegister()
         }
     }
 
     LoginContent(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .background(FSTheme.colors.lightYellow)
+            .padding(36.dp),
         uiState = uiState,
         onAction = onAction,
     )
+
+    if (uiState.isLoading) FSLoading()
 }
 
 @Composable
@@ -42,13 +68,78 @@ fun LoginContent(
     uiState: UiState,
     onAction: (UiAction) -> Unit,
 ) {
-    Box(
+    Column(
         modifier = modifier,
-        contentAlignment = Alignment.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
     ) {
-        Text(
-            text = "Login Content",
-            fontSize = 24.sp,
+        FSIcon(
+            modifier = Modifier.size(140.dp),
+            vector = FSTheme.icons.logo,
+        )
+
+        FSSpacer(34)
+
+        FSText(
+            text = stringResource(R.string.login),
+            style = TextStyle(
+                fontSize = 30.sp,
+                fontWeight = FontWeight.Bold,
+            ),
+        )
+
+        FSSpacer(24)
+
+        FSButton(
+            text = stringResource(R.string.login_with_google),
+            icon = FSTheme.icons.google,
+            type = FSButtonType.SECONDARY,
+            onClick = { onAction(UiAction.OnGoogleLoginClick) }
+        )
+
+        FSSpacer(36)
+
+        FSText(
+            text = stringResource(R.string.or_with_email)
+        )
+
+        FSSpacer(24)
+
+        FSTextField(
+            modifier = Modifier.fillMaxWidth(),
+            label = stringResource(R.string.email_hint),
+            value = uiState.email,
+            onValueChange = { onAction(UiAction.OnEmailChange(it)) },
+        )
+
+        FSSpacer(16)
+
+        FSTextField(
+            modifier = Modifier.fillMaxWidth(),
+            isPassword = true,
+            label = stringResource(R.string.password_hint),
+            value = uiState.password,
+            onValueChange = { onAction(UiAction.OnPasswordChange(it)) },
+        )
+
+        FSSpacer(30)
+
+        FSButton(
+            modifier = Modifier.fillMaxWidth(),
+            text = stringResource(R.string.login),
+            onClick = { onAction(UiAction.OnLoginClick) },
+        )
+
+        FSSpacerWeight(1f)
+
+        FSText(
+            modifier = Modifier.noRippleClickable { onAction(UiAction.OnRegisterClick) },
+            fullText = stringResource(R.string.register_text),
+            spanText = stringResource(R.string.register_text_span),
+            spanStyle = SpanStyle(
+                color = FSTheme.colors.green,
+                fontWeight = FontWeight.SemiBold,
+            ),
         )
     }
 }
@@ -63,5 +154,6 @@ fun LoginScreenPreview(
         uiEffect = emptyFlow(),
         onAction = {},
         onNavigateHome = {},
+        onNavigateRegister = {},
     )
 }

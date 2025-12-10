@@ -57,6 +57,7 @@ fun FSNavGraph(
             entry<LoginRoute> {
                 LoginRoute(
                     onNavigateHome = { /* TODO: Navigate to Home */ },
+                    onNavigateRegister = { /* TODO: Navigate to Register */ }
                 )
             }
         }

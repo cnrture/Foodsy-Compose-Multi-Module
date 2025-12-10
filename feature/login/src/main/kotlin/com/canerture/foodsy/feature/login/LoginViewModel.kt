@@ -18,6 +18,21 @@ class LoginViewModel @Inject constructor() :
 
     override fun onAction(uiAction: UiAction) {
         viewModelScope.launch {
+            when (uiAction) {
+                is UiAction.OnEmailChange -> updateUiState { copy(email = uiAction.email) }
+                is UiAction.OnPasswordChange -> updateUiState { copy(password = uiAction.password) }
+                UiAction.OnLoginClick -> login()
+                UiAction.OnGoogleLoginClick -> loginWithGoogle()
+                UiAction.OnRegisterClick -> emitUiEffect(UiEffect.NavigateToRegister)
+            }
         }
+    }
+
+    private fun login() {
+        // Implement actual login logic here
+    }
+
+    private fun loginWithGoogle() {
+        // Implement actual Google login logic here
     }
 }
