@@ -90,11 +90,12 @@ fun FSButton(
             ) {
                 icon?.let {
                     Icon(
+                        modifier = Modifier.size(14.dp),
                         imageVector = icon,
                         tint = Color.Unspecified,
                         contentDescription = text,
                     )
-                    Spacer(modifier = Modifier.width(8.dp))
+                    Spacer(modifier = Modifier.width(14.dp))
                 }
                 FSText(
                     text = text,

@@ -18,7 +18,7 @@ fun FSLoading() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(FSTheme.colors.brown.copy(alpha = 0.5f))
+            .background(FSTheme.colors.brown.copy(alpha = 0.4f))
             .clickable(
                 indication = null,
                 interactionSource = remember { MutableInteractionSource() }
