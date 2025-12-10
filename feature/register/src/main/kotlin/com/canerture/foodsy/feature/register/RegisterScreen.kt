@@ -1,4 +1,4 @@
-package com.canerture.foodsy.feature.login
+package com.canerture.foodsy.feature.register
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -20,9 +20,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.canerture.foodsy.feature.login.LoginContract.UiAction
-import com.canerture.foodsy.feature.login.LoginContract.UiEffect
-import com.canerture.foodsy.feature.login.LoginContract.UiState
+import com.canerture.foodsy.feature.register.RegisterContract.UiAction
+import com.canerture.foodsy.feature.register.RegisterContract.UiEffect
+import com.canerture.foodsy.feature.register.RegisterContract.UiState
 import com.canerture.ui.components.FSButton
 import com.canerture.ui.components.FSButtonType
 import com.canerture.ui.components.FSIcon
@@ -38,21 +38,21 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 
 @Composable
-fun LoginScreen(
+fun RegisterScreen(
     uiState: UiState,
     uiEffect: Flow<UiEffect>,
     onAction: (UiAction) -> Unit,
     onNavigateHome: () -> Unit,
-    onNavigateRegister: () -> Unit,
+    onNavigateLogin: () -> Unit,
 ) {
     uiEffect.collectWithLifecycle { effect ->
         when (effect) {
-            UiEffect.NavigateToHome -> onNavigateHome()
-            UiEffect.NavigateToRegister -> onNavigateRegister()
+            UiEffect.NavigateHome -> onNavigateHome()
+            UiEffect.NavigateLogin -> onNavigateLogin()
         }
     }
 
-    LoginContent(
+    RegisterContent(
         modifier = Modifier
             .fillMaxSize()
             .background(FSTheme.colors.lightYellow)
@@ -66,7 +66,7 @@ fun LoginScreen(
 }
 
 @Composable
-fun LoginContent(
+fun RegisterContent(
     modifier: Modifier = Modifier,
     uiState: UiState,
     onAction: (UiAction) -> Unit,
@@ -84,7 +84,7 @@ fun LoginContent(
         FSSpacer(34)
 
         FSText(
-            text = stringResource(R.string.login),
+            text = stringResource(R.string.register),
             style = TextStyle(
                 fontSize = 30.sp,
                 fontWeight = FontWeight.Bold,
@@ -94,10 +94,10 @@ fun LoginContent(
         FSSpacer(24)
 
         FSButton(
-            text = stringResource(R.string.login_with_google),
+            text = stringResource(R.string.register_with_google),
             icon = FSTheme.icons.google,
             type = FSButtonType.SECONDARY,
-            onClick = { onAction(UiAction.OnGoogleLoginClick) }
+            onClick = { onAction(UiAction.OnGoogleRegisterClick) }
         )
 
         FSSpacer(36)
@@ -107,6 +107,15 @@ fun LoginContent(
         )
 
         FSSpacer(24)
+
+        FSTextField(
+            modifier = Modifier.fillMaxWidth(),
+            label = stringResource(R.string.username_hint),
+            value = uiState.username,
+            onValueChange = { onAction(UiAction.OnUsernameChange(it)) },
+        )
+
+        FSSpacer(16)
 
         FSTextField(
             modifier = Modifier.fillMaxWidth(),
@@ -129,7 +138,7 @@ fun LoginContent(
 
         FSButton(
             modifier = Modifier.fillMaxWidth(),
-            text = stringResource(R.string.login),
+            text = stringResource(R.string.register),
             onClick = { onAction(UiAction.OnLoginClick) },
         )
 
@@ -137,8 +146,8 @@ fun LoginContent(
 
         FSText(
             modifier = Modifier.noRippleClickable { onAction(UiAction.OnRegisterClick) },
-            fullText = stringResource(R.string.register_text),
-            spanText = stringResource(R.string.register_text_span),
+            fullText = stringResource(R.string.login_text),
+            spanText = stringResource(R.string.login_text_span),
             spanStyle = SpanStyle(
                 color = FSTheme.colors.green,
                 fontWeight = FontWeight.SemiBold,
@@ -149,14 +158,14 @@ fun LoginContent(
 
 @Preview(showBackground = true)
 @Composable
-fun LoginScreenPreview(
-    @PreviewParameter(LoginScreenPreviewProvider::class) uiState: UiState,
+fun RegisterScreenPreview(
+    @PreviewParameter(RegisterScreenPreviewProvider::class) uiState: UiState,
 ) {
-    LoginScreen(
+    RegisterScreen(
         uiState = uiState,
         uiEffect = emptyFlow(),
         onAction = {},
         onNavigateHome = {},
-        onNavigateRegister = {},
+        onNavigateLogin = {},
     )
 }

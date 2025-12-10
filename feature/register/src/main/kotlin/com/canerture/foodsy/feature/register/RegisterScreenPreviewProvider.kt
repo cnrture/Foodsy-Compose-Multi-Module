@@ -1,4 +1,4 @@
-package com.canerture.foodsy.ui.register
+package com.canerture.foodsy.feature.register
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 
@@ -7,15 +7,15 @@ class RegisterScreenPreviewProvider : PreviewParameterProvider<RegisterContract.
         get() = sequenceOf(
             RegisterContract.UiState(
                 isLoading = true,
-                list = emptyList(),
             ),
             RegisterContract.UiState(
                 isLoading = false,
-                list = emptyList(),
             ),
             RegisterContract.UiState(
                 isLoading = false,
-                list = listOf("Item 1", "Item 2", "Item 3")
+                username = "canerture",
+                email = "cnrture@gmail.com",
+                password = "password123",
             ),
         )
 }

@@ -41,4 +41,6 @@ dependencies {
     implementation(projects.feature.onboarding)
 
     implementation(projects.feature.login)
+
+    implementation(projects.feature.register)
 }
