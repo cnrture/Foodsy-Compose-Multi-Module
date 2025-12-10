@@ -9,6 +9,7 @@ import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.runtime.rememberSaveableStateHolderNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import androidx.savedstate.serialization.SavedStateConfiguration
+import com.canerture.foodsy.feature.login.navigation.LoginRoute
 import com.canerture.foodsy.feature.onboarding.navigation.OnboardingRoute
 import com.canerture.foodsy.feature.splash.navigation.SplashRoute
 import kotlinx.serialization.modules.SerializersModule
@@ -24,11 +25,13 @@ fun FSNavGraph(
                 polymorphic(NavKey::class) {
                     subclass(SplashRoute::class, SplashRoute.serializer())
                     subclass(OnboardingRoute::class, OnboardingRoute.serializer())
+                    subclass(LoginRoute::class, LoginRoute.serializer())
                 }
             }
         },
         SplashRoute
     )
+
     NavDisplay(
         modifier = modifier,
         backStack = backStack,
@@ -44,10 +47,18 @@ fun FSNavGraph(
                         backStack.remove(SplashRoute)
                         backStack.add(OnboardingRoute)
                     },
-                    onNavigateLogin = { /* TODO: Navigate to Login */ }
+                    onNavigateLogin = {
+                        backStack.remove(SplashRoute)
+                        backStack.add(LoginRoute)
+                    },
                 )
             }
             entry<OnboardingRoute> { OnboardingRoute() }
+            entry<LoginRoute> {
+                LoginRoute(
+                    onNavigateHome = { /* TODO: Navigate to Home */ },
+                )
+            }
         }
     )
 }
