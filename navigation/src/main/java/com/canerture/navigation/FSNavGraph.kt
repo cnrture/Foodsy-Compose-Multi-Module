@@ -40,7 +40,10 @@ fun FSNavGraph(
         entryProvider = entryProvider {
             entry<SplashRoute> {
                 SplashRoute(
-                    onNavigateOnboarding = { backStack.add(OnboardingRoute) },
+                    onNavigateOnboarding = {
+                        backStack.remove(SplashRoute)
+                        backStack.add(OnboardingRoute)
+                    },
                     onNavigateLogin = { /* TODO: Navigate to Login */ }
                 )
             }
