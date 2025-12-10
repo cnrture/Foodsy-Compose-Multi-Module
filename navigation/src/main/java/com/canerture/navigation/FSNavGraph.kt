@@ -53,7 +53,14 @@ fun FSNavGraph(
                     },
                 )
             }
-            entry<OnboardingRoute> { OnboardingRoute() }
+            entry<OnboardingRoute> {
+                OnboardingRoute(
+                    onNavigateLogin = {
+                        backStack.remove(OnboardingRoute)
+                        backStack.add(LoginRoute)
+                    },
+                )
+            }
             entry<LoginRoute> {
                 LoginRoute(
                     onNavigateHome = { /* TODO: Navigate to Home */ },

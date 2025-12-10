@@ -18,7 +18,7 @@ class OnboardingViewModel @Inject constructor() :
     override fun onAction(uiAction: UiAction) {
         viewModelScope.launch {
             when (uiAction) {
-                UiAction.OnSkipClick -> Unit
+                UiAction.OnSkipClick -> emitUiEffect(UiEffect.NavigateLogin)
             }
         }
     }

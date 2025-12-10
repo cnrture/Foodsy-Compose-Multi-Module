@@ -11,11 +11,14 @@ import kotlinx.serialization.Serializable
 data object OnboardingRoute : Screen
 
 @Composable
-fun OnboardingRoute() {
+fun OnboardingRoute(
+    onNavigateLogin: () -> Unit,
+) {
     val viewModel = hiltViewModel<OnboardingViewModel>()
     val uiEffect = viewModel.uiEffect
     OnboardingScreen(
         uiEffect = uiEffect,
         onAction = viewModel::onAction,
+        onNavigateLogin = onNavigateLogin,
     )
 }

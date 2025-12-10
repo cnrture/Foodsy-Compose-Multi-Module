@@ -5,5 +5,7 @@ object OnboardingContract {
         data object OnSkipClick : UiAction
     }
 
-    sealed interface UiEffect
+    sealed interface UiEffect {
+        data object NavigateLogin : UiEffect
+    }
 }
