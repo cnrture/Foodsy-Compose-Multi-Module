@@ -1,22 +1,25 @@
 package com.canerture.foodsy.feature.splash.navigation
 
+import androidx.compose.runtime.Composable
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import androidx.navigation.NavGraphBuilder
-import androidx.navigation.compose.composable
 import com.canerture.foodsy.feature.splash.SplashScreen
 import com.canerture.foodsy.feature.splash.SplashViewModel
 import com.canerture.ui.navigation.Screen
 import kotlinx.serialization.Serializable
 
 @Serializable
-data object Splash : Screen
+data object SplashRoute : Screen
 
-fun NavGraphBuilder.splashRoute() {
-    composable<Splash> {
-        val viewModel = hiltViewModel<SplashViewModel>()
-        val uiEffect = viewModel.uiEffect
-        SplashScreen(
-            uiEffect = uiEffect,
-        )
-    }
+@Composable
+fun SplashRoute(
+    onNavigateOnboarding: () -> Unit,
+    onNavigateLogin: () -> Unit,
+) {
+    val viewModel = hiltViewModel<SplashViewModel>()
+    val uiEffect = viewModel.uiEffect
+    SplashScreen(
+        uiEffect = uiEffect,
+        onNavigateOnboarding = onNavigateOnboarding,
+        onNavigateLogin = onNavigateLogin,
+    )
 }

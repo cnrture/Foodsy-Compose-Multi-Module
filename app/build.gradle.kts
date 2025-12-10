@@ -31,7 +31,7 @@ android {
 }
 
 dependencies {
-    implementation(libs.navigation.compose)
+    implementation(libs.navigation3.ui)
 
     implementation(projects.navigation)
 

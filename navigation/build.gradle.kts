@@ -9,7 +9,9 @@ android {
 }
 
 dependencies {
-    implementation(libs.navigation.compose)
+    implementation(libs.navigation3.runtime)
+    implementation(libs.navigation3.ui)
+    implementation(libs.lifecycle.viewmodel.navigation3)
     implementation(libs.kotlinx.serialization)
 
     implementation(projects.feature.splash)

@@ -16,7 +16,7 @@ object FSTheme {
         @ReadOnlyComposable
         get() = LocalIcons.current
 
-    val typography: ESimTypography
+    val typography: FSTypography
         @Composable
         @ReadOnlyComposable
         get() = LocalTypography.current

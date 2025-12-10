@@ -8,4 +8,5 @@ android {
 }
 
 dependencies {
+    implementation(libs.navigation3.runtime)
 }

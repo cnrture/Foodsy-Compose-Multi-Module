@@ -1,3 +1,5 @@
 package com.canerture.ui.navigation
 
-interface Screen
+import androidx.navigation3.runtime.NavKey
+
+interface Screen : NavKey

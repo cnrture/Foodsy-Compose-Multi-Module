@@ -1,5 +1,6 @@
 package com.canerture.navigation
 
+/*
 import android.annotation.SuppressLint
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
@@ -94,4 +95,4 @@ fun FSBottomBarPreview() {
     FSBottomBar(
         navController = rememberNavController(),
     )
-}
+}*/
