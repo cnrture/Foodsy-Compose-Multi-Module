@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">Quiz App</string>
-    <string name="okay">Okay</string>
-    <string name="success">Success</string>
-    <string name="search">Search…</string>
-
-    <string name="search_icon">Search Icon</string>
-    <string name="back_icon">Back Icon</string>
-</resources>

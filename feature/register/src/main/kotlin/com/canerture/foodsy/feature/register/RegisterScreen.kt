@@ -139,13 +139,13 @@ fun RegisterContent(
         FSButton(
             modifier = Modifier.fillMaxWidth(),
             text = stringResource(R.string.register),
-            onClick = { onAction(UiAction.OnLoginClick) },
+            onClick = { onAction(UiAction.OnRegisterClick) },
         )
 
         FSSpacerWeight(1f)
 
         FSText(
-            modifier = Modifier.noRippleClickable { onAction(UiAction.OnRegisterClick) },
+            modifier = Modifier.noRippleClickable { onAction(UiAction.OnLoginClick) },
             fullText = stringResource(R.string.login_text),
             spanText = stringResource(R.string.login_text_span),
             spanStyle = SpanStyle(
