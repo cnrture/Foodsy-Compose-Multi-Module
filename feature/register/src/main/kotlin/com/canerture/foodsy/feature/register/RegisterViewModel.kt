@@ -41,6 +41,6 @@ class RegisterViewModel @Inject constructor() :
 
     private fun registerWithGoogle() = viewModelScope.launch {
         delay(1000)
-        navigateTo(Screen.Home, Screen.Register)
+        navigateTo(Screen.BottomBar, Screen.Register)
     }
 }

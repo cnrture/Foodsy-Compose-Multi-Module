@@ -25,15 +25,8 @@ import kotlinx.coroutines.flow.emptyFlow
 @Composable
 fun SplashScreen(
     uiEffect: Flow<UiEffect>,
-    onNavigateOnboarding: () -> Unit,
-    onNavigateLogin: () -> Unit,
 ) {
-    uiEffect.collectWithLifecycle { effect ->
-        when (effect) {
-            is UiEffect.NavigateToOnboarding -> onNavigateOnboarding()
-            is UiEffect.NavigateToLogin -> onNavigateLogin()
-        }
-    }
+    uiEffect.collectWithLifecycle {}
 
     SplashContent(
         modifier = Modifier
@@ -81,8 +74,6 @@ internal fun SplashScreenPreview() {
     FSTheme {
         SplashScreen(
             uiEffect = emptyFlow(),
-            onNavigateOnboarding = {},
-            onNavigateLogin = {},
         )
     }
 }

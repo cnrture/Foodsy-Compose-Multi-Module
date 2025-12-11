@@ -1,5 +1,7 @@
 package com.canerture.navigation
 
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.navigation3.rememberViewModelStoreNavEntryDecorator
@@ -13,16 +15,13 @@ import com.canerture.foodsy.feature.login.navigation.LoginRoute
 import com.canerture.foodsy.feature.onboarding.navigation.OnboardingRoute
 import com.canerture.foodsy.feature.register.navigation.RegisterRoute
 import com.canerture.foodsy.feature.splash.navigation.SplashRoute
-import com.canerture.home.feature.home.navigation.HomeRoute
 import com.canerture.ui.delegate.navigator.RememberBackStack
 import com.canerture.ui.navigation.Screen
 import kotlinx.serialization.modules.SerializersModule
 import kotlinx.serialization.modules.polymorphic
 
 @Composable
-fun FSNavGraph(
-    modifier: Modifier = Modifier,
-) {
+fun FSNavGraph() {
     val backStack = rememberNavBackStack(
         configuration = SavedStateConfiguration {
             serializersModule = SerializersModule {
@@ -31,15 +30,18 @@ fun FSNavGraph(
                     subclass(Screen.Onboarding::class, Screen.Onboarding.serializer())
                     subclass(Screen.Login::class, Screen.Login.serializer())
                     subclass(Screen.Register::class, Screen.Register.serializer())
+                    subclass(Screen.BottomBar::class, Screen.BottomBar.serializer())
                 }
             }
         },
-        Screen.Splash
+        Screen.BottomBar
     )
 
     RememberBackStack(backStack) {
         NavDisplay(
-            modifier = modifier,
+            modifier = Modifier
+                .fillMaxSize()
+                .systemBarsPadding(),
             backStack = backStack,
             onBack = { backStack.removeLastOrNull() },
             entryDecorators = listOf(
@@ -47,22 +49,11 @@ fun FSNavGraph(
                 rememberViewModelStoreNavEntryDecorator(),
             ),
             entryProvider = entryProvider {
-                entry<Screen.Splash> {
-                    SplashRoute(
-                        onNavigateOnboarding = {
-                            backStack.remove(Screen.Splash)
-                            backStack.add(Screen.Onboarding)
-                        },
-                        onNavigateLogin = {
-                            backStack.remove(Screen.Splash)
-                            backStack.add(Screen.Login)
-                        },
-                    )
-                }
+                entry<Screen.Splash> { SplashRoute() }
                 entry<Screen.Onboarding> { OnboardingRoute() }
                 entry<Screen.Login> { LoginRoute() }
                 entry<Screen.Register> { RegisterRoute() }
-                entry<Screen.Home> { HomeRoute() }
+                entry<Screen.BottomBar> { FSBottomBar() }
             }
         )
     }

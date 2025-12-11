@@ -35,11 +35,11 @@ class LoginViewModel @Inject constructor() :
 
     private fun login() = viewModelScope.launch {
         delay(1000)
-        navigateTo(Screen.Home, Screen.Login)
+        navigateTo(Screen.BottomBar, Screen.Login)
     }
 
     private fun loginWithGoogle() = viewModelScope.launch {
         delay(1000)
-        navigateTo(Screen.Home, Screen.Login)
+        navigateTo(Screen.BottomBar, Screen.Login)
     }
 }
