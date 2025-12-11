@@ -6,7 +6,3 @@ plugins {
 android {
     namespace = "com.canerture.foodsy.feature.splash"
 }
-
-dependencies {
-    implementation(projects.core.ui)
-}

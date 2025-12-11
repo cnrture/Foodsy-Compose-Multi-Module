@@ -6,7 +6,3 @@ plugins {
 android {
     namespace = "com.canerture.foodsy.feature.register"
 }
-
-dependencies {
-    implementation(projects.core.ui)
-}

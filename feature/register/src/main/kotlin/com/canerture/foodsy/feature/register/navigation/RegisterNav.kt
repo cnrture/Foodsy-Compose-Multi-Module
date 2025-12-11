@@ -6,11 +6,6 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.canerture.foodsy.feature.register.RegisterScreen
 import com.canerture.foodsy.feature.register.RegisterViewModel
-import com.canerture.ui.navigation.Screen
-import kotlinx.serialization.Serializable
-
-@Serializable
-data object RegisterRoute : Screen
 
 @Composable
 fun RegisterRoute(

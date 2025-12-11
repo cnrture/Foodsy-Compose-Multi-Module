@@ -6,11 +6,6 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.canerture.foodsy.feature.login.LoginScreen
 import com.canerture.foodsy.feature.login.LoginViewModel
-import com.canerture.ui.navigation.Screen
-import kotlinx.serialization.Serializable
-
-@Serializable
-data object LoginRoute : Screen
 
 @Composable
 fun LoginRoute(

@@ -13,6 +13,8 @@ import com.canerture.foodsy.feature.login.navigation.LoginRoute
 import com.canerture.foodsy.feature.onboarding.navigation.OnboardingRoute
 import com.canerture.foodsy.feature.register.navigation.RegisterRoute
 import com.canerture.foodsy.feature.splash.navigation.SplashRoute
+import com.canerture.ui.delegate.navigator.RememberBackStack
+import com.canerture.ui.navigation.Screen
 import kotlinx.serialization.modules.SerializersModule
 import kotlinx.serialization.modules.polymorphic
 
@@ -24,60 +26,62 @@ fun FSNavGraph(
         configuration = SavedStateConfiguration {
             serializersModule = SerializersModule {
                 polymorphic(NavKey::class) {
-                    subclass(SplashRoute::class, SplashRoute.serializer())
-                    subclass(OnboardingRoute::class, OnboardingRoute.serializer())
-                    subclass(LoginRoute::class, LoginRoute.serializer())
-                    subclass(RegisterRoute::class, RegisterRoute.serializer())
+                    subclass(Screen.Splash::class, Screen.Splash.serializer())
+                    subclass(Screen.Onboarding::class, Screen.Onboarding.serializer())
+                    subclass(Screen.Login::class, Screen.Login.serializer())
+                    subclass(Screen.Register::class, Screen.Register.serializer())
                 }
             }
         },
-        SplashRoute
+        Screen.Splash
     )
 
-    NavDisplay(
-        modifier = modifier,
-        backStack = backStack,
-        onBack = { backStack.removeLastOrNull() },
-        entryDecorators = listOf(
-            rememberSaveableStateHolderNavEntryDecorator(),
-            rememberViewModelStoreNavEntryDecorator(),
-        ),
-        entryProvider = entryProvider {
-            entry<SplashRoute> {
-                SplashRoute(
-                    onNavigateOnboarding = {
-                        backStack.remove(SplashRoute)
-                        backStack.add(OnboardingRoute)
-                    },
-                    onNavigateLogin = {
-                        backStack.remove(SplashRoute)
-                        backStack.add(LoginRoute)
-                    },
-                )
+    RememberBackStack(backStack) {
+        NavDisplay(
+            modifier = modifier,
+            backStack = backStack,
+            onBack = { backStack.removeLastOrNull() },
+            entryDecorators = listOf(
+                rememberSaveableStateHolderNavEntryDecorator(),
+                rememberViewModelStoreNavEntryDecorator(),
+            ),
+            entryProvider = entryProvider {
+                entry<Screen.Splash> {
+                    SplashRoute(
+                        onNavigateOnboarding = {
+                            backStack.remove(Screen.Splash)
+                            backStack.add(Screen.Onboarding)
+                        },
+                        onNavigateLogin = {
+                            backStack.remove(Screen.Splash)
+                            backStack.add(Screen.Login)
+                        },
+                    )
+                }
+                entry<Screen.Onboarding> {
+                    OnboardingRoute(
+                        onNavigateLogin = {
+                            backStack.remove(Screen.Onboarding)
+                            backStack.add(Screen.Login)
+                        },
+                    )
+                }
+                entry<Screen.Login> {
+                    LoginRoute(
+                        onNavigateHome = { /* TODO: Navigate to Home */ },
+                        onNavigateRegister = { backStack.add(Screen.Register) }
+                    )
+                }
+                entry<Screen.Register> {
+                    RegisterRoute(
+                        onNavigateHome = { /* TODO: Navigate to Home */ },
+                        onNavigateLogin = {
+                            backStack.remove(Screen.Register)
+                            backStack.add(Screen.Login)
+                        }
+                    )
+                }
             }
-            entry<OnboardingRoute> {
-                OnboardingRoute(
-                    onNavigateLogin = {
-                        backStack.remove(OnboardingRoute)
-                        backStack.add(LoginRoute)
-                    },
-                )
-            }
-            entry<LoginRoute> {
-                LoginRoute(
-                    onNavigateHome = { /* TODO: Navigate to Home */ },
-                    onNavigateRegister = { backStack.add(RegisterRoute) }
-                )
-            }
-            entry<RegisterRoute> {
-                RegisterRoute(
-                    onNavigateHome = { /* TODO: Navigate to Home */ },
-                    onNavigateLogin = {
-                        backStack.remove(RegisterRoute)
-                        backStack.add(LoginRoute)
-                    }
-                )
-            }
-        }
-    )
+        )
+    }
 }

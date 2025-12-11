@@ -1,5 +1,19 @@
 package com.canerture.ui.navigation
 
 import androidx.navigation3.runtime.NavKey
+import kotlinx.serialization.Serializable
 
-interface Screen : NavKey
+@Serializable
+sealed interface Screen : NavKey {
+    @Serializable
+    data object Splash : Screen
+
+    @Serializable
+    data object Onboarding : Screen
+
+    @Serializable
+    data object Login : Screen
+
+    @Serializable
+    data object Register : Screen
+}

@@ -4,11 +4,6 @@ import androidx.compose.runtime.Composable
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import com.canerture.foodsy.feature.onboarding.OnboardingScreen
 import com.canerture.foodsy.feature.onboarding.OnboardingViewModel
-import com.canerture.ui.navigation.Screen
-import kotlinx.serialization.Serializable
-
-@Serializable
-data object OnboardingRoute : Screen
 
 @Composable
 fun OnboardingRoute(
