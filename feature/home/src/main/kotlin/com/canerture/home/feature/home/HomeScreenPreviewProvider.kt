@@ -11,8 +11,5 @@ class HomeScreenPreviewProvider : PreviewParameterProvider<HomeContract.UiState>
             HomeContract.UiState(
                 isLoading = false,
             ),
-            HomeContract.UiState(
-                isLoading = false,
-            ),
         )
 }

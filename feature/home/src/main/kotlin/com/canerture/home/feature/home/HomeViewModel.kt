@@ -21,6 +21,18 @@ class HomeViewModel @Inject constructor() :
 
     override fun onAction(uiAction: UiAction) {
         viewModelScope.launch {
+            when (uiAction) {
+                is UiAction.OnFavoriteClick -> handleFavoriteClick(uiAction.id)
+                is UiAction.OnAddToCartClick -> addToCart(uiAction.id)
+            }
         }
+    }
+
+    private fun handleFavoriteClick(id: Int) = viewModelScope.launch {
+        // Implementation for handling favorite click
+    }
+
+    private fun addToCart(id: Int) = viewModelScope.launch {
+        // Implementation for adding item to cart
     }
 }
