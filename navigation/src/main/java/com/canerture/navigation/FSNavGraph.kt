@@ -61,18 +61,7 @@ fun FSNavGraph(
                 }
                 entry<Screen.Onboarding> { OnboardingRoute() }
                 entry<Screen.Login> { LoginRoute() }
-                entry<Screen.Register> {
-                    RegisterRoute(
-                        onNavigateHome = {
-                            backStack.remove(Screen.Register)
-                            backStack.add(Screen.Home)
-                        },
-                        onNavigateLogin = {
-                            backStack.remove(Screen.Register)
-                            backStack.add(Screen.Login)
-                        }
-                    )
-                }
+                entry<Screen.Register> { RegisterRoute() }
                 entry<Screen.Home> { HomeRoute() }
             }
         )

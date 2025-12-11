@@ -42,15 +42,8 @@ fun RegisterScreen(
     uiState: UiState,
     uiEffect: Flow<UiEffect>,
     onAction: (UiAction) -> Unit,
-    onNavigateHome: () -> Unit,
-    onNavigateLogin: () -> Unit,
 ) {
-    uiEffect.collectWithLifecycle { effect ->
-        when (effect) {
-            UiEffect.NavigateHome -> onNavigateHome()
-            UiEffect.NavigateLogin -> onNavigateLogin()
-        }
-    }
+    uiEffect.collectWithLifecycle {}
 
     RegisterContent(
         modifier = Modifier
@@ -165,7 +158,5 @@ fun RegisterScreenPreview(
         uiState = uiState,
         uiEffect = emptyFlow(),
         onAction = {},
-        onNavigateHome = {},
-        onNavigateLogin = {},
     )
 }

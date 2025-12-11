@@ -7,14 +7,19 @@ import com.canerture.foodsy.feature.register.RegisterContract.UiEffect
 import com.canerture.foodsy.feature.register.RegisterContract.UiState
 import com.canerture.ui.delegate.mvi.MVI
 import com.canerture.ui.delegate.mvi.mvi
+import com.canerture.ui.delegate.navigator.NavigationClient
+import com.canerture.ui.delegate.navigator.navigationClient
+import com.canerture.ui.navigation.Screen
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class RegisterViewModel @Inject constructor() :
     ViewModel(),
-    MVI<UiState, UiAction, UiEffect> by mvi(UiState()) {
+    MVI<UiState, UiAction, UiEffect> by mvi(UiState()),
+    NavigationClient by navigationClient() {
 
     override fun onAction(uiAction: UiAction) {
         viewModelScope.launch {
@@ -24,16 +29,18 @@ class RegisterViewModel @Inject constructor() :
                 is UiAction.OnPasswordChange -> updateUiState { copy(password = uiAction.password) }
                 UiAction.OnRegisterClick -> register()
                 UiAction.OnGoogleRegisterClick -> registerWithGoogle()
-                UiAction.OnLoginClick -> emitUiEffect(UiEffect.NavigateLogin)
+                UiAction.OnLoginClick -> navigateTo(Screen.Login, Screen.Register)
             }
         }
     }
 
-    private fun register() {
-        // Registration logic to be implemented
+    private fun register() = viewModelScope.launch {
+        delay(1000)
+        navigateTo(Screen.Login, Screen.Register)
     }
 
-    private fun registerWithGoogle() {
-        // Google registration logic to be implemented
+    private fun registerWithGoogle() = viewModelScope.launch {
+        delay(1000)
+        navigateTo(Screen.Home, Screen.Register)
     }
 }
