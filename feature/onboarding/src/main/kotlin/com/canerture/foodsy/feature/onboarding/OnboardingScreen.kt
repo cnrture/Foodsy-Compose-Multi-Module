@@ -45,13 +45,8 @@ import kotlinx.coroutines.flow.emptyFlow
 fun OnboardingScreen(
     uiEffect: Flow<UiEffect>,
     onAction: (UiAction) -> Unit,
-    onNavigateLogin: () -> Unit,
 ) {
-    uiEffect.collectWithLifecycle { effect ->
-        when (effect) {
-            UiEffect.NavigateLogin -> onNavigateLogin()
-        }
-    }
+    uiEffect.collectWithLifecycle {}
 
     OnboardingContent(
         modifier = Modifier
@@ -182,7 +177,6 @@ fun OnboardingScreenPreview() {
         OnboardingScreen(
             uiEffect = emptyFlow(),
             onAction = {},
-            onNavigateLogin = {},
         )
     }
 }

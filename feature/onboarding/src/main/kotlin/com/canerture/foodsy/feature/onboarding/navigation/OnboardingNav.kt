@@ -4,16 +4,15 @@ import androidx.compose.runtime.Composable
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import com.canerture.foodsy.feature.onboarding.OnboardingScreen
 import com.canerture.foodsy.feature.onboarding.OnboardingViewModel
+import com.canerture.ui.delegate.navigator.NavigationClientCollector
 
 @Composable
-fun OnboardingRoute(
-    onNavigateLogin: () -> Unit,
-) {
+fun OnboardingRoute() {
     val viewModel = hiltViewModel<OnboardingViewModel>()
     val uiEffect = viewModel.uiEffect
+    NavigationClientCollector(viewModel.navigationClientEffect)
     OnboardingScreen(
         uiEffect = uiEffect,
         onAction = viewModel::onAction,
-        onNavigateLogin = onNavigateLogin,
     )
 }
