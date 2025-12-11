@@ -7,14 +7,19 @@ import com.canerture.foodsy.feature.login.LoginContract.UiEffect
 import com.canerture.foodsy.feature.login.LoginContract.UiState
 import com.canerture.ui.delegate.mvi.MVI
 import com.canerture.ui.delegate.mvi.mvi
+import com.canerture.ui.delegate.navigator.NavigationClient
+import com.canerture.ui.delegate.navigator.navigationClient
+import com.canerture.ui.navigation.Screen
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class LoginViewModel @Inject constructor() :
     ViewModel(),
-    MVI<UiState, UiAction, UiEffect> by mvi(UiState()) {
+    MVI<UiState, UiAction, UiEffect> by mvi(UiState()),
+    NavigationClient by navigationClient() {
 
     override fun onAction(uiAction: UiAction) {
         viewModelScope.launch {
@@ -23,16 +28,18 @@ class LoginViewModel @Inject constructor() :
                 is UiAction.OnPasswordChange -> updateUiState { copy(password = uiAction.password) }
                 UiAction.OnLoginClick -> login()
                 UiAction.OnGoogleLoginClick -> loginWithGoogle()
-                UiAction.OnRegisterClick -> emitUiEffect(UiEffect.NavigateToRegister)
+                UiAction.OnRegisterClick -> navigateTo(Screen.Register)
             }
         }
     }
 
-    private fun login() {
-        // Implement actual login logic here
+    private fun login() = viewModelScope.launch {
+        delay(1000)
+        navigateTo(Screen.Home, Screen.Login)
     }
 
-    private fun loginWithGoogle() {
-        // Implement actual Google login logic here
+    private fun loginWithGoogle() = viewModelScope.launch {
+        delay(1000)
+        navigateTo(Screen.Home, Screen.Login)
     }
 }

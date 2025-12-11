@@ -15,8 +15,5 @@ object LoginContract {
         data object OnRegisterClick : UiAction
     }
 
-    sealed interface UiEffect {
-        data object NavigateToHome : UiEffect
-        data object NavigateToRegister : UiEffect
-    }
+    sealed interface UiEffect
 }

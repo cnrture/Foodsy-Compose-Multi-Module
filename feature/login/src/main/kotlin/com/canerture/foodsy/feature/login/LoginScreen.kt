@@ -42,15 +42,8 @@ fun LoginScreen(
     uiState: UiState,
     uiEffect: Flow<UiEffect>,
     onAction: (UiAction) -> Unit,
-    onNavigateHome: () -> Unit,
-    onNavigateRegister: () -> Unit,
 ) {
-    uiEffect.collectWithLifecycle { effect ->
-        when (effect) {
-            UiEffect.NavigateToHome -> onNavigateHome()
-            UiEffect.NavigateToRegister -> onNavigateRegister()
-        }
-    }
+    uiEffect.collectWithLifecycle {}
 
     LoginContent(
         modifier = Modifier
@@ -156,7 +149,5 @@ fun LoginScreenPreview(
         uiState = uiState,
         uiEffect = emptyFlow(),
         onAction = {},
-        onNavigateHome = {},
-        onNavigateRegister = {},
     )
 }
