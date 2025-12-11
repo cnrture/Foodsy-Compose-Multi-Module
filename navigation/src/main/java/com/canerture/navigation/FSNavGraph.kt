@@ -13,6 +13,7 @@ import com.canerture.foodsy.feature.login.navigation.LoginRoute
 import com.canerture.foodsy.feature.onboarding.navigation.OnboardingRoute
 import com.canerture.foodsy.feature.register.navigation.RegisterRoute
 import com.canerture.foodsy.feature.splash.navigation.SplashRoute
+import com.canerture.home.feature.home.navigation.HomeRoute
 import com.canerture.ui.delegate.navigator.RememberBackStack
 import com.canerture.ui.navigation.Screen
 import kotlinx.serialization.modules.SerializersModule
@@ -68,19 +69,26 @@ fun FSNavGraph(
                 }
                 entry<Screen.Login> {
                     LoginRoute(
-                        onNavigateHome = { /* TODO: Navigate to Home */ },
+                        onNavigateHome = {
+                            backStack.remove(Screen.Login)
+                            backStack.add(Screen.Home)
+                        },
                         onNavigateRegister = { backStack.add(Screen.Register) }
                     )
                 }
                 entry<Screen.Register> {
                     RegisterRoute(
-                        onNavigateHome = { /* TODO: Navigate to Home */ },
+                        onNavigateHome = {
+                            backStack.remove(Screen.Register)
+                            backStack.add(Screen.Home)
+                        },
                         onNavigateLogin = {
                             backStack.remove(Screen.Register)
                             backStack.add(Screen.Login)
                         }
                     )
                 }
+                entry<Screen.Home> { HomeRoute() }
             }
         )
     }

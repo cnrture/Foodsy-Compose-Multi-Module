@@ -1,4 +1,4 @@
-package com.canerture.foodsy.ui.home
+package com.canerture.home.feature.home
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,10 +9,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.sp
-import com.canerture.foodsy.common.collectWithLifecycle
-import com.canerture.foodsy.ui.home.HomeContract.UiAction
-import com.canerture.foodsy.ui.home.HomeContract.UiEffect
-import com.canerture.foodsy.ui.home.HomeContract.UiState
+import com.canerture.home.feature.home.HomeContract.UiAction
+import com.canerture.home.feature.home.HomeContract.UiEffect
+import com.canerture.home.feature.home.HomeContract.UiState
+import com.canerture.ui.extensions.collectWithLifecycle
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 

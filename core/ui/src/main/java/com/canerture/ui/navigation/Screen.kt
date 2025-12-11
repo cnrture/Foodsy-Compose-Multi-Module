@@ -16,4 +16,7 @@ sealed interface Screen : NavKey {
 
     @Serializable
     data object Register : Screen
+
+    @Serializable
+    data object Home : Screen
 }

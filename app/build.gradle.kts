@@ -43,4 +43,6 @@ dependencies {
     implementation(projects.feature.login)
 
     implementation(projects.feature.register)
+
+    implementation(projects.feature.home)
 }
