@@ -7,6 +7,8 @@ import com.canerture.home.feature.home.HomeContract.UiEffect
 import com.canerture.home.feature.home.HomeContract.UiState
 import com.canerture.ui.delegate.mvi.MVI
 import com.canerture.ui.delegate.mvi.mvi
+import com.canerture.ui.delegate.navigator.NavigationClient
+import com.canerture.ui.delegate.navigator.navigationClient
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -14,7 +16,8 @@ import javax.inject.Inject
 @HiltViewModel
 class HomeViewModel @Inject constructor() :
     ViewModel(),
-    MVI<UiState, UiAction, UiEffect> by mvi(UiState()) {
+    MVI<UiState, UiAction, UiEffect> by mvi(UiState()),
+    NavigationClient by navigationClient() {
 
     override fun onAction(uiAction: UiAction) {
         viewModelScope.launch {
