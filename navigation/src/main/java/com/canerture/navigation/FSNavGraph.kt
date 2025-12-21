@@ -21,6 +21,7 @@ import com.cnrture.foodsy.feature.cart.navigation.CartRoute
 import com.cnrture.foodsy.feature.categories.navigation.CategoriesRoute
 import com.cnrture.foodsy.feature.confirmorder.navigation.ConfirmOrderRoute
 import com.cnrture.foodsy.feature.discount.navigation.DiscountRoute
+import com.cnrture.foodsy.feature.dishdetail.navigation.DishDetailRoute
 import kotlinx.serialization.modules.SerializersModule
 import kotlinx.serialization.modules.polymorphic
 
@@ -39,6 +40,7 @@ fun FSNavGraph() {
                     subclass(Screen.Categories::class, Screen.Categories.serializer())
                     subclass(Screen.ConfirmOrder::class, Screen.ConfirmOrder.serializer())
                     subclass(Screen.Discount::class, Screen.Discount.serializer())
+                    subclass(Screen.DishDetail::class, Screen.DishDetail.serializer())
                 }
             }
         },
@@ -66,6 +68,7 @@ fun FSNavGraph() {
                 entry<Screen.Categories> { CategoriesRoute() }
                 entry<Screen.ConfirmOrder> { ConfirmOrderRoute() }
                 entry<Screen.Discount> { DiscountRoute() }
+                entry<Screen.DishDetail> { DishDetailRoute() }
             }
         )
     }

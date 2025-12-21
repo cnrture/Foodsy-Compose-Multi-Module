@@ -1,4 +1,4 @@
-package com.canerture.foodsy.ui.dishdetail
+package com.cnrture.foodsy.feature.dishdetail
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 

@@ -1,4 +1,4 @@
-package com.canerture.foodsy.ui.dishdetail
+package com.cnrture.foodsy.feature.dishdetail
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,10 +9,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.sp
-import com.canerture.foodsy.common.collectWithLifecycle
-import com.canerture.foodsy.ui.dishdetail.DishDetailContract.UiAction
-import com.canerture.foodsy.ui.dishdetail.DishDetailContract.UiEffect
-import com.canerture.foodsy.ui.dishdetail.DishDetailContract.UiState
+import com.canerture.ui.extensions.collectWithLifecycle
+import com.cnrture.foodsy.feature.dishdetail.DishDetailContract.UiAction
+import com.cnrture.foodsy.feature.dishdetail.DishDetailContract.UiEffect
+import com.cnrture.foodsy.feature.dishdetail.DishDetailContract.UiState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 

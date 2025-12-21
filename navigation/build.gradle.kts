@@ -23,6 +23,7 @@ dependencies {
     implementation(projects.feature.categories)
     implementation(projects.feature.confirmorder)
     implementation(projects.feature.discount)
+    implementation(projects.feature.dishdetail)
 
     implementation(projects.core.ui)
 }

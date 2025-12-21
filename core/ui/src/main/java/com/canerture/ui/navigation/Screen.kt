@@ -32,6 +32,9 @@ sealed interface Screen : NavKey {
 
     @Serializable
     data object Discount : Screen
+
+    @Serializable
+    data object DishDetail : Screen
 }
 
 @Serializable
