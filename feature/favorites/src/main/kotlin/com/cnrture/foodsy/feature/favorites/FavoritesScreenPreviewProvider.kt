@@ -1,4 +1,4 @@
-package com.canerture.foodsy.ui.favorites
+package com.cnrture.foodsy.feature.favorites
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 

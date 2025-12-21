@@ -55,4 +55,6 @@ dependencies {
     implementation(projects.feature.discount)
 
     implementation(projects.feature.dishdetail)
+
+    implementation(projects.feature.favorites)
 }

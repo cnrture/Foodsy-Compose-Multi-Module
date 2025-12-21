@@ -1,4 +1,4 @@
-package com.canerture.foodsy.ui.favorites
+package com.cnrture.foodsy.feature.favorites
 
 object FavoritesContract {
     data class UiState(

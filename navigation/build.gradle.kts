@@ -24,6 +24,7 @@ dependencies {
     implementation(projects.feature.confirmorder)
     implementation(projects.feature.discount)
     implementation(projects.feature.dishdetail)
+    implementation(projects.feature.favorites)
 
     implementation(projects.core.ui)
 }
