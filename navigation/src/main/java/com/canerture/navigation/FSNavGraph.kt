@@ -17,6 +17,7 @@ import com.canerture.foodsy.feature.register.navigation.RegisterRoute
 import com.canerture.foodsy.feature.splash.navigation.SplashRoute
 import com.canerture.ui.delegate.navigator.RememberBackStack
 import com.canerture.ui.navigation.Screen
+import com.cnrture.foodsy.feature.cart.navigation.CartRoute
 import kotlinx.serialization.modules.SerializersModule
 import kotlinx.serialization.modules.polymorphic
 
@@ -31,6 +32,7 @@ fun FSNavGraph() {
                     subclass(Screen.Login::class, Screen.Login.serializer())
                     subclass(Screen.Register::class, Screen.Register.serializer())
                     subclass(Screen.BottomBar::class, Screen.BottomBar.serializer())
+                    subclass(Screen.Cart::class, Screen.Cart.serializer())
                 }
             }
         },
@@ -54,6 +56,7 @@ fun FSNavGraph() {
                 entry<Screen.Login> { LoginRoute() }
                 entry<Screen.Register> { RegisterRoute() }
                 entry<Screen.BottomBar> { FSBottomBar() }
+                entry<Screen.Cart> { CartRoute() }
             }
         )
     }

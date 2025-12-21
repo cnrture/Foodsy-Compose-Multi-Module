@@ -1,4 +1,4 @@
-package com.canerture.foodsy.ui.cart
+package com.cnrture.foodsy.feature.cart
 
 object CartContract {
     data class UiState(

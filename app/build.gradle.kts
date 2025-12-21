@@ -45,4 +45,6 @@ dependencies {
     implementation(projects.feature.register)
 
     implementation(projects.feature.home)
+
+    implementation(projects.feature.cart)
 }

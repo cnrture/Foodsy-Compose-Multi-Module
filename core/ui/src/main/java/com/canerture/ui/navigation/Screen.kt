@@ -20,6 +20,9 @@ sealed interface Screen : NavKey {
 
     @Serializable
     data object BottomBar : Screen
+
+    @Serializable
+    data object Cart : Screen
 }
 
 @Serializable

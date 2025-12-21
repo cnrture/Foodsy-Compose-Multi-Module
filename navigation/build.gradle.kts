@@ -19,6 +19,7 @@ dependencies {
     implementation(projects.feature.login)
     implementation(projects.feature.register)
     implementation(projects.feature.home)
+    implementation(projects.feature.cart)
 
     implementation(projects.core.ui)
 }

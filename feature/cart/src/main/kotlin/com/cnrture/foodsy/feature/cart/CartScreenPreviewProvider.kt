@@ -1,4 +1,4 @@
-package com.canerture.foodsy.ui.cart
+package com.cnrture.foodsy.feature.cart
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 
