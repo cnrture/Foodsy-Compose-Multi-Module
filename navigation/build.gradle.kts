@@ -28,6 +28,7 @@ dependencies {
     implementation(projects.feature.forgotpassword)
     implementation(projects.feature.ordercomplete)
     implementation(projects.feature.orders)
+    implementation(projects.feature.profile)
 
     implementation(projects.core.ui)
 }

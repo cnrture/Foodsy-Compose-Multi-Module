@@ -1,4 +1,4 @@
-package com.canerture.foodsy.ui.profile
+package com.cnrture.foodsy.feature.profile
 
 object ProfileContract {
     data class UiState(

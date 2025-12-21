@@ -47,6 +47,9 @@ sealed interface Screen : NavKey {
 
     @Serializable
     data object Orders : Screen
+
+    @Serializable
+    data object Profile : Screen
 }
 
 @Serializable

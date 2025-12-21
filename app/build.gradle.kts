@@ -63,4 +63,6 @@ dependencies {
     implementation(projects.feature.ordercomplete)
 
     implementation(projects.feature.orders)
+
+    implementation(projects.feature.profile)
 }
