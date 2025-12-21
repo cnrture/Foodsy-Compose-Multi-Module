@@ -1,4 +1,4 @@
-package com.canerture.foodsy.ui.orders
+package com.cnrture.foodsy.feature.orders
 
 object OrdersContract {
     data class UiState(

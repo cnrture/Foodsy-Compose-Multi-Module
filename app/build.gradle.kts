@@ -61,4 +61,6 @@ dependencies {
     implementation(projects.feature.forgotpassword)
 
     implementation(projects.feature.ordercomplete)
+
+    implementation(projects.feature.orders)
 }
