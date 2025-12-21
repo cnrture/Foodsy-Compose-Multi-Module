@@ -25,6 +25,7 @@ dependencies {
     implementation(projects.feature.discount)
     implementation(projects.feature.dishdetail)
     implementation(projects.feature.favorites)
+    implementation(projects.feature.forgotpassword)
 
     implementation(projects.core.ui)
 }

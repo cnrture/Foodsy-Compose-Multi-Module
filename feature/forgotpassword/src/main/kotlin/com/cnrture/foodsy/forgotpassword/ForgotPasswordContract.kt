@@ -1,4 +1,4 @@
-package com.canerture.foodsy.ui.forgotpassword
+package com.cnrture.foodsy.forgotpassword
 
 object ForgotPasswordContract {
     data class UiState(

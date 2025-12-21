@@ -57,4 +57,6 @@ dependencies {
     implementation(projects.feature.dishdetail)
 
     implementation(projects.feature.favorites)
+
+    implementation(projects.feature.forgotpassword)
 }
