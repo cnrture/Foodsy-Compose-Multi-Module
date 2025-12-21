@@ -1,4 +1,4 @@
-package com.canerture.foodsy.ui.ordercomplete
+package com.cnrture.foodsy.feature.ordercomplete
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 

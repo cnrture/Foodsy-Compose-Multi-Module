@@ -26,6 +26,7 @@ dependencies {
     implementation(projects.feature.dishdetail)
     implementation(projects.feature.favorites)
     implementation(projects.feature.forgotpassword)
+    implementation(projects.feature.ordercomplete)
 
     implementation(projects.core.ui)
 }

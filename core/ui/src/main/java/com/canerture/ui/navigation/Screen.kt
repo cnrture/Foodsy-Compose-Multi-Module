@@ -41,6 +41,9 @@ sealed interface Screen : NavKey {
 
     @Serializable
     data object ForgotPassword : Screen
+
+    @Serializable
+    data object OrderComplete : Screen
 }
 
 @Serializable
