@@ -51,4 +51,6 @@ dependencies {
     implementation(projects.feature.categories)
 
     implementation(projects.feature.confirmorder)
+
+    implementation(projects.feature.discount)
 }

@@ -22,6 +22,7 @@ dependencies {
     implementation(projects.feature.cart)
     implementation(projects.feature.categories)
     implementation(projects.feature.confirmorder)
+    implementation(projects.feature.discount)
 
     implementation(projects.core.ui)
 }

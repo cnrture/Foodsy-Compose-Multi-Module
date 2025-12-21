@@ -1,4 +1,4 @@
-package com.canerture.foodsy.ui.discount
+package com.cnrture.foodsy.feature.discount
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 
