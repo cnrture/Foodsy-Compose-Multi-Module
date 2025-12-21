@@ -47,4 +47,6 @@ dependencies {
     implementation(projects.feature.home)
 
     implementation(projects.feature.cart)
+
+    implementation(projects.feature.categories)
 }

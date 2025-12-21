@@ -23,6 +23,9 @@ sealed interface Screen : NavKey {
 
     @Serializable
     data object Cart : Screen
+
+    @Serializable
+    data object Categories : Screen
 }
 
 @Serializable
