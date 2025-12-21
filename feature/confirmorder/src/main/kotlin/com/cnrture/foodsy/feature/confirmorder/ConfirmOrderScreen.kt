@@ -1,4 +1,4 @@
-package com.canerture.foodsy.ui.confirmorder
+package com.cnrture.foodsy.feature.confirmorder
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,10 +9,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.sp
-import com.canerture.foodsy.common.collectWithLifecycle
-import com.canerture.foodsy.ui.confirmorder.ConfirmOrderContract.UiAction
-import com.canerture.foodsy.ui.confirmorder.ConfirmOrderContract.UiEffect
-import com.canerture.foodsy.ui.confirmorder.ConfirmOrderContract.UiState
+import com.canerture.ui.extensions.collectWithLifecycle
+import com.cnrture.foodsy.feature.confirmorder.ConfirmOrderContract.UiAction
+import com.cnrture.foodsy.feature.confirmorder.ConfirmOrderContract.UiEffect
+import com.cnrture.foodsy.feature.confirmorder.ConfirmOrderContract.UiState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 

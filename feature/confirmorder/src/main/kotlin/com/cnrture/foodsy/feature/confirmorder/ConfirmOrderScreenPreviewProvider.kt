@@ -1,4 +1,4 @@
-package com.canerture.foodsy.ui.confirmorder
+package com.cnrture.foodsy.feature.confirmorder
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 

@@ -49,4 +49,6 @@ dependencies {
     implementation(projects.feature.cart)
 
     implementation(projects.feature.categories)
+
+    implementation(projects.feature.confirmorder)
 }

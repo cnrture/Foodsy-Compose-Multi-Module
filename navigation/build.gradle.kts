@@ -21,6 +21,7 @@ dependencies {
     implementation(projects.feature.home)
     implementation(projects.feature.cart)
     implementation(projects.feature.categories)
+    implementation(projects.feature.confirmorder)
 
     implementation(projects.core.ui)
 }

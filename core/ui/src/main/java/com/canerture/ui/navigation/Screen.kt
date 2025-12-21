@@ -26,6 +26,9 @@ sealed interface Screen : NavKey {
 
     @Serializable
     data object Categories : Screen
+
+    @Serializable
+    data object ConfirmOrder : Screen
 }
 
 @Serializable

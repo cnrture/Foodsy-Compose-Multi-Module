@@ -1,4 +1,4 @@
-package com.canerture.foodsy.ui.confirmorder
+package com.cnrture.foodsy.feature.confirmorder
 
 object ConfirmOrderContract {
     data class UiState(
