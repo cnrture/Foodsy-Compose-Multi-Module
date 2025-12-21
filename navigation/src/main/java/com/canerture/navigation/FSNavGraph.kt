@@ -26,6 +26,7 @@ import com.cnrture.foodsy.feature.favorites.navigation.FavoritesRoute
 import com.cnrture.foodsy.feature.ordercomplete.navigation.OrderCompleteRoute
 import com.cnrture.foodsy.feature.orders.navigation.OrdersRoute
 import com.cnrture.foodsy.feature.profile.navigation.ProfileRoute
+import com.cnrture.foodsy.feature.search.navigation.SearchRoute
 import com.cnrture.foodsy.forgotpassword.navigation.ForgotPasswordRoute
 import kotlinx.serialization.modules.SerializersModule
 import kotlinx.serialization.modules.polymorphic
@@ -51,6 +52,7 @@ fun FSNavGraph() {
                     subclass(Screen.OrderComplete::class, Screen.OrderComplete.serializer())
                     subclass(Screen.Orders::class, Screen.Orders.serializer())
                     subclass(Screen.Profile::class, Screen.Profile.serializer())
+                    subclass(Screen.Search::class, Screen.Search.serializer())
                 }
             }
         },
@@ -84,6 +86,7 @@ fun FSNavGraph() {
                 entry<Screen.OrderComplete> { OrderCompleteRoute() }
                 entry<Screen.Orders> { OrdersRoute() }
                 entry<Screen.Profile> { ProfileRoute() }
+                entry<Screen.Search> { SearchRoute() }
             }
         )
     }

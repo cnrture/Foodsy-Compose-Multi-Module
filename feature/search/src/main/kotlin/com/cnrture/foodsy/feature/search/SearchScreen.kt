@@ -1,4 +1,4 @@
-package com.canerture.foodsy.ui.search
+package com.cnrture.foodsy.feature.search
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,10 +9,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.sp
-import com.canerture.foodsy.common.collectWithLifecycle
-import com.canerture.foodsy.ui.search.SearchContract.UiAction
-import com.canerture.foodsy.ui.search.SearchContract.UiEffect
-import com.canerture.foodsy.ui.search.SearchContract.UiState
+import com.canerture.ui.extensions.collectWithLifecycle
+import com.cnrture.foodsy.feature.search.SearchContract.UiAction
+import com.cnrture.foodsy.feature.search.SearchContract.UiEffect
+import com.cnrture.foodsy.feature.search.SearchContract.UiState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 

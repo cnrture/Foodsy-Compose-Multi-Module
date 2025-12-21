@@ -1,4 +1,4 @@
-package com.canerture.foodsy.ui.search
+package com.cnrture.foodsy.feature.search
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 

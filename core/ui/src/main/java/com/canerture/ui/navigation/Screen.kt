@@ -50,6 +50,9 @@ sealed interface Screen : NavKey {
 
     @Serializable
     data object Profile : Screen
+
+    @Serializable
+    data object Search : Screen
 }
 
 @Serializable

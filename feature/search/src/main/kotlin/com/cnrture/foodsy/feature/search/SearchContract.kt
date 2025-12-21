@@ -1,4 +1,4 @@
-package com.canerture.foodsy.ui.search
+package com.cnrture.foodsy.feature.search
 
 object SearchContract {
     data class UiState(

@@ -65,4 +65,6 @@ dependencies {
     implementation(projects.feature.orders)
 
     implementation(projects.feature.profile)
+
+    implementation(projects.feature.search)
 }

@@ -29,6 +29,7 @@ dependencies {
     implementation(projects.feature.ordercomplete)
     implementation(projects.feature.orders)
     implementation(projects.feature.profile)
+    implementation(projects.feature.search)
 
     implementation(projects.core.ui)
 }
