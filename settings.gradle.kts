@@ -26,6 +26,7 @@ include(":app")
 include(":navigation")
 include(":core:ui")
 include(":core:common")
+include(":core:network")
 
 // Features
 include(":feature:splash")
