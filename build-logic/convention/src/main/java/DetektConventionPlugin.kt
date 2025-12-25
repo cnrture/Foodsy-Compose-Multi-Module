@@ -24,7 +24,7 @@ class DetektConventionPlugin : Plugin<Project> {
             }
 
             dependencies {
-                //add("detektPlugins", libs.findLibrary("detekt").get())
+                add("detektPlugins", libs.findLibrary("detekt").get())
             }
         }
     }
