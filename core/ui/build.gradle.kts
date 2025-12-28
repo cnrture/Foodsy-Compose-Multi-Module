@@ -1,6 +1,6 @@
 plugins {
-    alias(libs.plugins.foodsy.android.library)
-    alias(libs.plugins.foodsy.android.library.compose)
+    alias(libs.plugins.hogwartia.android.library)
+    alias(libs.plugins.hogwartia.android.library.compose)
     alias(libs.plugins.kotlinx.serialization.plugin)
 }
 

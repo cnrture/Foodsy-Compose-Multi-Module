@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.foodsy.jvm.library)
+    alias(libs.plugins.hogwartia.jvm.library)
     id("org.jetbrains.kotlin.plugin.compose")
 }
 

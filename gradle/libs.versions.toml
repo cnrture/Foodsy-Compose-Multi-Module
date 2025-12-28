@@ -90,13 +90,13 @@ kotlinx-serialization-plugin = { id = "org.jetbrains.kotlin.plugin.serialization
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 module-graph = { id = "com.jraska.module.graph.assertion", version.ref = "moduleGraph" }
 
-foodsy-android-application = { id = "foodsy.android.application" }
-foodsy-android-application-compose = { id = "foodsy.android.application.compose" }
-foodsy-android-firebase = { id = "foodsy.android.firebase" }
-foodsy-android-feature = { id = "foodsy.android.feature" }
-foodsy-android-library = { id = "foodsy.android.library" }
-foodsy-android-library-compose = { id = "foodsy.android.library.compose" }
-foodsy-hilt = { id = "foodsy.hilt" }
-foodsy-detekt = { id = "foodsy.detekt" }
-foodsy-retrofit = { id = "foodsy.retrofit" }
-foodsy-jvm-library = { id = "foodsy.jvm.library" }
+hogwartia-android-application = { id = "hogwartia.android.application" }
+hogwartia-android-application-compose = { id = "hogwartia.android.application.compose" }
+hogwartia-android-firebase = { id = "hogwartia.android.firebase" }
+hogwartia-android-feature = { id = "hogwartia.android.feature" }
+hogwartia-android-library = { id = "hogwartia.android.library" }
+hogwartia-android-library-compose = { id = "hogwartia.android.library.compose" }
+hogwartia-hilt = { id = "hogwartia.hilt" }
+hogwartia-detekt = { id = "hogwartia.detekt" }
+hogwartia-retrofit = { id = "hogwartia.retrofit" }
+hogwartia-jvm-library = { id = "hogwartia.jvm.library" }

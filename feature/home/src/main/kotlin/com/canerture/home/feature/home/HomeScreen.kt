@@ -23,7 +23,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
-import com.canerture.foodsy.feature.home.R
+import com.canerture.hogwartia.feature.home.R
 import com.canerture.home.feature.home.HomeContract.UiAction
 import com.canerture.home.feature.home.HomeContract.UiEffect
 import com.canerture.home.feature.home.HomeContract.UiState

@@ -1,8 +1,8 @@
 plugins {
-    alias(libs.plugins.foodsy.android.feature)
-    alias(libs.plugins.foodsy.android.library.compose)
+    alias(libs.plugins.hogwartia.android.feature)
+    alias(libs.plugins.hogwartia.android.library.compose)
 }
 
 android {
-    namespace = "com.canerture.foodsy.feature.forgotpassword"
+    namespace = "com.canerture.hogwartia.feature.forgotpassword"
 }

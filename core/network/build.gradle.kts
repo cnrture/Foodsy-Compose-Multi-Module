@@ -1,8 +1,8 @@
 plugins {
-    alias(libs.plugins.foodsy.android.library)
-    alias(libs.plugins.foodsy.hilt)
-    alias(libs.plugins.foodsy.android.firebase)
-    alias(libs.plugins.foodsy.retrofit)
+    alias(libs.plugins.hogwartia.android.library)
+    alias(libs.plugins.hogwartia.hilt)
+    alias(libs.plugins.hogwartia.android.firebase)
+    alias(libs.plugins.hogwartia.retrofit)
 }
 
 android {
@@ -16,7 +16,7 @@ android {
         buildConfigField(
             "String",
             "BASE_URL",
-            "\"https://api.canerture.com/foodsy/\"",
+            "\"https://api.canerture.com/hogwartia/\"",
         )
     }
 }

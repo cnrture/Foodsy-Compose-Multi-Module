@@ -8,9 +8,9 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             pluginManager.apply {
-                apply("foodsy.android.library")
-                apply("foodsy.hilt")
-                apply("foodsy.detekt")
+                apply("hogwartia.android.library")
+                apply("hogwartia.hilt")
+                apply("hogwartia.detekt")
                 apply("org.jetbrains.kotlin.plugin.serialization")
             }
 

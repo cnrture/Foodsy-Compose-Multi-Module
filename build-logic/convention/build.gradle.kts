@@ -24,43 +24,43 @@ dependencies {
 gradlePlugin {
     plugins {
         register("androidApplicationCompose") {
-            id = libs.plugins.foodsy.android.application.compose.get().pluginId
+            id = libs.plugins.hogwartia.android.application.compose.get().pluginId
             implementationClass = "com.canerture.convention.AndroidApplicationComposeConventionPlugin"
         }
         register("androidApplication") {
-            id = libs.plugins.foodsy.android.application.asProvider().get().pluginId
+            id = libs.plugins.hogwartia.android.application.asProvider().get().pluginId
             implementationClass = "com.canerture.convention.AndroidApplicationConventionPlugin"
         }
         register("androidLibraryCompose") {
-            id = libs.plugins.foodsy.android.library.compose.get().pluginId
+            id = libs.plugins.hogwartia.android.library.compose.get().pluginId
             implementationClass = "com.canerture.convention.AndroidLibraryComposeConventionPlugin"
         }
         register("androidLibrary") {
-            id = libs.plugins.foodsy.android.library.asProvider().get().pluginId
+            id = libs.plugins.hogwartia.android.library.asProvider().get().pluginId
             implementationClass = "com.canerture.convention.AndroidLibraryConventionPlugin"
         }
         register("androidFeature") {
-            id = libs.plugins.foodsy.android.feature.get().pluginId
+            id = libs.plugins.hogwartia.android.feature.get().pluginId
             implementationClass = "com.canerture.convention.AndroidFeatureConventionPlugin"
         }
         register("hilt") {
-            id = libs.plugins.foodsy.hilt.get().pluginId
+            id = libs.plugins.hogwartia.hilt.get().pluginId
             implementationClass = "com.canerture.convention.HiltConventionPlugin"
         }
         register("androidFirebase") {
-            id = libs.plugins.foodsy.android.firebase.get().pluginId
+            id = libs.plugins.hogwartia.android.firebase.get().pluginId
             implementationClass = "com.canerture.convention.AndroidApplicationFirebaseConventionPlugin"
         }
         register("jvmLibrary") {
-            id = libs.plugins.foodsy.jvm.library.get().pluginId
+            id = libs.plugins.hogwartia.jvm.library.get().pluginId
             implementationClass = "com.canerture.convention.JvmLibraryConventionPlugin"
         }
         register("detekt") {
-            id = libs.plugins.foodsy.detekt.get().pluginId
+            id = libs.plugins.hogwartia.detekt.get().pluginId
             implementationClass = "com.canerture.convention.DetektConventionPlugin"
         }
         register("retrofit") {
-            id = libs.plugins.foodsy.retrofit.get().pluginId
+            id = libs.plugins.hogwartia.retrofit.get().pluginId
             implementationClass = "com.canerture.convention.RetrofitConventionPlugin"
         }
     }

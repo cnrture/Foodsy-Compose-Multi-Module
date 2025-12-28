@@ -1,16 +1,16 @@
 plugins {
-    alias(libs.plugins.foodsy.android.application)
-    alias(libs.plugins.foodsy.android.application.compose)
-    alias(libs.plugins.foodsy.android.firebase)
-    alias(libs.plugins.foodsy.hilt)
+    alias(libs.plugins.hogwartia.android.application)
+    alias(libs.plugins.hogwartia.android.application.compose)
+    alias(libs.plugins.hogwartia.android.firebase)
+    alias(libs.plugins.hogwartia.hilt)
     alias(libs.plugins.kotlinx.serialization.plugin)
 }
 
 android {
-    namespace = "com.canerture.foodsy"
+    namespace = "com.canerture.hogwartia"
 
     defaultConfig {
-        applicationId = "com.canerture.foodsy"
+        applicationId = "com.canerture.hogwartia"
         versionCode = 1
         versionName = "1.0"
 
