@@ -1,4 +1,4 @@
-package com.cnrture.hogwartia.feature.orders
+package com.cnrture.hogwartia.feature.spells
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 

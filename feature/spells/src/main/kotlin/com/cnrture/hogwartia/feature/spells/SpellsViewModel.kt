@@ -1,4 +1,4 @@
-package com.cnrture.hogwartia.feature.orders
+package com.cnrture.hogwartia.feature.spells
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -6,9 +6,9 @@ import com.canerture.hogwartia.ui.delegate.mvi.MVI
 import com.canerture.hogwartia.ui.delegate.mvi.mvi
 import com.canerture.hogwartia.ui.delegate.navigator.NavigationClient
 import com.canerture.hogwartia.ui.delegate.navigator.navigationClient
-import com.cnrture.hogwartia.feature.orders.SpellsContract.UiAction
-import com.cnrture.hogwartia.feature.orders.SpellsContract.UiEffect
-import com.cnrture.hogwartia.feature.orders.SpellsContract.UiState
+import com.cnrture.hogwartia.feature.spells.SpellsContract.UiAction
+import com.cnrture.hogwartia.feature.spells.SpellsContract.UiEffect
+import com.cnrture.hogwartia.feature.spells.SpellsContract.UiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

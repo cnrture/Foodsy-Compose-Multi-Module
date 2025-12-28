@@ -1,4 +1,4 @@
-package com.cnrture.hogwartia.feature.orders
+package com.cnrture.hogwartia.feature.spells
 
 object SpellsContract {
     data class UiState(

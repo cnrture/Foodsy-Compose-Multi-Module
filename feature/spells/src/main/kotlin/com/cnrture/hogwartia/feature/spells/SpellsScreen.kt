@@ -1,4 +1,4 @@
-package com.cnrture.hogwartia.feature.orders
+package com.cnrture.hogwartia.feature.spells
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,9 +10,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
-import com.cnrture.hogwartia.feature.orders.SpellsContract.UiAction
-import com.cnrture.hogwartia.feature.orders.SpellsContract.UiEffect
-import com.cnrture.hogwartia.feature.orders.SpellsContract.UiState
+import com.cnrture.hogwartia.feature.spells.SpellsContract.UiAction
+import com.cnrture.hogwartia.feature.spells.SpellsContract.UiEffect
+import com.cnrture.hogwartia.feature.spells.SpellsContract.UiState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 

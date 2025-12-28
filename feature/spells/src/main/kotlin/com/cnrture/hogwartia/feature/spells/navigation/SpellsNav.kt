@@ -1,12 +1,12 @@
-package com.cnrture.hogwartia.feature.orders.navigation
+package com.cnrture.hogwartia.feature.spells.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.canerture.hogwartia.ui.delegate.navigator.NavigationClientCollector
-import com.cnrture.hogwartia.feature.orders.SpellsScreen
-import com.cnrture.hogwartia.feature.orders.SpellsViewModel
+import com.cnrture.hogwartia.feature.spells.SpellsScreen
+import com.cnrture.hogwartia.feature.spells.SpellsViewModel
 
 @Composable
 fun SpellsRoute() {

@@ -22,10 +22,10 @@ import com.cnrture.hogwartia.feature.characters.navigation.CharactersRoute
 import com.cnrture.hogwartia.feature.discount.navigation.DiscountRoute
 import com.cnrture.hogwartia.feature.favorites.navigation.FavoritesRoute
 import com.cnrture.hogwartia.feature.ordercomplete.navigation.MovieDetailRoute
-import com.cnrture.hogwartia.feature.orders.navigation.SpellsRoute
 import com.cnrture.hogwartia.feature.profile.navigation.ProfileRoute
 import com.cnrture.hogwartia.feature.search.navigation.SearchRoute
 import com.cnrture.hogwartia.feature.spelldetail.navigation.SpellDetailRoute
+import com.cnrture.hogwartia.feature.spells.navigation.SpellsRoute
 import com.cnrture.hogwartia.feature.welcome.navigation.WelcomeRoute
 import com.cnrture.hogwartia.movies.navigation.MoviesRoute
 import kotlinx.serialization.modules.SerializersModule
