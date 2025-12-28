@@ -105,7 +105,7 @@ fun FSBottomBar() {
                         modifier = Modifier.fillMaxSize(),
                         contentAlignment = Alignment.Center
                     ) {
-                        Text(text = "Categories")
+                        Text(text = "Characters")
                     }
                 }
                 entry<BottomBarScreen.Discounts> {
@@ -121,7 +121,7 @@ fun FSBottomBar() {
                         modifier = Modifier.fillMaxSize(),
                         contentAlignment = Alignment.Center
                     ) {
-                        Text(text = "Cart")
+                        Text(text = "Welcome")
                     }
                 }
             }

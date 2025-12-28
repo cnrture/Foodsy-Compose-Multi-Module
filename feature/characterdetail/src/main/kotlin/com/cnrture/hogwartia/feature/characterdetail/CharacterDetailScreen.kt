@@ -42,7 +42,7 @@ fun CharacterDetailContent(
         contentAlignment = Alignment.Center,
     ) {
         Text(
-            text = "ConfirmOrder Content",
+            text = "CharacterDetail Content",
             fontSize = 24.sp,
         )
     }

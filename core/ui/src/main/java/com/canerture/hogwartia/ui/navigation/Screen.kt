@@ -22,13 +22,13 @@ sealed interface Screen : NavKey {
     data object BottomBar : Screen
 
     @Serializable
-    data object Cart : Screen
+    data object Welcome : Screen
 
     @Serializable
-    data object Categories : Screen
+    data object Characters : Screen
 
     @Serializable
-    data object ConfirmOrder : Screen
+    data object CharacterDetail : Screen
 
     @Serializable
     data object Discount : Screen

@@ -17,9 +17,8 @@ import com.canerture.hogwartia.feature.register.navigation.RegisterRoute
 import com.canerture.hogwartia.feature.splash.navigation.SplashRoute
 import com.canerture.hogwartia.ui.delegate.navigator.RememberBackStack
 import com.canerture.hogwartia.ui.navigation.Screen
-import com.cnrture.hogwartia.feature.welcome.navigation.WelcomeRoute
-import com.cnrture.hogwartia.feature.characters.navigation.CategoriesRoute
-import com.cnrture.hogwartia.feature.characterdetail.navigation.ConfirmOrderRoute
+import com.cnrture.hogwartia.feature.characterdetail.navigation.CharacterDetailRoute
+import com.cnrture.hogwartia.feature.characters.navigation.CharactersRoute
 import com.cnrture.hogwartia.feature.discount.navigation.DiscountRoute
 import com.cnrture.hogwartia.feature.dishdetail.navigation.DishDetailRoute
 import com.cnrture.hogwartia.feature.favorites.navigation.FavoritesRoute
@@ -27,6 +26,7 @@ import com.cnrture.hogwartia.feature.ordercomplete.navigation.OrderCompleteRoute
 import com.cnrture.hogwartia.feature.orders.navigation.OrdersRoute
 import com.cnrture.hogwartia.feature.profile.navigation.ProfileRoute
 import com.cnrture.hogwartia.feature.search.navigation.SearchRoute
+import com.cnrture.hogwartia.feature.welcome.navigation.WelcomeRoute
 import com.cnrture.hogwartia.forgotpassword.navigation.ForgotPasswordRoute
 import kotlinx.serialization.modules.SerializersModule
 import kotlinx.serialization.modules.polymorphic
@@ -42,9 +42,9 @@ fun FSNavGraph() {
                     subclass(Screen.Login::class, Screen.Login.serializer())
                     subclass(Screen.Register::class, Screen.Register.serializer())
                     subclass(Screen.BottomBar::class, Screen.BottomBar.serializer())
-                    subclass(Screen.Cart::class, Screen.Cart.serializer())
-                    subclass(Screen.Categories::class, Screen.Categories.serializer())
-                    subclass(Screen.ConfirmOrder::class, Screen.ConfirmOrder.serializer())
+                    subclass(Screen.Welcome::class, Screen.Welcome.serializer())
+                    subclass(Screen.Characters::class, Screen.Characters.serializer())
+                    subclass(Screen.CharacterDetail::class, Screen.CharacterDetail.serializer())
                     subclass(Screen.Discount::class, Screen.Discount.serializer())
                     subclass(Screen.DishDetail::class, Screen.DishDetail.serializer())
                     subclass(Screen.Favorites::class, Screen.Favorites.serializer())
@@ -76,9 +76,9 @@ fun FSNavGraph() {
                 entry<Screen.Login> { LoginRoute() }
                 entry<Screen.Register> { RegisterRoute() }
                 entry<Screen.BottomBar> { FSBottomBar() }
-                entry<Screen.Cart> { WelcomeRoute() }
-                entry<Screen.Categories> { CategoriesRoute() }
-                entry<Screen.ConfirmOrder> { ConfirmOrderRoute() }
+                entry<Screen.Welcome> { WelcomeRoute() }
+                entry<Screen.Characters> { CharactersRoute() }
+                entry<Screen.CharacterDetail> { CharacterDetailRoute() }
                 entry<Screen.Discount> { DiscountRoute() }
                 entry<Screen.DishDetail> { DishDetailRoute() }
                 entry<Screen.Favorites> { FavoritesRoute() }

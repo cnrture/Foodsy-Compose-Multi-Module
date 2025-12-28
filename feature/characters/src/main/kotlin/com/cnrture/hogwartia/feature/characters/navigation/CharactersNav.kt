@@ -9,7 +9,7 @@ import com.cnrture.hogwartia.feature.characters.CharactersScreen
 import com.cnrture.hogwartia.feature.characters.CharactersViewModel
 
 @Composable
-fun CategoriesRoute() {
+fun CharactersRoute() {
     val viewModel = hiltViewModel<CharactersViewModel>()
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val uiEffect = viewModel.uiEffect
