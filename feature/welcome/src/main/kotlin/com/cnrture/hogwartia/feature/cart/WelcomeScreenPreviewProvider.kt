@@ -2,18 +2,18 @@ package com.cnrture.hogwartia.feature.cart
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 
-class CartScreenPreviewProvider : PreviewParameterProvider<CartContract.UiState> {
-    override val values: Sequence<CartContract.UiState>
+class WelcomeScreenPreviewProvider : PreviewParameterProvider<WelcomeContract.UiState> {
+    override val values: Sequence<WelcomeContract.UiState>
         get() = sequenceOf(
-            CartContract.UiState(
+            WelcomeContract.UiState(
                 isLoading = true,
                 list = emptyList(),
             ),
-            CartContract.UiState(
+            WelcomeContract.UiState(
                 isLoading = false,
                 list = emptyList(),
             ),
-            CartContract.UiState(
+            WelcomeContract.UiState(
                 isLoading = false,
                 list = listOf("Item 1", "Item 2", "Item 3")
             ),

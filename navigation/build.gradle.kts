@@ -19,7 +19,7 @@ dependencies {
     implementation(projects.feature.login)
     implementation(projects.feature.register)
     implementation(projects.feature.home)
-    implementation(projects.feature.cart)
+    implementation(projects.feature.welcome)
     implementation(projects.feature.categories)
     implementation(projects.feature.confirmorder)
     implementation(projects.feature.discount)

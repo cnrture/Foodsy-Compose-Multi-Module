@@ -1,6 +1,6 @@
 package com.cnrture.hogwartia.feature.cart
 
-object CartContract {
+object WelcomeContract {
     data class UiState(
         val isLoading: Boolean = false,
         val list: List<String> = emptyList(),

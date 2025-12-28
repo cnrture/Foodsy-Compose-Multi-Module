@@ -10,21 +10,21 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
-import com.cnrture.hogwartia.feature.cart.CartContract.UiAction
-import com.cnrture.hogwartia.feature.cart.CartContract.UiEffect
-import com.cnrture.hogwartia.feature.cart.CartContract.UiState
+import com.cnrture.hogwartia.feature.cart.WelcomeContract.UiAction
+import com.cnrture.hogwartia.feature.cart.WelcomeContract.UiEffect
+import com.cnrture.hogwartia.feature.cart.WelcomeContract.UiState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 
 @Composable
-fun CartScreen(
+fun WelcomeScreen(
     uiState: UiState,
     uiEffect: Flow<UiEffect>,
     onAction: (UiAction) -> Unit,
 ) {
     uiEffect.collectWithLifecycle {}
 
-    CartContent(
+    WelcomeContent(
         modifier = Modifier.fillMaxSize(),
         uiState = uiState,
         onAction = onAction,
@@ -32,7 +32,7 @@ fun CartScreen(
 }
 
 @Composable
-fun CartContent(
+fun WelcomeContent(
     modifier: Modifier = Modifier,
     uiState: UiState,
     onAction: (UiAction) -> Unit,
@@ -42,7 +42,7 @@ fun CartContent(
         contentAlignment = Alignment.Center,
     ) {
         Text(
-            text = "Cart Content",
+            text = "Welcome Content",
             fontSize = 24.sp,
         )
     }
@@ -50,10 +50,10 @@ fun CartContent(
 
 @Preview(showBackground = true)
 @Composable
-fun CartScreenPreview(
-    @PreviewParameter(CartScreenPreviewProvider::class) uiState: UiState,
+fun WelcomeScreenPreview(
+    @PreviewParameter(WelcomeScreenPreviewProvider::class) uiState: UiState,
 ) {
-    CartScreen(
+    WelcomeScreen(
         uiState = uiState,
         uiEffect = emptyFlow(),
         onAction = {},

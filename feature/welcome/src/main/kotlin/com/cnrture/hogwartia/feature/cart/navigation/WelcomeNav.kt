@@ -5,16 +5,16 @@ import androidx.compose.runtime.getValue
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.canerture.hogwartia.ui.delegate.navigator.NavigationClientCollector
-import com.cnrture.hogwartia.feature.cart.CartScreen
-import com.cnrture.hogwartia.feature.cart.CartViewModel
+import com.cnrture.hogwartia.feature.cart.WelcomeScreen
+import com.cnrture.hogwartia.feature.cart.WelcomeViewModel
 
 @Composable
-fun CartRoute() {
-    val viewModel = hiltViewModel<CartViewModel>()
+fun WelcomeRoute() {
+    val viewModel = hiltViewModel<WelcomeViewModel>()
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val uiEffect = viewModel.uiEffect
     NavigationClientCollector(viewModel.navigationClientEffect)
-    CartScreen(
+    WelcomeScreen(
         uiState = uiState,
         uiEffect = uiEffect,
         onAction = viewModel::onAction,

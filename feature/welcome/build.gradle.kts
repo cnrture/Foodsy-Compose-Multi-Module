@@ -4,5 +4,5 @@ plugins {
 }
 
 android {
-    namespace = "com.canerture.hogwartia.feature.cart"
+    namespace = "com.canerture.hogwartia.feature.welcome"
 }
