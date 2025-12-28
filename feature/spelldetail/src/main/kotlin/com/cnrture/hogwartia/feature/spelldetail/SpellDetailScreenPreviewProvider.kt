@@ -1,19 +1,19 @@
-package com.cnrture.hogwartia.feature.dishdetail
+package com.cnrture.hogwartia.feature.spelldetail
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 
-class DishDetailScreenPreviewProvider : PreviewParameterProvider<DishDetailContract.UiState> {
-    override val values: Sequence<DishDetailContract.UiState>
+class SpellDetailScreenPreviewProvider : PreviewParameterProvider<SpellDetailContract.UiState> {
+    override val values: Sequence<SpellDetailContract.UiState>
         get() = sequenceOf(
-            DishDetailContract.UiState(
+            SpellDetailContract.UiState(
                 isLoading = true,
                 list = emptyList(),
             ),
-            DishDetailContract.UiState(
+            SpellDetailContract.UiState(
                 isLoading = false,
                 list = emptyList(),
             ),
-            DishDetailContract.UiState(
+            SpellDetailContract.UiState(
                 isLoading = false,
                 list = listOf("Item 1", "Item 2", "Item 3")
             ),

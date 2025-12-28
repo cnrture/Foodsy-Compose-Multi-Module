@@ -20,12 +20,12 @@ import com.canerture.hogwartia.ui.navigation.Screen
 import com.cnrture.hogwartia.feature.characterdetail.navigation.CharacterDetailRoute
 import com.cnrture.hogwartia.feature.characters.navigation.CharactersRoute
 import com.cnrture.hogwartia.feature.discount.navigation.DiscountRoute
-import com.cnrture.hogwartia.feature.dishdetail.navigation.DishDetailRoute
 import com.cnrture.hogwartia.feature.favorites.navigation.FavoritesRoute
 import com.cnrture.hogwartia.feature.ordercomplete.navigation.MovieDetailRoute
 import com.cnrture.hogwartia.feature.orders.navigation.SpellsRoute
 import com.cnrture.hogwartia.feature.profile.navigation.ProfileRoute
 import com.cnrture.hogwartia.feature.search.navigation.SearchRoute
+import com.cnrture.hogwartia.feature.spelldetail.navigation.SpellDetailRoute
 import com.cnrture.hogwartia.feature.welcome.navigation.WelcomeRoute
 import com.cnrture.hogwartia.movies.navigation.MoviesRoute
 import kotlinx.serialization.modules.SerializersModule
@@ -46,7 +46,7 @@ fun FSNavGraph() {
                     subclass(Screen.Characters::class, Screen.Characters.serializer())
                     subclass(Screen.CharacterDetail::class, Screen.CharacterDetail.serializer())
                     subclass(Screen.Discount::class, Screen.Discount.serializer())
-                    subclass(Screen.DishDetail::class, Screen.DishDetail.serializer())
+                    subclass(Screen.SpellDetail::class, Screen.SpellDetail.serializer())
                     subclass(Screen.Favorites::class, Screen.Favorites.serializer())
                     subclass(Screen.Movies::class, Screen.Movies.serializer())
                     subclass(Screen.MovieDetail::class, Screen.MovieDetail.serializer())
@@ -80,7 +80,7 @@ fun FSNavGraph() {
                 entry<Screen.Characters> { CharactersRoute() }
                 entry<Screen.CharacterDetail> { CharacterDetailRoute() }
                 entry<Screen.Discount> { DiscountRoute() }
-                entry<Screen.DishDetail> { DishDetailRoute() }
+                entry<Screen.SpellDetail> { SpellDetailRoute() }
                 entry<Screen.Favorites> { FavoritesRoute() }
                 entry<Screen.Movies> { MoviesRoute() }
                 entry<Screen.MovieDetail> { MovieDetailRoute() }

@@ -1,6 +1,6 @@
-package com.cnrture.hogwartia.feature.dishdetail
+package com.cnrture.hogwartia.feature.spelldetail
 
-object DishDetailContract {
+object SpellDetailContract {
     data class UiState(
         val isLoading: Boolean = false,
         val list: List<String> = emptyList(),

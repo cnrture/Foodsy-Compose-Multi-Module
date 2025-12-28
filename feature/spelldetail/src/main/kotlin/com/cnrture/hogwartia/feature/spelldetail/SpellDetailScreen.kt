@@ -1,4 +1,4 @@
-package com.cnrture.hogwartia.feature.dishdetail
+package com.cnrture.hogwartia.feature.spelldetail
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,21 +10,21 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
-import com.cnrture.hogwartia.feature.dishdetail.DishDetailContract.UiAction
-import com.cnrture.hogwartia.feature.dishdetail.DishDetailContract.UiEffect
-import com.cnrture.hogwartia.feature.dishdetail.DishDetailContract.UiState
+import com.cnrture.hogwartia.feature.spelldetail.SpellDetailContract.UiAction
+import com.cnrture.hogwartia.feature.spelldetail.SpellDetailContract.UiEffect
+import com.cnrture.hogwartia.feature.spelldetail.SpellDetailContract.UiState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 
 @Composable
-fun DishDetailScreen(
+fun SpellDetailScreen(
     uiState: UiState,
     uiEffect: Flow<UiEffect>,
     onAction: (UiAction) -> Unit,
 ) {
     uiEffect.collectWithLifecycle {}
 
-    DishDetailContent(
+    SpellDetailContent(
         modifier = Modifier.fillMaxSize(),
         uiState = uiState,
         onAction = onAction,
@@ -32,7 +32,7 @@ fun DishDetailScreen(
 }
 
 @Composable
-fun DishDetailContent(
+fun SpellDetailContent(
     modifier: Modifier = Modifier,
     uiState: UiState,
     onAction: (UiAction) -> Unit,
@@ -42,7 +42,7 @@ fun DishDetailContent(
         contentAlignment = Alignment.Center,
     ) {
         Text(
-            text = "DishDetail Content",
+            text = "SpellDetail Content",
             fontSize = 24.sp,
         )
     }
@@ -50,10 +50,10 @@ fun DishDetailContent(
 
 @Preview(showBackground = true)
 @Composable
-fun DishDetailScreenPreview(
-    @PreviewParameter(DishDetailScreenPreviewProvider::class) uiState: UiState,
+fun SpellDetailScreenPreview(
+    @PreviewParameter(SpellDetailScreenPreviewProvider::class) uiState: UiState,
 ) {
-    DishDetailScreen(
+    SpellDetailScreen(
         uiState = uiState,
         uiEffect = emptyFlow(),
         onAction = {},

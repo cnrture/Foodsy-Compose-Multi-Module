@@ -23,7 +23,7 @@ dependencies {
     implementation(projects.feature.characters)
     implementation(projects.feature.characterdetail)
     implementation(projects.feature.discount)
-    implementation(projects.feature.dishdetail)
+    implementation(projects.feature.spelldetail)
     implementation(projects.feature.favorites)
     implementation(projects.feature.movies)
     implementation(projects.feature.moviedetail)

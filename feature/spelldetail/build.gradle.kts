@@ -4,5 +4,5 @@ plugins {
 }
 
 android {
-    namespace = "com.canerture.hogwartia.feature.dishdetail"
+    namespace = "com.canerture.hogwartia.feature.spelldetail"
 }
