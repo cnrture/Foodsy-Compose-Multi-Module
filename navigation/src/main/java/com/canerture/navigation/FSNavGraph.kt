@@ -22,7 +22,7 @@ import com.cnrture.hogwartia.feature.characters.navigation.CharactersRoute
 import com.cnrture.hogwartia.feature.discount.navigation.DiscountRoute
 import com.cnrture.hogwartia.feature.dishdetail.navigation.DishDetailRoute
 import com.cnrture.hogwartia.feature.favorites.navigation.FavoritesRoute
-import com.cnrture.hogwartia.feature.ordercomplete.navigation.OrderCompleteRoute
+import com.cnrture.hogwartia.feature.ordercomplete.navigation.MovieDetailRoute
 import com.cnrture.hogwartia.feature.orders.navigation.OrdersRoute
 import com.cnrture.hogwartia.feature.profile.navigation.ProfileRoute
 import com.cnrture.hogwartia.feature.search.navigation.SearchRoute
@@ -49,7 +49,7 @@ fun FSNavGraph() {
                     subclass(Screen.DishDetail::class, Screen.DishDetail.serializer())
                     subclass(Screen.Favorites::class, Screen.Favorites.serializer())
                     subclass(Screen.Movies::class, Screen.Movies.serializer())
-                    subclass(Screen.OrderComplete::class, Screen.OrderComplete.serializer())
+                    subclass(Screen.MovieDetail::class, Screen.MovieDetail.serializer())
                     subclass(Screen.Orders::class, Screen.Orders.serializer())
                     subclass(Screen.Profile::class, Screen.Profile.serializer())
                     subclass(Screen.Search::class, Screen.Search.serializer())
@@ -83,7 +83,7 @@ fun FSNavGraph() {
                 entry<Screen.DishDetail> { DishDetailRoute() }
                 entry<Screen.Favorites> { FavoritesRoute() }
                 entry<Screen.Movies> { MoviesRoute() }
-                entry<Screen.OrderComplete> { OrderCompleteRoute() }
+                entry<Screen.MovieDetail> { MovieDetailRoute() }
                 entry<Screen.Orders> { OrdersRoute() }
                 entry<Screen.Profile> { ProfileRoute() }
                 entry<Screen.Search> { SearchRoute() }

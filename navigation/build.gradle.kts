@@ -26,7 +26,7 @@ dependencies {
     implementation(projects.feature.dishdetail)
     implementation(projects.feature.favorites)
     implementation(projects.feature.movies)
-    implementation(projects.feature.ordercomplete)
+    implementation(projects.feature.moviedetail)
     implementation(projects.feature.orders)
     implementation(projects.feature.profile)
     implementation(projects.feature.search)

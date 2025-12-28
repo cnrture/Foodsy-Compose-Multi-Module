@@ -5,16 +5,16 @@ import androidx.compose.runtime.getValue
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.canerture.hogwartia.ui.delegate.navigator.NavigationClientCollector
-import com.cnrture.hogwartia.feature.ordercomplete.OrderCompleteScreen
-import com.cnrture.hogwartia.feature.ordercomplete.OrderCompleteViewModel
+import com.cnrture.hogwartia.feature.ordercomplete.MovieDetailScreen
+import com.cnrture.hogwartia.feature.ordercomplete.MovieDetailViewModel
 
 @Composable
-fun OrderCompleteRoute() {
-    val viewModel = hiltViewModel<OrderCompleteViewModel>()
+fun MovieDetailRoute() {
+    val viewModel = hiltViewModel<MovieDetailViewModel>()
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val uiEffect = viewModel.uiEffect
     NavigationClientCollector(viewModel.navigationClientEffect)
-    OrderCompleteScreen(
+    MovieDetailScreen(
         uiState = uiState,
         uiEffect = uiEffect,
         onAction = viewModel::onAction,

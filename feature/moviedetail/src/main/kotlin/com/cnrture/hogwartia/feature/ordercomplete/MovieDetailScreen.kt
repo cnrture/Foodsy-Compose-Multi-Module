@@ -10,21 +10,21 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
-import com.cnrture.hogwartia.feature.ordercomplete.OrderCompleteContract.UiAction
-import com.cnrture.hogwartia.feature.ordercomplete.OrderCompleteContract.UiEffect
-import com.cnrture.hogwartia.feature.ordercomplete.OrderCompleteContract.UiState
+import com.cnrture.hogwartia.feature.ordercomplete.MovieDetailContract.UiAction
+import com.cnrture.hogwartia.feature.ordercomplete.MovieDetailContract.UiEffect
+import com.cnrture.hogwartia.feature.ordercomplete.MovieDetailContract.UiState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 
 @Composable
-fun OrderCompleteScreen(
+fun MovieDetailScreen(
     uiState: UiState,
     uiEffect: Flow<UiEffect>,
     onAction: (UiAction) -> Unit,
 ) {
     uiEffect.collectWithLifecycle {}
 
-    OrderCompleteContent(
+    MovieDetailContent(
         modifier = Modifier.fillMaxSize(),
         uiState = uiState,
         onAction = onAction,
@@ -32,7 +32,7 @@ fun OrderCompleteScreen(
 }
 
 @Composable
-fun OrderCompleteContent(
+fun MovieDetailContent(
     modifier: Modifier = Modifier,
     uiState: UiState,
     onAction: (UiAction) -> Unit,
@@ -42,7 +42,7 @@ fun OrderCompleteContent(
         contentAlignment = Alignment.Center,
     ) {
         Text(
-            text = "OrderComplete Content",
+            text = "MovieDetail Content",
             fontSize = 24.sp,
         )
     }
@@ -50,10 +50,10 @@ fun OrderCompleteContent(
 
 @Preview(showBackground = true)
 @Composable
-fun OrderCompleteScreenPreview(
-    @PreviewParameter(OrderCompleteScreenPreviewProvider::class) uiState: UiState,
+fun MovieDetailScreenPreview(
+    @PreviewParameter(MovieDetailScreenPreviewProvider::class) uiState: UiState,
 ) {
-    OrderCompleteScreen(
+    MovieDetailScreen(
         uiState = uiState,
         uiEffect = emptyFlow(),
         onAction = {},

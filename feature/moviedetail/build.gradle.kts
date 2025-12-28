@@ -4,5 +4,5 @@ plugins {
 }
 
 android {
-    namespace = "com.canerture.hogwartia.feature.ordercomplete"
+    namespace = "com.canerture.hogwartia.feature.moviedetail"
 }

@@ -1,6 +1,6 @@
 package com.cnrture.hogwartia.feature.ordercomplete
 
-object OrderCompleteContract {
+object MovieDetailContract {
     data class UiState(
         val isLoading: Boolean = false,
         val list: List<String> = emptyList(),
