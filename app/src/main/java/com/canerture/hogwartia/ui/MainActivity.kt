@@ -4,8 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.canerture.hogwartia.ui.theme.FSTheme
-import com.canerture.navigation.FSNavGraph
+import com.canerture.hogwartia.ui.theme.HWTheme
+import com.canerture.navigation.HWNavGraph
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -15,8 +15,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            FSTheme {
-                FSNavGraph()
+            HWTheme {
+                HWNavGraph()
             }
         }
     }

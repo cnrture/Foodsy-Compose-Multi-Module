@@ -25,11 +25,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.canerture.hogwartia.ui.theme.FSTheme
+import com.canerture.hogwartia.ui.theme.HWTheme
 import kotlin.math.abs
 
 @Composable
-fun FSFilter(
+fun HWFilter(
     modifier: Modifier = Modifier,
     minValue: Float,
     maxValue: Float,
@@ -44,9 +44,9 @@ fun FSFilter(
         mutableStateOf(currentRange.endInclusive)
     }
 
-    val green = FSTheme.colors.green
-    val brown = FSTheme.colors.brown
-    val orange = FSTheme.colors.orange
+    val green = HWTheme.colors.green
+    val brown = HWTheme.colors.brown
+    val orange = HWTheme.colors.orange
 
     Column(
         modifier = modifier.fillMaxWidth(),
@@ -164,28 +164,28 @@ fun FSFilter(
                 text = "$${minValue.toInt()}",
                 fontSize = 13.sp,
                 fontWeight = FontWeight.Normal,
-                color = FSTheme.colors.darkBrown,
+                color = HWTheme.colors.darkBrown,
             )
 
             Text(
                 text = "$${startThumbPosition.toInt()}",
                 fontSize = 13.sp,
                 fontWeight = FontWeight.Normal,
-                color = FSTheme.colors.darkBrown,
+                color = HWTheme.colors.darkBrown,
             )
 
             Text(
                 text = "$${endThumbPosition.toInt()}",
                 fontSize = 13.sp,
                 fontWeight = FontWeight.Normal,
-                color = FSTheme.colors.darkBrown,
+                color = HWTheme.colors.darkBrown,
             )
 
             Text(
                 text = "$${maxValue.toInt()}",
                 fontSize = 13.sp,
                 fontWeight = FontWeight.Normal,
-                color = FSTheme.colors.darkBrown,
+                color = HWTheme.colors.darkBrown,
             )
         }
     }
@@ -193,9 +193,9 @@ fun FSFilter(
 
 @Preview(showBackground = true)
 @Composable
-fun FSFilterPreview() {
-    FSTheme {
-        FSFilter(
+fun HWFilterPreview() {
+    HWTheme {
+        HWFilter(
             minValue = 1f,
             maxValue = 30f,
             currentRange = 3f..16f,

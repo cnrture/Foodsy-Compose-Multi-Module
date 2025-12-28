@@ -32,7 +32,7 @@ import kotlinx.serialization.modules.SerializersModule
 import kotlinx.serialization.modules.polymorphic
 
 @Composable
-fun FSNavGraph() {
+fun HWNavGraph() {
     val backStack = rememberNavBackStack(
         configuration = SavedStateConfiguration {
             serializersModule = SerializersModule {
@@ -75,7 +75,7 @@ fun FSNavGraph() {
                 entry<Screen.Onboarding> { OnboardingRoute() }
                 entry<Screen.Login> { LoginRoute() }
                 entry<Screen.Register> { RegisterRoute() }
-                entry<Screen.BottomBar> { FSBottomBar() }
+                entry<Screen.BottomBar> { HWBottomBar() }
                 entry<Screen.Welcome> { WelcomeRoute() }
                 entry<Screen.Characters> { CharactersRoute() }
                 entry<Screen.CharacterDetail> { CharacterDetailRoute() }

@@ -20,10 +20,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.canerture.hogwartia.ui.theme.FSTheme
+import com.canerture.hogwartia.ui.theme.HWTheme
 
 @Composable
-fun FSToolbar(
+fun HWToolbar(
     title: String,
     titleSpan: String,
 ) {
@@ -33,32 +33,32 @@ fun FSToolbar(
             .padding(24.dp),
         verticalAlignment = Alignment.Top,
     ) {
-        FSText(
+        HWText(
             modifier = Modifier.weight(1f),
             fullText = title,
             spanText = titleSpan,
             style = TextStyle(
                 fontSize = 30.sp,
                 fontWeight = FontWeight.Normal,
-                color = FSTheme.colors.brown,
+                color = HWTheme.colors.brown,
             ),
             spanStyle = SpanStyle(
                 fontSize = 30.sp,
                 fontWeight = FontWeight.Bold,
-                color = FSTheme.colors.brown,
+                color = HWTheme.colors.brown,
             )
         )
         Box(
             modifier = Modifier
                 .size(46.dp)
                 .background(
-                    color = FSTheme.colors.softPink,
+                    color = HWTheme.colors.softPink,
                     shape = RoundedCornerShape(16.dp),
                 ),
             contentAlignment = Alignment.Center,
         ) {
-            FSIcon(
-                vector = FSTheme.icons.logo,
+            HWIcon(
+                vector = HWTheme.icons.logo,
                 contentDescription = "HouseDetail Icon"
             )
         }
@@ -66,7 +66,7 @@ fun FSToolbar(
 }
 
 @Composable
-fun FSToolbar(
+fun HWToolbar(
     onBackClick: () -> Unit,
     endContent: @Composable () -> Unit,
 ) {
@@ -76,9 +76,9 @@ fun FSToolbar(
             .padding(24.dp),
         verticalAlignment = Alignment.Top,
     ) {
-        FSIcon(
+        HWIcon(
             modifier = Modifier.clickable { onBackClick() },
-            vector = FSTheme.icons.arrowBack,
+            vector = HWTheme.icons.arrowBack,
             contentDescription = "Back Icon",
         )
         Spacer(modifier = Modifier.weight(1f))
@@ -88,27 +88,27 @@ fun FSToolbar(
 
 @Preview(showBackground = true)
 @Composable
-private fun FSToolbarPreview() {
+private fun HWToolbarPreview() {
     Column {
         Spacer(modifier = Modifier.height(12.dp))
-        FSToolbar(
+        HWToolbar(
             title = "Specials\nMenu Offers",
             titleSpan = "Menu Offers",
         )
         Spacer(modifier = Modifier.height(12.dp))
-        FSToolbar(
+        HWToolbar(
             onBackClick = { },
             endContent = {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    FSIcon(
-                        vector = FSTheme.icons.search,
+                    HWIcon(
+                        vector = HWTheme.icons.search,
                         contentDescription = "HouseDetail Icon",
                     )
-                    FSSpacer(24)
-                    FSIcon(
-                        vector = FSTheme.icons.filter,
+                    HWSpacer(24)
+                    HWIcon(
+                        vector = HWTheme.icons.filter,
                         contentDescription = "Filter Icon",
                     )
                 }

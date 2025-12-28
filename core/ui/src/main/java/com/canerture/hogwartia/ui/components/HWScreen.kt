@@ -14,12 +14,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
-import com.canerture.hogwartia.ui.theme.FSTheme
+import com.canerture.hogwartia.ui.theme.HWTheme
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
 @Composable
-fun <T> FSScreen(
+fun <T> HWScreen(
     isLoading: Boolean = false,
     uiEffect: Flow<T>? = null,
     collectEffect: ((T) -> Unit)? = null,
@@ -30,18 +30,18 @@ fun <T> FSScreen(
     }
 
     content()
-    if (isLoading) FSLoading()
+    if (isLoading) HWLoading()
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun <T> FSScreenWithSheet(
+fun <T> HWScreenWithSheet(
     isLoading: Boolean = false,
     uiEffect: Flow<T>? = null,
     collectEffect: ((T) -> Unit)? = null,
     isSheetOpen: Boolean = false,
     skipPartiallyExpanded: Boolean = false,
-    containerColor: Color = FSTheme.colors.white,
+    containerColor: Color = HWTheme.colors.white,
     sheetContent: @Composable () -> Unit,
     onDismissSheet: () -> Unit,
     content: @Composable () -> Unit,
@@ -84,5 +84,5 @@ fun <T> FSScreenWithSheet(
         }
     }
 
-    if (isLoading) FSLoading()
+    if (isLoading) HWLoading()
 }

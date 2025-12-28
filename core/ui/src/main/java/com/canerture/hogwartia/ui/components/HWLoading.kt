@@ -11,14 +11,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.StrokeCap
-import com.canerture.hogwartia.ui.theme.FSTheme
+import com.canerture.hogwartia.ui.theme.HWTheme
 
 @Composable
-fun FSLoading() {
+fun HWLoading() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(FSTheme.colors.brown.copy(alpha = 0.4f))
+            .background(HWTheme.colors.brown.copy(alpha = 0.4f))
             .clickable(
                 indication = null,
                 interactionSource = remember { MutableInteractionSource() }
@@ -26,7 +26,7 @@ fun FSLoading() {
         contentAlignment = Alignment.Center,
     ) {
         CircularProgressIndicator(
-            color = FSTheme.colors.brown,
+            color = HWTheme.colors.brown,
             strokeCap = StrokeCap.Round,
         )
     }

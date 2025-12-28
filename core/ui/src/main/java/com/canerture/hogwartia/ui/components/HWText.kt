@@ -16,13 +16,13 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import com.canerture.hogwartia.ui.R
-import com.canerture.hogwartia.ui.theme.FSTheme
+import com.canerture.hogwartia.ui.theme.HWTheme
 
 @Composable
-fun FSText(
+fun HWText(
     modifier: Modifier = Modifier,
     text: String,
-    color: Color = FSTheme.colors.brown,
+    color: Color = HWTheme.colors.brown,
     style: TextStyle = LocalTextStyle.current,
     overflow: TextOverflow = TextOverflow.Clip,
     maxLines: Int = Int.MAX_VALUE,
@@ -46,11 +46,11 @@ fun FSText(
 }
 
 @Composable
-fun FSText(
+fun HWText(
     modifier: Modifier = Modifier,
     fullText: String,
     spanText: String,
-    color: Color = FSTheme.colors.brown,
+    color: Color = HWTheme.colors.brown,
     style: TextStyle = LocalTextStyle.current,
     spanStyle: SpanStyle = SpanStyle(),
     textAlign: TextAlign? = null,
@@ -83,8 +83,8 @@ fun FSText(
 
 @Preview(showBackground = true)
 @Composable
-private fun FSTextPreview() {
-    FSText(
-        text = "FSText"
+private fun HWTextPreview() {
+    HWText(
+        text = "HWText"
     )
 }

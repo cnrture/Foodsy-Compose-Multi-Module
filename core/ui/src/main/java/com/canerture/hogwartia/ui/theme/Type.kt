@@ -10,7 +10,7 @@ import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.ui.R
 
-internal val LocalTypography = staticCompositionLocalOf { FSTypography() }
+internal val LocalTypography = staticCompositionLocalOf { HWTypography() }
 
 val Poppins = FontFamily(
     Font(R.font.noto_regular, FontWeight.Normal),
@@ -18,7 +18,7 @@ val Poppins = FontFamily(
     Font(R.font.noto_bold, FontWeight.Bold),
 )
 
-class FSTypography {
+class HWTypography {
     val heading1: TextStyle
         @Composable
         get() = TextStyle(
@@ -29,7 +29,7 @@ class FSTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = FSTheme.colors.brown
+            color = HWTheme.colors.brown
         )
     val heading2: TextStyle
         @Composable
@@ -41,7 +41,7 @@ class FSTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = FSTheme.colors.brown
+            color = HWTheme.colors.brown
         )
     val heading3: TextStyle
         @Composable
@@ -53,7 +53,7 @@ class FSTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = FSTheme.colors.brown
+            color = HWTheme.colors.brown
         )
     val heading4: TextStyle
         @Composable
@@ -65,7 +65,7 @@ class FSTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = FSTheme.colors.brown
+            color = HWTheme.colors.brown
         )
     val heading5: TextStyle
         @Composable
@@ -77,7 +77,7 @@ class FSTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = FSTheme.colors.brown
+            color = HWTheme.colors.brown
         )
     val heading6: TextStyle
         @Composable
@@ -89,7 +89,7 @@ class FSTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = FSTheme.colors.brown
+            color = HWTheme.colors.brown
         )
     val heading7: TextStyle
         @Composable
@@ -101,7 +101,7 @@ class FSTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = FSTheme.colors.brown
+            color = HWTheme.colors.brown
         )
     val subheading1: TextStyle
         @Composable
@@ -113,7 +113,7 @@ class FSTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = FSTheme.colors.brown
+            color = HWTheme.colors.brown
         )
     val subheading2: TextStyle
         @Composable
@@ -125,7 +125,7 @@ class FSTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = FSTheme.colors.brown
+            color = HWTheme.colors.brown
         )
     val subheading3: TextStyle
         @Composable
@@ -137,7 +137,7 @@ class FSTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = FSTheme.colors.brown
+            color = HWTheme.colors.brown
         )
     val paragraph1: TextStyle
         @Composable
@@ -149,7 +149,7 @@ class FSTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = FSTheme.colors.brown
+            color = HWTheme.colors.brown
         )
     val paragraph2: TextStyle
         @Composable
@@ -161,7 +161,7 @@ class FSTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = FSTheme.colors.brown
+            color = HWTheme.colors.brown
         )
     val paragraph3: TextStyle
         @Composable
@@ -173,7 +173,7 @@ class FSTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = FSTheme.colors.brown
+            color = HWTheme.colors.brown
         )
     val paragraph4: TextStyle
         @Composable
@@ -185,6 +185,6 @@ class FSTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = FSTheme.colors.brown
+            color = HWTheme.colors.brown
         )
 }

@@ -25,12 +25,12 @@ import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.runtime.rememberSaveableStateHolderNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import com.canerture.hogwartia.ui.navigation.BottomBarScreen
-import com.canerture.hogwartia.ui.theme.FSTheme
+import com.canerture.hogwartia.ui.theme.HWTheme
 import com.canerture.home.feature.home.navigation.HomeRoute
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun FSBottomBar() {
+fun HWBottomBar() {
     val bottomBarItems = listOf(
         BottomBarScreen.Home,
         BottomBarScreen.Favorites,
@@ -48,7 +48,7 @@ fun FSBottomBar() {
     Scaffold(
         bottomBar = {
             NavigationBar(
-                containerColor = FSTheme.colors.lightYellow,
+                containerColor = HWTheme.colors.lightYellow,
             ) {
                 bottomBarItems.forEach { destination ->
                     val isSelected = currentBottomBarScreen == destination
@@ -56,9 +56,9 @@ fun FSBottomBar() {
                     NavigationBarItem(
                         selected = isSelected,
                         colors = NavigationBarItemDefaults.colors(
-                            selectedIconColor = FSTheme.colors.brown,
-                            unselectedIconColor = FSTheme.colors.brown,
-                            indicatorColor = FSTheme.colors.lightYellow,
+                            selectedIconColor = HWTheme.colors.brown,
+                            unselectedIconColor = HWTheme.colors.brown,
+                            indicatorColor = HWTheme.colors.lightYellow,
                         ),
                         icon = {
                             Icon(

@@ -14,11 +14,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.feature.splash.SplashContract.UiEffect
-import com.canerture.hogwartia.ui.components.FSIcon
-import com.canerture.hogwartia.ui.components.FSSpacer
-import com.canerture.hogwartia.ui.components.FSText
+import com.canerture.hogwartia.ui.components.HWIcon
+import com.canerture.hogwartia.ui.components.HWSpacer
+import com.canerture.hogwartia.ui.components.HWText
 import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
-import com.canerture.hogwartia.ui.theme.FSTheme
+import com.canerture.hogwartia.ui.theme.HWTheme
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 
@@ -31,7 +31,7 @@ fun SplashScreen(
     SplashContent(
         modifier = Modifier
             .fillMaxSize()
-            .background(FSTheme.colors.lightYellow),
+            .background(HWTheme.colors.lightYellow),
     )
 }
 
@@ -44,26 +44,26 @@ internal fun SplashContent(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
-        FSIcon(
+        HWIcon(
             modifier = Modifier.size(170.dp),
-            vector = FSTheme.icons.logo,
+            vector = HWTheme.icons.logo,
         )
-        FSSpacer(12)
-        FSText(
+        HWSpacer(12)
+        HWText(
             text = "Hogwartia",
             style = TextStyle(
                 fontSize = 48.sp,
                 fontWeight = FontWeight.Medium,
             )
         )
-        FSSpacer(4)
-        FSText(
+        HWSpacer(4)
+        HWText(
             text = "Food Delivery App",
             style = TextStyle(
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Bold,
             ),
-            color = FSTheme.colors.orange,
+            color = HWTheme.colors.orange,
         )
     }
 }
@@ -71,7 +71,7 @@ internal fun SplashContent(
 @Preview(showBackground = true)
 @Composable
 internal fun SplashScreenPreview() {
-    FSTheme {
+    HWTheme {
         SplashScreen(
             uiEffect = emptyFlow(),
         )

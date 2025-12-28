@@ -13,10 +13,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.canerture.hogwartia.ui.theme.FSTheme
+import com.canerture.hogwartia.ui.theme.HWTheme
 
 @Composable
-fun FSChip(
+fun HWChip(
     modifier: Modifier = Modifier,
     selected: Boolean,
     onClick: () -> Unit,
@@ -27,33 +27,33 @@ fun FSChip(
         selected = selected,
         onClick = onClick,
         label = {
-            FSText(
+            HWText(
                 modifier = Modifier.padding(horizontal = 20.dp, vertical = 10.dp),
                 text = label,
                 style = TextStyle(
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Medium,
                 ),
-                color = if (selected) FSTheme.colors.white else FSTheme.colors.darkBrown,
+                color = if (selected) HWTheme.colors.white else HWTheme.colors.darkBrown,
             )
         },
         shape = RoundedCornerShape(16.dp),
         border = BorderStroke(
             width = 1.dp,
-            color = if (selected) FSTheme.colors.green else FSTheme.colors.lightBrown,
+            color = if (selected) HWTheme.colors.green else HWTheme.colors.lightBrown,
         ),
         colors = FilterChipDefaults.filterChipColors(
             containerColor = Color.Transparent,
-            selectedContainerColor = FSTheme.colors.green,
+            selectedContainerColor = HWTheme.colors.green,
         ),
     )
 }
 
 @Preview(showBackground = true)
 @Composable
-fun FSChipPreview() {
-    FSTheme {
-        FSChip(
+fun HWChipPreview() {
+    HWTheme {
+        HWChip(
             selected = true,
             onClick = {},
             label = "Sample Chip",

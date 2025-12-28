@@ -23,17 +23,17 @@ import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.feature.login.LoginContract.UiAction
 import com.canerture.hogwartia.feature.login.LoginContract.UiEffect
 import com.canerture.hogwartia.feature.login.LoginContract.UiState
-import com.canerture.hogwartia.ui.components.FSButton
-import com.canerture.hogwartia.ui.components.FSButtonType
-import com.canerture.hogwartia.ui.components.FSIcon
-import com.canerture.hogwartia.ui.components.FSLoading
-import com.canerture.hogwartia.ui.components.FSSpacer
-import com.canerture.hogwartia.ui.components.FSSpacerWeight
-import com.canerture.hogwartia.ui.components.FSText
-import com.canerture.hogwartia.ui.components.FSTextField
+import com.canerture.hogwartia.ui.components.HWButton
+import com.canerture.hogwartia.ui.components.HWButtonType
+import com.canerture.hogwartia.ui.components.HWIcon
+import com.canerture.hogwartia.ui.components.HWLoading
+import com.canerture.hogwartia.ui.components.HWSpacer
+import com.canerture.hogwartia.ui.components.HWSpacerWeight
+import com.canerture.hogwartia.ui.components.HWText
+import com.canerture.hogwartia.ui.components.HWTextField
 import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
 import com.canerture.hogwartia.ui.extensions.noRippleClickable
-import com.canerture.hogwartia.ui.theme.FSTheme
+import com.canerture.hogwartia.ui.theme.HWTheme
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 
@@ -48,14 +48,14 @@ fun LoginScreen(
     LoginContent(
         modifier = Modifier
             .fillMaxSize()
-            .background(FSTheme.colors.lightYellow)
+            .background(HWTheme.colors.lightYellow)
             .verticalScroll(rememberScrollState())
             .padding(36.dp),
         uiState = uiState,
         onAction = onAction,
     )
 
-    if (uiState.isLoading) FSLoading()
+    if (uiState.isLoading) HWLoading()
 }
 
 @Composable
@@ -69,14 +69,14 @@ fun LoginContent(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
-        FSIcon(
+        HWIcon(
             modifier = Modifier.size(140.dp),
-            vector = FSTheme.icons.logo,
+            vector = HWTheme.icons.logo,
         )
 
-        FSSpacer(34)
+        HWSpacer(34)
 
-        FSText(
+        HWText(
             text = stringResource(R.string.login),
             style = TextStyle(
                 fontSize = 30.sp,
@@ -84,33 +84,33 @@ fun LoginContent(
             ),
         )
 
-        FSSpacer(24)
+        HWSpacer(24)
 
-        FSButton(
+        HWButton(
             text = stringResource(R.string.login_with_google),
-            icon = FSTheme.icons.google,
-            type = FSButtonType.SECONDARY,
+            icon = HWTheme.icons.google,
+            type = HWButtonType.SECONDARY,
             onClick = { onAction(UiAction.OnGoogleLoginClick) }
         )
 
-        FSSpacer(36)
+        HWSpacer(36)
 
-        FSText(
+        HWText(
             text = stringResource(R.string.or_with_email)
         )
 
-        FSSpacer(24)
+        HWSpacer(24)
 
-        FSTextField(
+        HWTextField(
             modifier = Modifier.fillMaxWidth(),
             label = stringResource(R.string.email_hint),
             value = uiState.email,
             onValueChange = { onAction(UiAction.OnEmailChange(it)) },
         )
 
-        FSSpacer(16)
+        HWSpacer(16)
 
-        FSTextField(
+        HWTextField(
             modifier = Modifier.fillMaxWidth(),
             isPassword = true,
             label = stringResource(R.string.password_hint),
@@ -118,22 +118,22 @@ fun LoginContent(
             onValueChange = { onAction(UiAction.OnPasswordChange(it)) },
         )
 
-        FSSpacer(30)
+        HWSpacer(30)
 
-        FSButton(
+        HWButton(
             modifier = Modifier.fillMaxWidth(),
             text = stringResource(R.string.login),
             onClick = { onAction(UiAction.OnLoginClick) },
         )
 
-        FSSpacerWeight(1f)
+        HWSpacerWeight(1f)
 
-        FSText(
+        HWText(
             modifier = Modifier.noRippleClickable { onAction(UiAction.OnRegisterClick) },
             fullText = stringResource(R.string.register_text),
             spanText = stringResource(R.string.register_text_span),
             spanStyle = SpanStyle(
-                color = FSTheme.colors.green,
+                color = HWTheme.colors.green,
                 fontWeight = FontWeight.SemiBold,
             ),
         )

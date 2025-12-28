@@ -6,9 +6,9 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import com.canerture.hogwartia.ui.R
 
-internal val LocalIcons = staticCompositionLocalOf { FSIcons() }
+internal val LocalIcons = staticCompositionLocalOf { HWIcons() }
 
-class FSIcons {
+class HWIcons {
     val logo: ImageVector
         @Composable
         get() = ImageVector.vectorResource(id = R.drawable.ic_logo)

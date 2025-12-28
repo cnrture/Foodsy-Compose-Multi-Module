@@ -20,7 +20,7 @@ internal fun lightColors(
     lightYellow: Color = Color(0xFFFFF5E0),
     white: Color = Color(0xFFFFFAF0),
     softPink: Color = Color(0xFFF5D3BB),
-): FSColor = FSColor(
+): HWColor = HWColor(
     brown = brown,
     green = green,
     orange = orange,
@@ -44,7 +44,7 @@ internal fun darkColors(
     lightYellow: Color = Color(0xFFFFF5E0),
     white: Color = Color(0xFFFFFAF0),
     softPink: Color = Color(0xFFF5D3BB),
-): FSColor = FSColor(
+): HWColor = HWColor(
     brown = brown,
     green = green,
     orange = orange,
@@ -57,7 +57,7 @@ internal fun darkColors(
     softPink = softPink,
 )
 
-class FSColor(
+class HWColor(
     brown: Color,
     green: Color,
     orange: Color,

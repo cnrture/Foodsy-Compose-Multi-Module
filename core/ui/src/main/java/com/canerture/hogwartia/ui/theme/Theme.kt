@@ -5,29 +5,29 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.ReadOnlyComposable
 
-object FSTheme {
-    val colors: FSColor
+object HWTheme {
+    val colors: HWColor
         @Composable
         @ReadOnlyComposable
         get() = if (isSystemInDarkTheme()) LocalDarkColors.current else LocalLightColors.current
 
-    val icons: FSIcons
+    val icons: HWIcons
         @Composable
         @ReadOnlyComposable
         get() = LocalIcons.current
 
-    val typography: FSTypography
+    val typography: HWTypography
         @Composable
         @ReadOnlyComposable
         get() = LocalTypography.current
 }
 
 @Composable
-fun FSTheme(content: @Composable () -> Unit) {
+fun HWTheme(content: @Composable () -> Unit) {
     CompositionLocalProvider(
-        LocalLightColors provides FSTheme.colors,
-        LocalIcons provides FSTheme.icons,
-        LocalTypography provides FSTheme.typography,
+        LocalLightColors provides HWTheme.colors,
+        LocalIcons provides HWTheme.icons,
+        LocalTypography provides HWTheme.typography,
     ) {
         content()
     }

@@ -32,10 +32,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.ui.extensions.conditional
 import com.canerture.hogwartia.ui.extensions.noRippleClickable
-import com.canerture.hogwartia.ui.theme.FSTheme
+import com.canerture.hogwartia.ui.theme.HWTheme
 
 @Composable
-fun FSTextField(
+fun HWTextField(
     modifier: Modifier = Modifier,
     value: String,
     label: String? = null,
@@ -51,21 +51,21 @@ fun FSTextField(
 
     val trailingIcon: @Composable (() -> Unit)? = if (isPassword) {
         {
-            FSIcon(
+            HWIcon(
                 modifier = Modifier
                     .size(24.dp)
                     .clickable { visibility = !visibility },
-                vector = if (visibility) FSTheme.icons.visibilityOn else FSTheme.icons.visibilityOff,
-                tint = FSTheme.colors.brown,
+                vector = if (visibility) HWTheme.icons.visibilityOn else HWTheme.icons.visibilityOff,
+                tint = HWTheme.colors.brown,
                 contentDescription = label,
             )
         }
     } else if (icon != null) {
         {
-            FSIcon(
+            HWIcon(
                 modifier = Modifier.size(20.dp),
                 vector = icon,
-                tint = FSTheme.colors.brown,
+                tint = HWTheme.colors.brown,
                 contentDescription = label,
             )
         }
@@ -80,7 +80,7 @@ fun FSTextField(
             .clip(RoundedCornerShape(16.dp))
             .border(
                 width = 1.dp,
-                color = FSTheme.colors.beige,
+                color = HWTheme.colors.beige,
                 shape = RoundedCornerShape(16.dp),
             ),
         value = value,
@@ -91,10 +91,10 @@ fun FSTextField(
         textStyle = TextStyle(
             fontSize = 14.sp,
             fontWeight = FontWeight.Normal,
-            color = FSTheme.colors.brown,
+            color = HWTheme.colors.brown,
         ),
         singleLine = isSingleLine,
-        cursorBrush = SolidColor(value = FSTheme.colors.brown),
+        cursorBrush = SolidColor(value = HWTheme.colors.brown),
         decorationBox = {
             Box(
                 modifier = Modifier
@@ -114,14 +114,14 @@ fun FSTextField(
                         contentAlignment = Alignment.CenterStart,
                     ) {
                         if (value.isBlank() && label != null) {
-                            FSText(
+                            HWText(
                                 text = label,
                                 style = TextStyle(
                                     fontSize = 14.sp,
                                     fontWeight = FontWeight.Normal,
-                                    color = FSTheme.colors.brown,
+                                    color = HWTheme.colors.brown,
                                 ),
-                                color = FSTheme.colors.brown.copy(alpha = 0.5f)
+                                color = HWTheme.colors.brown.copy(alpha = 0.5f)
                             )
                         } else {
                             it()
@@ -139,12 +139,12 @@ fun FSTextField(
 
 @Preview(showBackground = true)
 @Composable
-private fun FSTextFieldPreview() {
-    FSTheme {
+private fun HWTextFieldPreview() {
+    HWTheme {
         Box(
             modifier = Modifier.padding(16.dp),
         ) {
-            FSTextField(
+            HWTextField(
                 value = "caner@gmail.com",
                 label = "Your Email",
                 isPassword = true,

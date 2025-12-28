@@ -23,24 +23,24 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.ui.R
-import com.canerture.hogwartia.ui.theme.FSTheme
+import com.canerture.hogwartia.ui.theme.HWTheme
 
-enum class FSButtonType { PRIMARY, SECONDARY, OUTLINED }
+enum class HWButtonType { PRIMARY, SECONDARY, OUTLINED }
 
-enum class FSButtonSize { SMALL, MEDIUM }
+enum class HWButtonSize { SMALL, MEDIUM }
 
 @Composable
-fun FSButton(
+fun HWButton(
     modifier: Modifier = Modifier,
     text: String,
     isEnable: Boolean = true,
-    type: FSButtonType = FSButtonType.PRIMARY,
-    size: FSButtonSize = FSButtonSize.MEDIUM,
+    type: HWButtonType = HWButtonType.PRIMARY,
+    size: HWButtonSize = HWButtonSize.MEDIUM,
     icon: ImageVector? = null,
     onClick: () -> Unit,
 ) {
     val textStyle = when (size) {
-        FSButtonSize.SMALL -> TextStyle(
+        HWButtonSize.SMALL -> TextStyle(
             fontSize = 14.sp,
             fontWeight = FontWeight.Medium,
             fontFamily = FontFamily(
@@ -50,7 +50,7 @@ fun FSButton(
             ),
         )
 
-        FSButtonSize.MEDIUM -> TextStyle(
+        HWButtonSize.MEDIUM -> TextStyle(
             fontSize = 15.sp,
             fontWeight = FontWeight.SemiBold,
             fontFamily = FontFamily(
@@ -62,17 +62,17 @@ fun FSButton(
     }
 
     val height = when (size) {
-        FSButtonSize.SMALL -> 40.dp
-        FSButtonSize.MEDIUM -> 50.dp
+        HWButtonSize.SMALL -> 40.dp
+        HWButtonSize.MEDIUM -> 50.dp
     }
 
     val paddingValues = when (size) {
-        FSButtonSize.SMALL -> PaddingValues(horizontal = 20.dp, vertical = 8.dp)
-        FSButtonSize.MEDIUM -> PaddingValues(horizontal = 20.dp, vertical = 12.dp)
+        HWButtonSize.SMALL -> PaddingValues(horizontal = 20.dp, vertical = 8.dp)
+        HWButtonSize.MEDIUM -> PaddingValues(horizontal = 20.dp, vertical = 12.dp)
     }
 
     when (type) {
-        FSButtonType.PRIMARY -> {
+        HWButtonType.PRIMARY -> {
             Button(
                 modifier = Modifier
                     .then(modifier)
@@ -80,8 +80,8 @@ fun FSButton(
                 onClick = onClick,
                 enabled = isEnable,
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = FSTheme.colors.green,
-                    disabledContainerColor = FSTheme.colors.green.copy(alpha = 0.2f),
+                    containerColor = HWTheme.colors.green,
+                    disabledContainerColor = HWTheme.colors.green.copy(alpha = 0.2f),
                 ),
                 shape = RoundedCornerShape(16.dp),
                 contentPadding = paddingValues,
@@ -95,22 +95,22 @@ fun FSButton(
                     )
                     Spacer(modifier = Modifier.width(14.dp))
                 }
-                FSText(
+                HWText(
                     text = text,
-                    color = FSTheme.colors.white,
+                    color = HWTheme.colors.white,
                     style = textStyle,
                 )
             }
         }
 
-        FSButtonType.SECONDARY -> {
+        HWButtonType.SECONDARY -> {
             Button(
                 modifier = Modifier
                     .height(height)
                     .then(modifier),
                 onClick = onClick,
                 enabled = isEnable,
-                colors = ButtonDefaults.buttonColors(FSTheme.colors.orange),
+                colors = ButtonDefaults.buttonColors(HWTheme.colors.orange),
                 shape = RoundedCornerShape(16.dp),
                 contentPadding = paddingValues,
             ) {
@@ -123,15 +123,15 @@ fun FSButton(
                     )
                     Spacer(modifier = Modifier.width(14.dp))
                 }
-                FSText(
+                HWText(
                     text = text,
-                    color = FSTheme.colors.white,
+                    color = HWTheme.colors.white,
                     style = textStyle,
                 )
             }
         }
 
-        FSButtonType.OUTLINED -> {
+        HWButtonType.OUTLINED -> {
             Button(
                 modifier = Modifier
                     .height(height)
@@ -140,12 +140,12 @@ fun FSButton(
                 enabled = isEnable,
                 colors = ButtonDefaults.buttonColors(Color.Transparent),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(width = 1.dp, color = FSTheme.colors.beige),
+                border = BorderStroke(width = 1.dp, color = HWTheme.colors.beige),
                 contentPadding = paddingValues,
             ) {
-                FSText(
+                HWText(
                     text = text,
-                    color = FSTheme.colors.brown,
+                    color = HWTheme.colors.brown,
                     style = textStyle,
                 )
             }
@@ -155,50 +155,50 @@ fun FSButton(
 
 @Preview(showBackground = true)
 @Composable
-private fun FSButtonPreview() {
-    FSTheme {
+private fun HWButtonPreview() {
+    HWTheme {
         Column {
-            FSButton(
+            HWButton(
                 text = "Primary Button",
-                type = FSButtonType.PRIMARY,
-                size = FSButtonSize.SMALL,
+                type = HWButtonType.PRIMARY,
+                size = HWButtonSize.SMALL,
                 onClick = { }
             )
             Spacer(modifier = Modifier.height(16.dp))
-            FSButton(
+            HWButton(
                 text = "Outlined Button",
-                type = FSButtonType.OUTLINED,
-                size = FSButtonSize.SMALL,
+                type = HWButtonType.OUTLINED,
+                size = HWButtonSize.SMALL,
                 onClick = { }
             )
             Spacer(modifier = Modifier.height(16.dp))
-            FSButton(
+            HWButton(
                 text = "Primary Button",
-                type = FSButtonType.PRIMARY,
-                size = FSButtonSize.MEDIUM,
+                type = HWButtonType.PRIMARY,
+                size = HWButtonSize.MEDIUM,
                 onClick = { }
             )
             Spacer(modifier = Modifier.height(16.dp))
-            FSButton(
+            HWButton(
                 text = "Primary Button",
-                type = FSButtonType.SECONDARY,
-                size = FSButtonSize.SMALL,
+                type = HWButtonType.SECONDARY,
+                size = HWButtonSize.SMALL,
                 onClick = { }
             )
             Spacer(modifier = Modifier.height(16.dp))
-            FSButton(
+            HWButton(
                 text = "Outlined Button",
-                type = FSButtonType.OUTLINED,
-                size = FSButtonSize.SMALL,
-                icon = FSTheme.icons.google,
+                type = HWButtonType.OUTLINED,
+                size = HWButtonSize.SMALL,
+                icon = HWTheme.icons.google,
                 onClick = { }
             )
             Spacer(modifier = Modifier.height(16.dp))
-            FSButton(
+            HWButton(
                 text = "Primary Button",
-                type = FSButtonType.SECONDARY,
-                size = FSButtonSize.MEDIUM,
-                icon = FSTheme.icons.google,
+                type = HWButtonType.SECONDARY,
+                size = HWButtonSize.MEDIUM,
+                icon = HWTheme.icons.google,
                 onClick = { }
             )
         }

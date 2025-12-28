@@ -9,21 +9,21 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun FSSpacer(size: Int) {
+fun HWSpacer(size: Int) {
     Spacer(
         modifier = Modifier.size(size.dp)
     )
 }
 
 @Composable
-fun RowScope.FSSpacerWeight(weight: Float) {
+fun RowScope.HWSpacerWeight(weight: Float) {
     Spacer(
         modifier = Modifier.weight(weight),
     )
 }
 
 @Composable
-fun ColumnScope.FSSpacerWeight(weight: Float) {
+fun ColumnScope.HWSpacerWeight(weight: Float) {
     Spacer(
         modifier = Modifier.weight(weight),
     )

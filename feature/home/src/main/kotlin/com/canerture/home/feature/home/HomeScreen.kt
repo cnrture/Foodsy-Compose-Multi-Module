@@ -24,14 +24,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import com.canerture.hogwartia.feature.home.R
-import com.canerture.hogwartia.ui.components.FSFoodCard
-import com.canerture.hogwartia.ui.components.FSIcon
-import com.canerture.hogwartia.ui.components.FSLoading
-import com.canerture.hogwartia.ui.components.FSSpacer
-import com.canerture.hogwartia.ui.components.FSText
-import com.canerture.hogwartia.ui.components.FSToolbar
+import com.canerture.hogwartia.ui.components.HWFoodCard
+import com.canerture.hogwartia.ui.components.HWIcon
+import com.canerture.hogwartia.ui.components.HWLoading
+import com.canerture.hogwartia.ui.components.HWSpacer
+import com.canerture.hogwartia.ui.components.HWText
+import com.canerture.hogwartia.ui.components.HWToolbar
 import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
-import com.canerture.hogwartia.ui.theme.FSTheme
+import com.canerture.hogwartia.ui.theme.HWTheme
 import com.canerture.home.feature.home.HomeContract.UiAction
 import com.canerture.home.feature.home.HomeContract.UiEffect
 import com.canerture.home.feature.home.HomeContract.UiState
@@ -48,17 +48,17 @@ fun HomeScreen(
 
     Scaffold(
         topBar = {
-            FSToolbar(
+            HWToolbar(
                 title = stringResource(R.string.title),
                 titleSpan = stringResource(R.string.title_span),
             )
         },
-        containerColor = FSTheme.colors.lightYellow,
+        containerColor = HWTheme.colors.lightYellow,
     ) { paddingValues ->
         HomeContent(
             modifier = Modifier
                 .fillMaxSize()
-                .background(FSTheme.colors.lightYellow)
+                .background(HWTheme.colors.lightYellow)
                 .padding(paddingValues)
                 .verticalScroll(rememberScrollState())
                 .padding(vertical = 24.dp),
@@ -66,7 +66,7 @@ fun HomeScreen(
             onAction = onAction,
         )
 
-        if (uiState.isLoading) FSLoading()
+        if (uiState.isLoading) HWLoading()
     }
 }
 
@@ -89,21 +89,21 @@ fun HomeContent(
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
-                    FSIcon(
+                    HWIcon(
                         modifier = Modifier.size(46.dp),
-                        vector = FSTheme.icons.logo,
+                        vector = HWTheme.icons.logo,
                     )
-                    FSSpacer(8)
-                    FSText(
+                    HWSpacer(8)
+                    HWText(
                         text = "Sushi",
                         style = TextStyle(fontWeight = FontWeight.Bold),
                     )
                 }
-                FSSpacer(24)
+                HWSpacer(24)
             }
         }
 
-        FSSpacer(32)
+        HWSpacer(32)
 
         HorizontalPager(
             state = pagerState,
@@ -111,10 +111,10 @@ fun HomeContent(
             contentPadding = PaddingValues(horizontal = 48.dp),
             pageSpacing = 20.dp,
         ) {
-            FSFoodCard(
+            HWFoodCard(
                 title = "Specials Sushi",
                 price = "$${38 + it * 2}.00",
-                icon = FSTheme.icons.logo,
+                icon = HWTheme.icons.logo,
                 isFavorite = it == 1,
                 onFavoriteClick = {},
                 onAddClick = {},

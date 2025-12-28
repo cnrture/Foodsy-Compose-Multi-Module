@@ -23,10 +23,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.ui.extensions.noRippleClickable
-import com.canerture.hogwartia.ui.theme.FSTheme
+import com.canerture.hogwartia.ui.theme.HWTheme
 
 @Composable
-fun FSFoodCard(
+fun HWFoodCard(
     modifier: Modifier = Modifier,
     title: String,
     icon: ImageVector,
@@ -39,7 +39,7 @@ fun FSFoodCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(32.dp),
         colors = CardDefaults.cardColors(
-            containerColor = FSTheme.colors.softPink,
+            containerColor = HWTheme.colors.softPink,
         ),
         elevation = CardDefaults.cardElevation(0.dp),
     ) {
@@ -47,14 +47,14 @@ fun FSFoodCard(
             Column(
                 modifier = Modifier.padding(24.dp),
             ) {
-                FSIcon(
+                HWIcon(
                     modifier = Modifier
                         .fillMaxWidth()
                         .aspectRatio(1f),
                     vector = icon,
                 )
 
-                FSSpacer(24)
+                HWSpacer(24)
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -62,24 +62,24 @@ fun FSFoodCard(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Column {
-                        FSText(
+                        HWText(
                             text = title,
                             style = TextStyle(
                                 fontSize = 24.sp,
                                 fontWeight = FontWeight.Bold,
                             ),
-                            color = FSTheme.colors.brown,
+                            color = HWTheme.colors.brown,
                         )
 
-                        FSSpacer(4)
+                        HWSpacer(4)
 
-                        FSText(
+                        HWText(
                             text = price,
                             style = TextStyle(
                                 fontSize = 18.sp,
                                 fontWeight = FontWeight.SemiBold,
                             ),
-                            color = FSTheme.colors.darkBrown,
+                            color = HWTheme.colors.darkBrown,
                         )
                     }
 
@@ -89,27 +89,27 @@ fun FSFoodCard(
                             .clip(RoundedCornerShape(12.dp))
                             .border(
                                 width = 1.dp,
-                                color = FSTheme.colors.lightBrown,
+                                color = HWTheme.colors.lightBrown,
                                 shape = RoundedCornerShape(12.dp),
                             )
                             .noRippleClickable { onAddClick() },
                         contentAlignment = Alignment.Center,
                     ) {
-                        FSIcon(
+                        HWIcon(
                             modifier = Modifier.size(14.dp),
-                            vector = FSTheme.icons.plus,
-                            tint = FSTheme.colors.brown,
+                            vector = HWTheme.icons.plus,
+                            tint = HWTheme.colors.brown,
                         )
                     }
                 }
             }
 
-            FSIcon(
+            HWIcon(
                 modifier = Modifier
                     .align(Alignment.TopEnd)
                     .padding(24.dp),
-                vector = if (isFavorite) FSTheme.icons.favoriteFilled else FSTheme.icons.favoriteOutline,
-                tint = FSTheme.colors.orange,
+                vector = if (isFavorite) HWTheme.icons.favoriteFilled else HWTheme.icons.favoriteOutline,
+                tint = HWTheme.colors.orange,
             )
         }
     }
@@ -117,11 +117,11 @@ fun FSFoodCard(
 
 @Preview(showBackground = true)
 @Composable
-fun FSFoodCardPreview() {
-    FSFoodCard(
+fun HWFoodCardPreview() {
+    HWFoodCard(
         title = "Specials Sushi",
         price = "$38.00",
         isFavorite = true,
-        icon = FSTheme.icons.logo,
+        icon = HWTheme.icons.logo,
     )
 }

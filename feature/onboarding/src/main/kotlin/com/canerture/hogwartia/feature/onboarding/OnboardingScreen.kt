@@ -32,12 +32,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.feature.onboarding.OnboardingContract.UiAction
 import com.canerture.hogwartia.feature.onboarding.OnboardingContract.UiEffect
-import com.canerture.hogwartia.ui.components.FSButton
-import com.canerture.hogwartia.ui.components.FSButtonType
-import com.canerture.hogwartia.ui.components.FSSpacer
-import com.canerture.hogwartia.ui.components.FSText
+import com.canerture.hogwartia.ui.components.HWButton
+import com.canerture.hogwartia.ui.components.HWButtonType
+import com.canerture.hogwartia.ui.components.HWSpacer
+import com.canerture.hogwartia.ui.components.HWText
 import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
-import com.canerture.hogwartia.ui.theme.FSTheme
+import com.canerture.hogwartia.ui.theme.HWTheme
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 
@@ -51,7 +51,7 @@ fun OnboardingScreen(
     OnboardingContent(
         modifier = Modifier
             .fillMaxSize()
-            .background(FSTheme.colors.lightYellow)
+            .background(HWTheme.colors.lightYellow)
             .padding(vertical = 36.dp),
         onAction = onAction,
     )
@@ -78,15 +78,15 @@ fun OnboardingContent(
         ) {
             PageContent(data = onboardingPages[it])
         }
-        FSSpacer(32)
+        HWSpacer(32)
         Indicators(
             size = 3,
             index = pagerState.currentPage,
         )
         Spacer(Modifier.weight(1f))
-        FSButton(
+        HWButton(
             text = stringResource(id = R.string.skip),
-            type = FSButtonType.OUTLINED,
+            type = HWButtonType.OUTLINED,
             onClick = { onAction(UiAction.OnSkipClick) },
         )
     }
@@ -102,8 +102,8 @@ private fun PageContent(
             painter = painterResource(id = data.image),
             contentDescription = null,
         )
-        FSSpacer(64)
-        FSText(
+        HWSpacer(64)
+        HWText(
             fullText = stringResource(id = data.title),
             spanText = stringResource(id = data.titleSpan),
             style = TextStyle(
@@ -115,8 +115,8 @@ private fun PageContent(
             ),
             textAlign = TextAlign.Center,
         )
-        FSSpacer(16)
-        FSText(
+        HWSpacer(16)
+        HWText(
             text = stringResource(id = data.description),
             style = TextStyle(
                 fontSize = 16.sp,
@@ -141,7 +141,7 @@ private fun Indicators(modifier: Modifier = Modifier, size: Int, index: Int) {
                     .width(if (it == index) 22.dp else 5.dp)
                     .clip(shape = CircleShape)
                     .background(
-                        if (it == index) FSTheme.colors.green else FSTheme.colors.green.copy(0.5f)
+                        if (it == index) HWTheme.colors.green else HWTheme.colors.green.copy(0.5f)
                     )
             )
         }
@@ -173,7 +173,7 @@ private fun getOnboardingData() = listOf(
 @Preview(showBackground = true)
 @Composable
 fun OnboardingScreenPreview() {
-    FSTheme {
+    HWTheme {
         OnboardingScreen(
             uiEffect = emptyFlow(),
             onAction = {},

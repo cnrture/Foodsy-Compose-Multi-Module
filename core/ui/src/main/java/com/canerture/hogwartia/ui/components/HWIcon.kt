@@ -7,7 +7,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 
 @Composable
-fun FSIcon(
+fun HWIcon(
     modifier: Modifier = Modifier,
     vector: ImageVector,
     tint: Color = Color.Unspecified,
