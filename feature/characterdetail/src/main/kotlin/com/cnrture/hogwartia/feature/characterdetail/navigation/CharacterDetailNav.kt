@@ -1,20 +1,20 @@
-package com.cnrture.hogwartia.feature.confirmorder.navigation
+package com.cnrture.hogwartia.feature.characterdetail.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.canerture.hogwartia.ui.delegate.navigator.NavigationClientCollector
-import com.cnrture.hogwartia.feature.confirmorder.ConfirmOrderScreen
-import com.cnrture.hogwartia.feature.confirmorder.ConfirmOrderViewModel
+import com.cnrture.hogwartia.feature.characterdetail.CharacterDetailScreen
+import com.cnrture.hogwartia.feature.characterdetail.CharacterDetailViewModel
 
 @Composable
-fun ConfirmOrderRoute() {
-    val viewModel = hiltViewModel<ConfirmOrderViewModel>()
+fun CharacterDetailRoute() {
+    val viewModel = hiltViewModel<CharacterDetailViewModel>()
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val uiEffect = viewModel.uiEffect
     NavigationClientCollector(viewModel.navigationClientEffect)
-    ConfirmOrderScreen(
+    CharacterDetailScreen(
         uiState = uiState,
         uiEffect = uiEffect,
         onAction = viewModel::onAction,

@@ -1,6 +1,6 @@
-package com.cnrture.hogwartia.feature.confirmorder
+package com.cnrture.hogwartia.feature.characterdetail
 
-object ConfirmOrderContract {
+object CharacterDetailContract {
     data class UiState(
         val isLoading: Boolean = false,
         val list: List<String> = emptyList(),

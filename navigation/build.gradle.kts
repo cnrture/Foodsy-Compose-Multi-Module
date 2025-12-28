@@ -21,7 +21,7 @@ dependencies {
     implementation(projects.feature.home)
     implementation(projects.feature.welcome)
     implementation(projects.feature.characters)
-    implementation(projects.feature.confirmorder)
+    implementation(projects.feature.characterdetail)
     implementation(projects.feature.discount)
     implementation(projects.feature.dishdetail)
     implementation(projects.feature.favorites)

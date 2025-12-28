@@ -19,7 +19,7 @@ import com.canerture.hogwartia.ui.delegate.navigator.RememberBackStack
 import com.canerture.hogwartia.ui.navigation.Screen
 import com.cnrture.hogwartia.feature.welcome.navigation.WelcomeRoute
 import com.cnrture.hogwartia.feature.characters.navigation.CategoriesRoute
-import com.cnrture.hogwartia.feature.confirmorder.navigation.ConfirmOrderRoute
+import com.cnrture.hogwartia.feature.characterdetail.navigation.ConfirmOrderRoute
 import com.cnrture.hogwartia.feature.discount.navigation.DiscountRoute
 import com.cnrture.hogwartia.feature.dishdetail.navigation.DishDetailRoute
 import com.cnrture.hogwartia.feature.favorites.navigation.FavoritesRoute

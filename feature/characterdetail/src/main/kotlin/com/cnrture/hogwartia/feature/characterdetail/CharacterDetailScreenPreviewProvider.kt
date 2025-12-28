@@ -1,19 +1,19 @@
-package com.cnrture.hogwartia.feature.confirmorder
+package com.cnrture.hogwartia.feature.characterdetail
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 
-class ConfirmOrderScreenPreviewProvider : PreviewParameterProvider<ConfirmOrderContract.UiState> {
-    override val values: Sequence<ConfirmOrderContract.UiState>
+class CharacterDetailScreenPreviewProvider : PreviewParameterProvider<CharacterDetailContract.UiState> {
+    override val values: Sequence<CharacterDetailContract.UiState>
         get() = sequenceOf(
-            ConfirmOrderContract.UiState(
+            CharacterDetailContract.UiState(
                 isLoading = true,
                 list = emptyList(),
             ),
-            ConfirmOrderContract.UiState(
+            CharacterDetailContract.UiState(
                 isLoading = false,
                 list = emptyList(),
             ),
-            ConfirmOrderContract.UiState(
+            CharacterDetailContract.UiState(
                 isLoading = false,
                 list = listOf("Item 1", "Item 2", "Item 3")
             ),

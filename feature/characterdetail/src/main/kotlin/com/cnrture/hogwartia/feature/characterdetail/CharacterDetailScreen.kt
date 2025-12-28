@@ -1,4 +1,4 @@
-package com.cnrture.hogwartia.feature.confirmorder
+package com.cnrture.hogwartia.feature.characterdetail
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,21 +10,21 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
-import com.cnrture.hogwartia.feature.confirmorder.ConfirmOrderContract.UiAction
-import com.cnrture.hogwartia.feature.confirmorder.ConfirmOrderContract.UiEffect
-import com.cnrture.hogwartia.feature.confirmorder.ConfirmOrderContract.UiState
+import com.cnrture.hogwartia.feature.characterdetail.CharacterDetailContract.UiAction
+import com.cnrture.hogwartia.feature.characterdetail.CharacterDetailContract.UiEffect
+import com.cnrture.hogwartia.feature.characterdetail.CharacterDetailContract.UiState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 
 @Composable
-fun ConfirmOrderScreen(
+fun CharacterDetailScreen(
     uiState: UiState,
     uiEffect: Flow<UiEffect>,
     onAction: (UiAction) -> Unit,
 ) {
     uiEffect.collectWithLifecycle {}
 
-    ConfirmOrderContent(
+    CharacterDetailContent(
         modifier = Modifier.fillMaxSize(),
         uiState = uiState,
         onAction = onAction,
@@ -32,7 +32,7 @@ fun ConfirmOrderScreen(
 }
 
 @Composable
-fun ConfirmOrderContent(
+fun CharacterDetailContent(
     modifier: Modifier = Modifier,
     uiState: UiState,
     onAction: (UiAction) -> Unit,
@@ -50,10 +50,10 @@ fun ConfirmOrderContent(
 
 @Preview(showBackground = true)
 @Composable
-fun ConfirmOrderScreenPreview(
-    @PreviewParameter(ConfirmOrderScreenPreviewProvider::class) uiState: UiState,
+fun CharacterDetailScreenPreview(
+    @PreviewParameter(CharacterDetailScreenPreviewProvider::class) uiState: UiState,
 ) {
-    ConfirmOrderScreen(
+    CharacterDetailScreen(
         uiState = uiState,
         uiEffect = emptyFlow(),
         onAction = {},
