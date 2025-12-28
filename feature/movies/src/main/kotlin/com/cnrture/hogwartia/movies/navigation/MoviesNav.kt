@@ -1,16 +1,16 @@
-package com.cnrture.hogwartia.forgotpassword.navigation
+package com.cnrture.hogwartia.movies.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.canerture.hogwartia.ui.delegate.navigator.NavigationClientCollector
-import com.cnrture.hogwartia.forgotpassword.ForgotPasswordScreen
-import com.cnrture.hogwartia.forgotpassword.ForgotPasswordViewModel
+import com.cnrture.hogwartia.movies.ForgotPasswordScreen
+import com.cnrture.hogwartia.movies.MoviesViewModel
 
 @Composable
-fun ForgotPasswordRoute() {
-    val viewModel = hiltViewModel<ForgotPasswordViewModel>()
+fun MoviesRoute() {
+    val viewModel = hiltViewModel<MoviesViewModel>()
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val uiEffect = viewModel.uiEffect
     NavigationClientCollector(viewModel.navigationClientEffect)

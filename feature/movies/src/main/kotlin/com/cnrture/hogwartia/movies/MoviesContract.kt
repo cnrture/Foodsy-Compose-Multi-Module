@@ -1,6 +1,6 @@
-package com.cnrture.hogwartia.forgotpassword
+package com.cnrture.hogwartia.movies
 
-object ForgotPasswordContract {
+object MoviesContract {
     data class UiState(
         val isLoading: Boolean = false,
         val list: List<String> = emptyList(),

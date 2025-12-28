@@ -27,7 +27,7 @@ import com.cnrture.hogwartia.feature.orders.navigation.OrdersRoute
 import com.cnrture.hogwartia.feature.profile.navigation.ProfileRoute
 import com.cnrture.hogwartia.feature.search.navigation.SearchRoute
 import com.cnrture.hogwartia.feature.welcome.navigation.WelcomeRoute
-import com.cnrture.hogwartia.forgotpassword.navigation.ForgotPasswordRoute
+import com.cnrture.hogwartia.movies.navigation.MoviesRoute
 import kotlinx.serialization.modules.SerializersModule
 import kotlinx.serialization.modules.polymorphic
 
@@ -48,7 +48,7 @@ fun FSNavGraph() {
                     subclass(Screen.Discount::class, Screen.Discount.serializer())
                     subclass(Screen.DishDetail::class, Screen.DishDetail.serializer())
                     subclass(Screen.Favorites::class, Screen.Favorites.serializer())
-                    subclass(Screen.ForgotPassword::class, Screen.ForgotPassword.serializer())
+                    subclass(Screen.Movies::class, Screen.Movies.serializer())
                     subclass(Screen.OrderComplete::class, Screen.OrderComplete.serializer())
                     subclass(Screen.Orders::class, Screen.Orders.serializer())
                     subclass(Screen.Profile::class, Screen.Profile.serializer())
@@ -82,7 +82,7 @@ fun FSNavGraph() {
                 entry<Screen.Discount> { DiscountRoute() }
                 entry<Screen.DishDetail> { DishDetailRoute() }
                 entry<Screen.Favorites> { FavoritesRoute() }
-                entry<Screen.ForgotPassword> { ForgotPasswordRoute() }
+                entry<Screen.Movies> { MoviesRoute() }
                 entry<Screen.OrderComplete> { OrderCompleteRoute() }
                 entry<Screen.Orders> { OrdersRoute() }
                 entry<Screen.Profile> { ProfileRoute() }

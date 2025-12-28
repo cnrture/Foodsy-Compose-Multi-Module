@@ -1,19 +1,19 @@
-package com.cnrture.hogwartia.forgotpassword
+package com.cnrture.hogwartia.movies
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 
-class ForgotPasswordScreenPreviewProvider : PreviewParameterProvider<ForgotPasswordContract.UiState> {
-    override val values: Sequence<ForgotPasswordContract.UiState>
+class MoviesScreenPreviewProvider : PreviewParameterProvider<MoviesContract.UiState> {
+    override val values: Sequence<MoviesContract.UiState>
         get() = sequenceOf(
-            ForgotPasswordContract.UiState(
+            MoviesContract.UiState(
                 isLoading = true,
                 list = emptyList(),
             ),
-            ForgotPasswordContract.UiState(
+            MoviesContract.UiState(
                 isLoading = false,
                 list = emptyList(),
             ),
-            ForgotPasswordContract.UiState(
+            MoviesContract.UiState(
                 isLoading = false,
                 list = listOf("Item 1", "Item 2", "Item 3")
             ),

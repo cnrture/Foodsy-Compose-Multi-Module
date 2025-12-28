@@ -4,5 +4,5 @@ plugins {
 }
 
 android {
-    namespace = "com.canerture.hogwartia.feature.forgotpassword"
+    namespace = "com.canerture.hogwartia.feature.movies"
 }

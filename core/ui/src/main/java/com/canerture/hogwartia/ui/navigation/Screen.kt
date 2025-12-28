@@ -40,7 +40,7 @@ sealed interface Screen : NavKey {
     data object Favorites : Screen
 
     @Serializable
-    data object ForgotPassword : Screen
+    data object Movies : Screen
 
     @Serializable
     data object OrderComplete : Screen
