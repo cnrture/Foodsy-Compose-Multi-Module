@@ -20,7 +20,7 @@ dependencies {
     implementation(projects.feature.register)
     implementation(projects.feature.home)
     implementation(projects.feature.welcome)
-    implementation(projects.feature.categories)
+    implementation(projects.feature.characters)
     implementation(projects.feature.confirmorder)
     implementation(projects.feature.discount)
     implementation(projects.feature.dishdetail)

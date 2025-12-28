@@ -1,4 +1,4 @@
-package com.cnrture.hogwartia.feature.categories
+package com.cnrture.hogwartia.feature.characters
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,21 +10,21 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
-import com.cnrture.hogwartia.feature.categories.CategoriesContract.UiAction
-import com.cnrture.hogwartia.feature.categories.CategoriesContract.UiEffect
-import com.cnrture.hogwartia.feature.categories.CategoriesContract.UiState
+import com.cnrture.hogwartia.feature.characters.CharactersContract.UiAction
+import com.cnrture.hogwartia.feature.characters.CharactersContract.UiEffect
+import com.cnrture.hogwartia.feature.characters.CharactersContract.UiState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 
 @Composable
-fun CategoriesScreen(
+fun CharactersScreen(
     uiState: UiState,
     uiEffect: Flow<UiEffect>,
     onAction: (UiAction) -> Unit,
 ) {
     uiEffect.collectWithLifecycle {}
 
-    CategoriesContent(
+    CharactersContent(
         modifier = Modifier.fillMaxSize(),
         uiState = uiState,
         onAction = onAction,
@@ -32,7 +32,7 @@ fun CategoriesScreen(
 }
 
 @Composable
-fun CategoriesContent(
+fun CharactersContent(
     modifier: Modifier = Modifier,
     uiState: UiState,
     onAction: (UiAction) -> Unit,
@@ -42,7 +42,7 @@ fun CategoriesContent(
         contentAlignment = Alignment.Center,
     ) {
         Text(
-            text = "Categories Content",
+            text = "Characters Content",
             fontSize = 24.sp,
         )
     }
@@ -50,10 +50,10 @@ fun CategoriesContent(
 
 @Preview(showBackground = true)
 @Composable
-fun CategoriesScreenPreview(
-    @PreviewParameter(CategoriesScreenPreviewProvider::class) uiState: UiState,
+fun CharactersScreenPreview(
+    @PreviewParameter(CharactersScreenPreviewProvider::class) uiState: UiState,
 ) {
-    CategoriesScreen(
+    CharactersScreen(
         uiState = uiState,
         uiEffect = emptyFlow(),
         onAction = {},

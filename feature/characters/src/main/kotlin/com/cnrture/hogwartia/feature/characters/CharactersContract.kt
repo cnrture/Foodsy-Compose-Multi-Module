@@ -1,6 +1,6 @@
-package com.cnrture.hogwartia.feature.categories
+package com.cnrture.hogwartia.feature.characters
 
-object CategoriesContract {
+object CharactersContract {
     data class UiState(
         val isLoading: Boolean = false,
         val list: List<String> = emptyList(),

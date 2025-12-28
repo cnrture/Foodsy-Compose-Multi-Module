@@ -1,19 +1,19 @@
-package com.cnrture.hogwartia.feature.categories
+package com.cnrture.hogwartia.feature.characters
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 
-class CategoriesScreenPreviewProvider : PreviewParameterProvider<CategoriesContract.UiState> {
-    override val values: Sequence<CategoriesContract.UiState>
+class CharactersScreenPreviewProvider : PreviewParameterProvider<CharactersContract.UiState> {
+    override val values: Sequence<CharactersContract.UiState>
         get() = sequenceOf(
-            CategoriesContract.UiState(
+            CharactersContract.UiState(
                 isLoading = true,
                 list = emptyList(),
             ),
-            CategoriesContract.UiState(
+            CharactersContract.UiState(
                 isLoading = false,
                 list = emptyList(),
             ),
-            CategoriesContract.UiState(
+            CharactersContract.UiState(
                 isLoading = false,
                 list = listOf("Item 1", "Item 2", "Item 3")
             ),

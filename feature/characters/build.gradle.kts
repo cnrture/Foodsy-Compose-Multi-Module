@@ -4,5 +4,5 @@ plugins {
 }
 
 android {
-    namespace = "com.canerture.hogwartia.feature.categories"
+    namespace = "com.canerture.hogwartia.feature.characters"
 }
