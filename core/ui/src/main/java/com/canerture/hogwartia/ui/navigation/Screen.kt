@@ -31,7 +31,7 @@ sealed interface Screen : NavKey {
     data object CharacterDetail : Screen
 
     @Serializable
-    data object Discount : Screen
+    data object Houses : Screen
 
     @Serializable
     data object SpellDetail : Screen

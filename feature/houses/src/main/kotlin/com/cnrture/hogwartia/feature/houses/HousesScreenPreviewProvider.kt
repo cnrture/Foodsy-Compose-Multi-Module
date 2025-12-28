@@ -1,19 +1,19 @@
-package com.cnrture.hogwartia.feature.discount
+package com.cnrture.hogwartia.feature.houses
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 
-class DiscountScreenPreviewProvider : PreviewParameterProvider<DiscountContract.UiState> {
-    override val values: Sequence<DiscountContract.UiState>
+class HousesScreenPreviewProvider : PreviewParameterProvider<HousesContract.UiState> {
+    override val values: Sequence<HousesContract.UiState>
         get() = sequenceOf(
-            DiscountContract.UiState(
+            HousesContract.UiState(
                 isLoading = true,
                 list = emptyList(),
             ),
-            DiscountContract.UiState(
+            HousesContract.UiState(
                 isLoading = false,
                 list = emptyList(),
             ),
-            DiscountContract.UiState(
+            HousesContract.UiState(
                 isLoading = false,
                 list = listOf("Item 1", "Item 2", "Item 3")
             ),

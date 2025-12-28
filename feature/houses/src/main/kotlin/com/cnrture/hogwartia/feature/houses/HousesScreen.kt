@@ -1,4 +1,4 @@
-package com.cnrture.hogwartia.feature.discount
+package com.cnrture.hogwartia.feature.houses
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,21 +10,21 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
-import com.cnrture.hogwartia.feature.discount.DiscountContract.UiAction
-import com.cnrture.hogwartia.feature.discount.DiscountContract.UiEffect
-import com.cnrture.hogwartia.feature.discount.DiscountContract.UiState
+import com.cnrture.hogwartia.feature.houses.HousesContract.UiAction
+import com.cnrture.hogwartia.feature.houses.HousesContract.UiEffect
+import com.cnrture.hogwartia.feature.houses.HousesContract.UiState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 
 @Composable
-fun DiscountScreen(
+fun HousesScreen(
     uiState: UiState,
     uiEffect: Flow<UiEffect>,
     onAction: (UiAction) -> Unit,
 ) {
     uiEffect.collectWithLifecycle {}
 
-    DiscountContent(
+    HousesContent(
         modifier = Modifier.fillMaxSize(),
         uiState = uiState,
         onAction = onAction,
@@ -32,7 +32,7 @@ fun DiscountScreen(
 }
 
 @Composable
-fun DiscountContent(
+fun HousesContent(
     modifier: Modifier = Modifier,
     uiState: UiState,
     onAction: (UiAction) -> Unit,
@@ -42,7 +42,7 @@ fun DiscountContent(
         contentAlignment = Alignment.Center,
     ) {
         Text(
-            text = "Discount Content",
+            text = "Houses Content",
             fontSize = 24.sp,
         )
     }
@@ -50,10 +50,10 @@ fun DiscountContent(
 
 @Preview(showBackground = true)
 @Composable
-fun DiscountScreenPreview(
-    @PreviewParameter(DiscountScreenPreviewProvider::class) uiState: UiState,
+fun HousesScreenPreview(
+    @PreviewParameter(HousesScreenPreviewProvider::class) uiState: UiState,
 ) {
-    DiscountScreen(
+    HousesScreen(
         uiState = uiState,
         uiEffect = emptyFlow(),
         onAction = {},

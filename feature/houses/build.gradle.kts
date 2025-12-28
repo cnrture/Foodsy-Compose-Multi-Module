@@ -4,5 +4,5 @@ plugins {
 }
 
 android {
-    namespace = "com.canerture.hogwartia.feature.discount"
+    namespace = "com.canerture.hogwartia.feature.houses"
 }

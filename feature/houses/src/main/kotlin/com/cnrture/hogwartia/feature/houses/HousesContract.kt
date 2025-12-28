@@ -1,6 +1,6 @@
-package com.cnrture.hogwartia.feature.discount
+package com.cnrture.hogwartia.feature.houses
 
-object DiscountContract {
+object HousesContract {
     data class UiState(
         val isLoading: Boolean = false,
         val list: List<String> = emptyList(),

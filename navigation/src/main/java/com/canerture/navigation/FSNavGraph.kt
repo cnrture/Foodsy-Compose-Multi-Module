@@ -19,8 +19,8 @@ import com.canerture.hogwartia.ui.delegate.navigator.RememberBackStack
 import com.canerture.hogwartia.ui.navigation.Screen
 import com.cnrture.hogwartia.feature.characterdetail.navigation.CharacterDetailRoute
 import com.cnrture.hogwartia.feature.characters.navigation.CharactersRoute
-import com.cnrture.hogwartia.feature.discount.navigation.DiscountRoute
 import com.cnrture.hogwartia.feature.favorites.navigation.FavoritesRoute
+import com.cnrture.hogwartia.feature.houses.navigation.HousesRoute
 import com.cnrture.hogwartia.feature.moviedetail.navigation.MovieDetailRoute
 import com.cnrture.hogwartia.feature.profile.navigation.ProfileRoute
 import com.cnrture.hogwartia.feature.search.navigation.SearchRoute
@@ -45,7 +45,7 @@ fun FSNavGraph() {
                     subclass(Screen.Welcome::class, Screen.Welcome.serializer())
                     subclass(Screen.Characters::class, Screen.Characters.serializer())
                     subclass(Screen.CharacterDetail::class, Screen.CharacterDetail.serializer())
-                    subclass(Screen.Discount::class, Screen.Discount.serializer())
+                    subclass(Screen.Houses::class, Screen.Houses.serializer())
                     subclass(Screen.SpellDetail::class, Screen.SpellDetail.serializer())
                     subclass(Screen.Favorites::class, Screen.Favorites.serializer())
                     subclass(Screen.Movies::class, Screen.Movies.serializer())
@@ -79,7 +79,7 @@ fun FSNavGraph() {
                 entry<Screen.Welcome> { WelcomeRoute() }
                 entry<Screen.Characters> { CharactersRoute() }
                 entry<Screen.CharacterDetail> { CharacterDetailRoute() }
-                entry<Screen.Discount> { DiscountRoute() }
+                entry<Screen.Houses> { HousesRoute() }
                 entry<Screen.SpellDetail> { SpellDetailRoute() }
                 entry<Screen.Favorites> { FavoritesRoute() }
                 entry<Screen.Movies> { MoviesRoute() }
