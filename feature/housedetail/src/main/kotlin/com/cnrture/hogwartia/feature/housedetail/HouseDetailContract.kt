@@ -1,6 +1,6 @@
-package com.cnrture.hogwartia.feature.search
+package com.cnrture.hogwartia.feature.housedetail
 
-object SearchContract {
+object HouseDetailContract {
     data class UiState(
         val isLoading: Boolean = false,
         val list: List<String> = emptyList(),

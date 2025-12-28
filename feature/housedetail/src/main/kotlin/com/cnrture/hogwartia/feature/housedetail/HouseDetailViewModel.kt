@@ -1,4 +1,4 @@
-package com.cnrture.hogwartia.feature.search
+package com.cnrture.hogwartia.feature.housedetail
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -6,15 +6,15 @@ import com.canerture.hogwartia.ui.delegate.mvi.MVI
 import com.canerture.hogwartia.ui.delegate.mvi.mvi
 import com.canerture.hogwartia.ui.delegate.navigator.NavigationClient
 import com.canerture.hogwartia.ui.delegate.navigator.navigationClient
-import com.cnrture.hogwartia.feature.search.SearchContract.UiAction
-import com.cnrture.hogwartia.feature.search.SearchContract.UiEffect
-import com.cnrture.hogwartia.feature.search.SearchContract.UiState
+import com.cnrture.hogwartia.feature.housedetail.HouseDetailContract.UiAction
+import com.cnrture.hogwartia.feature.housedetail.HouseDetailContract.UiEffect
+import com.cnrture.hogwartia.feature.housedetail.HouseDetailContract.UiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class SearchViewModel @Inject constructor() :
+class HouseDetailViewModel @Inject constructor() :
     ViewModel(),
     MVI<UiState, UiAction, UiEffect> by mvi(UiState()),
     NavigationClient by navigationClient() {

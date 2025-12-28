@@ -59,7 +59,7 @@ fun FSToolbar(
         ) {
             FSIcon(
                 vector = FSTheme.icons.logo,
-                contentDescription = "Search Icon"
+                contentDescription = "HouseDetail Icon"
             )
         }
     }
@@ -104,7 +104,7 @@ private fun FSToolbarPreview() {
                 ) {
                     FSIcon(
                         vector = FSTheme.icons.search,
-                        contentDescription = "Search Icon",
+                        contentDescription = "HouseDetail Icon",
                     )
                     FSSpacer(24)
                     FSIcon(

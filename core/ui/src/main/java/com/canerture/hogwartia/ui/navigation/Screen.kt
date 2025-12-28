@@ -52,7 +52,7 @@ sealed interface Screen : NavKey {
     data object Profile : Screen
 
     @Serializable
-    data object Search : Screen
+    data object HouseDetail : Screen
 }
 
 @Serializable

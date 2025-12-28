@@ -1,4 +1,4 @@
-package com.cnrture.hogwartia.feature.search
+package com.cnrture.hogwartia.feature.housedetail
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,21 +10,21 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
-import com.cnrture.hogwartia.feature.search.SearchContract.UiAction
-import com.cnrture.hogwartia.feature.search.SearchContract.UiEffect
-import com.cnrture.hogwartia.feature.search.SearchContract.UiState
+import com.cnrture.hogwartia.feature.housedetail.HouseDetailContract.UiAction
+import com.cnrture.hogwartia.feature.housedetail.HouseDetailContract.UiEffect
+import com.cnrture.hogwartia.feature.housedetail.HouseDetailContract.UiState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 
 @Composable
-fun SearchScreen(
+fun HouseDetailScreen(
     uiState: UiState,
     uiEffect: Flow<UiEffect>,
     onAction: (UiAction) -> Unit,
 ) {
     uiEffect.collectWithLifecycle {}
 
-    SearchContent(
+    HouseDetailContent(
         modifier = Modifier.fillMaxSize(),
         uiState = uiState,
         onAction = onAction,
@@ -32,7 +32,7 @@ fun SearchScreen(
 }
 
 @Composable
-fun SearchContent(
+fun HouseDetailContent(
     modifier: Modifier = Modifier,
     uiState: UiState,
     onAction: (UiAction) -> Unit,
@@ -42,7 +42,7 @@ fun SearchContent(
         contentAlignment = Alignment.Center,
     ) {
         Text(
-            text = "Search Content",
+            text = "HouseDetail Content",
             fontSize = 24.sp,
         )
     }
@@ -50,10 +50,10 @@ fun SearchContent(
 
 @Preview(showBackground = true)
 @Composable
-fun SearchScreenPreview(
-    @PreviewParameter(SearchScreenPreviewProvider::class) uiState: UiState,
+fun HouseDetailScreenPreview(
+    @PreviewParameter(HouseDetailScreenPreviewProvider::class) uiState: UiState,
 ) {
-    SearchScreen(
+    HouseDetailScreen(
         uiState = uiState,
         uiEffect = emptyFlow(),
         onAction = {},

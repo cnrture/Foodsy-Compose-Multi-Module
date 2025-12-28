@@ -4,5 +4,5 @@ plugins {
 }
 
 android {
-    namespace = "com.canerture.hogwartia.feature.search"
+    namespace = "com.canerture.hogwartia.feature.housedetail"
 }

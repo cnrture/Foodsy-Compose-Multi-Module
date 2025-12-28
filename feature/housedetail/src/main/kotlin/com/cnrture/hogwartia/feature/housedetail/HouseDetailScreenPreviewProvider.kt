@@ -1,19 +1,19 @@
-package com.cnrture.hogwartia.feature.search
+package com.cnrture.hogwartia.feature.housedetail
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 
-class SearchScreenPreviewProvider : PreviewParameterProvider<SearchContract.UiState> {
-    override val values: Sequence<SearchContract.UiState>
+class HouseDetailScreenPreviewProvider : PreviewParameterProvider<HouseDetailContract.UiState> {
+    override val values: Sequence<HouseDetailContract.UiState>
         get() = sequenceOf(
-            SearchContract.UiState(
+            HouseDetailContract.UiState(
                 isLoading = true,
                 list = emptyList(),
             ),
-            SearchContract.UiState(
+            HouseDetailContract.UiState(
                 isLoading = false,
                 list = emptyList(),
             ),
-            SearchContract.UiState(
+            HouseDetailContract.UiState(
                 isLoading = false,
                 list = listOf("Item 1", "Item 2", "Item 3")
             ),

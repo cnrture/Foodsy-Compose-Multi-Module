@@ -29,7 +29,7 @@ dependencies {
     implementation(projects.feature.moviedetail)
     implementation(projects.feature.spells)
     implementation(projects.feature.profile)
-    implementation(projects.feature.search)
+    implementation(projects.feature.housedetail)
 
     implementation(projects.core.ui)
 }
