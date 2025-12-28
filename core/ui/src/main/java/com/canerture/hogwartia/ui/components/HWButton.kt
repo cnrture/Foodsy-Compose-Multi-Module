@@ -44,22 +44,12 @@ fun HWButton(
     val textStyle = when (size) {
         HWButtonSize.SMALL -> TextStyle(
             fontSize = 14.sp,
-            fontWeight = FontWeight.Medium,
-            fontFamily = FontFamily(
-                Font(R.font.noto_regular, FontWeight.Normal),
-                Font(R.font.noto_semibold, FontWeight.SemiBold),
-                Font(R.font.noto_bold, FontWeight.Bold),
-            ),
+            fontWeight = FontWeight.Normal,
         )
 
         HWButtonSize.MEDIUM -> TextStyle(
             fontSize = 15.sp,
             fontWeight = FontWeight.SemiBold,
-            fontFamily = FontFamily(
-                Font(R.font.noto_regular, FontWeight.Normal),
-                Font(R.font.noto_semibold, FontWeight.SemiBold),
-                Font(R.font.noto_bold, FontWeight.Bold),
-            ),
         )
     }
 
@@ -85,7 +75,7 @@ fun HWButton(
                     containerColor = containerColor,
                     disabledContainerColor = containerColor.copy(alpha = 0.2f),
                 ),
-                shape = RoundedCornerShape(16.dp),
+                shape = RoundedCornerShape(8.dp),
                 contentPadding = paddingValues,
             ) {
                 icon?.let {
@@ -113,7 +103,7 @@ fun HWButton(
                 onClick = onClick,
                 enabled = isEnable,
                 colors = ButtonDefaults.buttonColors(Color.Transparent),
-                shape = RoundedCornerShape(16.dp),
+                shape = RoundedCornerShape(8.dp),
                 border = BorderStroke(width = 1.dp, color = containerColor),
                 contentPadding = paddingValues,
             ) {
