@@ -1,4 +1,4 @@
-package com.cnrture.hogwartia.feature.cart
+package com.cnrture.hogwartia.feature.welcome
 
 object WelcomeContract {
     data class UiState(

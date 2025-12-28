@@ -33,6 +33,6 @@ class HomeViewModel @Inject constructor() :
     }
 
     private fun addToCart(id: Int) = viewModelScope.launch {
-        // Implementation for adding item to cart
+        // Implementation for adding item to welcome
     }
 }

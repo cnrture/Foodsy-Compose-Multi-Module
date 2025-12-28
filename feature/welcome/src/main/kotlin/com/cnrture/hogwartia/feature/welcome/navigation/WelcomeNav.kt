@@ -1,12 +1,12 @@
-package com.cnrture.hogwartia.feature.cart.navigation
+package com.cnrture.hogwartia.feature.welcome.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.canerture.hogwartia.ui.delegate.navigator.NavigationClientCollector
-import com.cnrture.hogwartia.feature.cart.WelcomeScreen
-import com.cnrture.hogwartia.feature.cart.WelcomeViewModel
+import com.cnrture.hogwartia.feature.welcome.WelcomeScreen
+import com.cnrture.hogwartia.feature.welcome.WelcomeViewModel
 
 @Composable
 fun WelcomeRoute() {

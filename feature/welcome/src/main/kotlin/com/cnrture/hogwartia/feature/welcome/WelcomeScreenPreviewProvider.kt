@@ -1,4 +1,4 @@
-package com.cnrture.hogwartia.feature.cart
+package com.cnrture.hogwartia.feature.welcome
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 

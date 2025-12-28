@@ -1,4 +1,4 @@
-package com.cnrture.hogwartia.feature.cart
+package com.cnrture.hogwartia.feature.welcome
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,9 +10,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
-import com.cnrture.hogwartia.feature.cart.WelcomeContract.UiAction
-import com.cnrture.hogwartia.feature.cart.WelcomeContract.UiEffect
-import com.cnrture.hogwartia.feature.cart.WelcomeContract.UiState
+import com.cnrture.hogwartia.feature.welcome.WelcomeContract.UiAction
+import com.cnrture.hogwartia.feature.welcome.WelcomeContract.UiEffect
+import com.cnrture.hogwartia.feature.welcome.WelcomeContract.UiState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 
