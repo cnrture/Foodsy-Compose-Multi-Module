@@ -1,10 +1,10 @@
 package com.canerture.hogwartia.network
 
-import com.canerture.core.hogwartia.common.AuthorizationException
-import com.canerture.core.hogwartia.common.BadRequestException
-import com.canerture.core.hogwartia.common.NetworkException
-import com.canerture.core.hogwartia.common.NotFoundException
-import com.canerture.core.hogwartia.common.UnknownException
+import com.canerture.hogwartia.common.AuthorizationException
+import com.canerture.hogwartia.common.BadRequestException
+import com.canerture.hogwartia.common.NetworkException
+import com.canerture.hogwartia.common.NotFoundException
+import com.canerture.hogwartia.common.UnknownException
 import com.canerture.hogwartia.network.model.BaseResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

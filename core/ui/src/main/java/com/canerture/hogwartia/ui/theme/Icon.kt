@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
-import com.canerture.core.ui.R
+import com.canerture.hogwartia.ui.R
 
 internal val LocalIcons = staticCompositionLocalOf { FSIcons() }
 

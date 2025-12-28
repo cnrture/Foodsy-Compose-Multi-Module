@@ -15,7 +15,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
-import com.canerture.core.ui.R
+import com.canerture.hogwartia.ui.R
 import com.canerture.hogwartia.ui.theme.FSTheme
 
 @Composable
@@ -35,10 +35,9 @@ fun FSText(
         style = style.merge(
             color = color,
             fontFamily = FontFamily(
-                Font(R.font.poppins_regular, FontWeight.Normal),
-                Font(R.font.poppins_medium, FontWeight.Medium),
-                Font(R.font.poppins_semi_bold, FontWeight.SemiBold),
-                Font(R.font.poppins_bold, FontWeight.Bold),
+                Font(R.font.noto_regular, FontWeight.Normal),
+                Font(R.font.noto_semibold, FontWeight.SemiBold),
+                Font(R.font.noto_bold, FontWeight.Bold),
             ),
         ),
         overflow = overflow,
@@ -74,10 +73,9 @@ fun FSText(
         style = style.merge(
             color = color,
             fontFamily = FontFamily(
-                Font(R.font.poppins_regular, FontWeight.Normal),
-                Font(R.font.poppins_medium, FontWeight.Medium),
-                Font(R.font.poppins_semi_bold, FontWeight.SemiBold),
-                Font(R.font.poppins_bold, FontWeight.Bold),
+                Font(R.font.noto_regular, FontWeight.Normal),
+                Font(R.font.noto_semibold, FontWeight.SemiBold),
+                Font(R.font.noto_bold, FontWeight.Bold),
             ),
         ),
     )

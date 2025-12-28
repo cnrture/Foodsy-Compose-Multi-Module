@@ -8,15 +8,14 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.unit.sp
-import com.canerture.core.ui.R
+import com.canerture.hogwartia.ui.R
 
 internal val LocalTypography = staticCompositionLocalOf { FSTypography() }
 
 val Poppins = FontFamily(
-    Font(R.font.poppins_regular, FontWeight.Normal),
-    Font(R.font.poppins_medium, FontWeight.Medium),
-    Font(R.font.poppins_semi_bold, FontWeight.SemiBold),
-    Font(R.font.poppins_bold, FontWeight.Bold),
+    Font(R.font.noto_regular, FontWeight.Normal),
+    Font(R.font.noto_semibold, FontWeight.SemiBold),
+    Font(R.font.noto_bold, FontWeight.Bold),
 )
 
 class FSTypography {

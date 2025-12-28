@@ -22,7 +22,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.canerture.core.ui.R
+import com.canerture.hogwartia.ui.R
 import com.canerture.hogwartia.ui.theme.FSTheme
 
 enum class FSButtonType { PRIMARY, SECONDARY, OUTLINED }
@@ -44,10 +44,9 @@ fun FSButton(
             fontSize = 14.sp,
             fontWeight = FontWeight.Medium,
             fontFamily = FontFamily(
-                Font(R.font.poppins_regular, FontWeight.Normal),
-                Font(R.font.poppins_medium, FontWeight.Medium),
-                Font(R.font.poppins_semi_bold, FontWeight.SemiBold),
-                Font(R.font.poppins_bold, FontWeight.Bold),
+                Font(R.font.noto_regular, FontWeight.Normal),
+                Font(R.font.noto_semibold, FontWeight.SemiBold),
+                Font(R.font.noto_bold, FontWeight.Bold),
             ),
         )
 
@@ -55,10 +54,9 @@ fun FSButton(
             fontSize = 15.sp,
             fontWeight = FontWeight.SemiBold,
             fontFamily = FontFamily(
-                Font(R.font.poppins_regular, FontWeight.Normal),
-                Font(R.font.poppins_medium, FontWeight.Medium),
-                Font(R.font.poppins_semi_bold, FontWeight.SemiBold),
-                Font(R.font.poppins_bold, FontWeight.Bold),
+                Font(R.font.noto_regular, FontWeight.Normal),
+                Font(R.font.noto_semibold, FontWeight.SemiBold),
+                Font(R.font.noto_bold, FontWeight.Bold),
             ),
         )
     }

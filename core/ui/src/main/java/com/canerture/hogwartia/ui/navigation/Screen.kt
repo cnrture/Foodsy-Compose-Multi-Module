@@ -1,7 +1,7 @@
 package com.canerture.hogwartia.ui.navigation
 
 import androidx.navigation3.runtime.NavKey
-import com.canerture.core.ui.R
+import com.canerture.hogwartia.ui.R
 import kotlinx.serialization.Serializable
 
 @Serializable

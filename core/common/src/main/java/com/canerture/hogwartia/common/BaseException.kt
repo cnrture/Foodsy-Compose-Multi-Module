@@ -1,4 +1,4 @@
-package com.canerture.core.hogwartia.common
+package com.canerture.hogwartia.common
 
 open class BaseException(message: String) : Exception(message)
 
