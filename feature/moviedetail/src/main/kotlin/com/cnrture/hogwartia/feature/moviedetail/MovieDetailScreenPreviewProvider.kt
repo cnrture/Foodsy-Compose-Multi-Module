@@ -1,4 +1,4 @@
-package com.cnrture.hogwartia.feature.ordercomplete
+package com.cnrture.hogwartia.feature.moviedetail
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 

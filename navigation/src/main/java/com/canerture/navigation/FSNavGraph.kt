@@ -21,7 +21,7 @@ import com.cnrture.hogwartia.feature.characterdetail.navigation.CharacterDetailR
 import com.cnrture.hogwartia.feature.characters.navigation.CharactersRoute
 import com.cnrture.hogwartia.feature.discount.navigation.DiscountRoute
 import com.cnrture.hogwartia.feature.favorites.navigation.FavoritesRoute
-import com.cnrture.hogwartia.feature.ordercomplete.navigation.MovieDetailRoute
+import com.cnrture.hogwartia.feature.moviedetail.navigation.MovieDetailRoute
 import com.cnrture.hogwartia.feature.profile.navigation.ProfileRoute
 import com.cnrture.hogwartia.feature.search.navigation.SearchRoute
 import com.cnrture.hogwartia.feature.spelldetail.navigation.SpellDetailRoute

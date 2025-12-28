@@ -1,4 +1,4 @@
-package com.cnrture.hogwartia.feature.ordercomplete
+package com.cnrture.hogwartia.feature.moviedetail
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,9 +10,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
-import com.cnrture.hogwartia.feature.ordercomplete.MovieDetailContract.UiAction
-import com.cnrture.hogwartia.feature.ordercomplete.MovieDetailContract.UiEffect
-import com.cnrture.hogwartia.feature.ordercomplete.MovieDetailContract.UiState
+import com.cnrture.hogwartia.feature.moviedetail.MovieDetailContract.UiAction
+import com.cnrture.hogwartia.feature.moviedetail.MovieDetailContract.UiEffect
+import com.cnrture.hogwartia.feature.moviedetail.MovieDetailContract.UiState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 
