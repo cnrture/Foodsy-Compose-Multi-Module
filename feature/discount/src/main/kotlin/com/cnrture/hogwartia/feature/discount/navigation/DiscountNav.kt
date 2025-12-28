@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.canerture.ui.delegate.navigator.NavigationClientCollector
+import com.canerture.hogwartia.ui.delegate.navigator.NavigationClientCollector
 import com.cnrture.hogwartia.feature.discount.DiscountScreen
 import com.cnrture.hogwartia.feature.discount.DiscountViewModel
 

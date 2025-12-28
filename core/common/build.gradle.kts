@@ -3,7 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.plugin.compose")
 }
 
-group = "com.canerture.core.common"
+group = "com.canerture.hogwartia.core.common"
 
 dependencies {
     implementation(platform(libs.compose.bom))

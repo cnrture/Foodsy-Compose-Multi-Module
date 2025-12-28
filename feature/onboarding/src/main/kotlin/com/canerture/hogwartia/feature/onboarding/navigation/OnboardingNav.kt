@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import com.canerture.hogwartia.feature.onboarding.OnboardingScreen
 import com.canerture.hogwartia.feature.onboarding.OnboardingViewModel
-import com.canerture.ui.delegate.navigator.NavigationClientCollector
+import com.canerture.hogwartia.ui.delegate.navigator.NavigationClientCollector
 
 @Composable
 fun OnboardingRoute() {

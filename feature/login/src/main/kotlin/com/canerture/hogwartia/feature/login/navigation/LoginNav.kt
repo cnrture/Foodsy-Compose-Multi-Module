@@ -6,7 +6,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.canerture.hogwartia.feature.login.LoginScreen
 import com.canerture.hogwartia.feature.login.LoginViewModel
-import com.canerture.ui.delegate.navigator.NavigationClientCollector
+import com.canerture.hogwartia.ui.delegate.navigator.NavigationClientCollector
 
 @Composable
 fun LoginRoute() {

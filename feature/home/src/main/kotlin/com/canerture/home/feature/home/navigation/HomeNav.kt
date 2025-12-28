@@ -4,9 +4,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.canerture.hogwartia.ui.delegate.navigator.NavigationClientCollector
 import com.canerture.home.feature.home.HomeScreen
 import com.canerture.home.feature.home.HomeViewModel
-import com.canerture.ui.delegate.navigator.NavigationClientCollector
 
 @Composable
 fun HomeRoute() {

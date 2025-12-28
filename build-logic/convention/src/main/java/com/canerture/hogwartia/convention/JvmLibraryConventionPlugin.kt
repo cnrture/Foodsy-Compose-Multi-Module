@@ -1,0 +1,31 @@
+package com.canerture.hogwartia.convention
+
+import com.canerture.hogwartia.config.AppConfig
+import org.gradle.api.Plugin
+import org.gradle.api.Project
+import org.gradle.api.plugins.JavaPluginExtension
+import org.gradle.kotlin.dsl.configure
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
+
+class JvmLibraryConventionPlugin : Plugin<Project> {
+    override fun apply(target: Project) {
+        with(target) {
+            with(pluginManager) {
+                apply("org.jetbrains.kotlin.jvm")
+                apply("hogwartia.detekt")
+            }
+
+            extensions.configure<JavaPluginExtension> {
+                sourceCompatibility = AppConfig.JAVA_VERSION
+                targetCompatibility = AppConfig.JAVA_VERSION
+            }
+
+            extensions.configure<KotlinJvmProjectExtension> {
+                compilerOptions.apply {
+                    jvmTarget.set(JvmTarget.JVM_17)
+                }
+            }
+        }
+    }
+}

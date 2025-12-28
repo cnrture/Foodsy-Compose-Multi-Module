@@ -2,10 +2,10 @@ package com.cnrture.hogwartia.feature.dishdetail
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.canerture.ui.delegate.mvi.MVI
-import com.canerture.ui.delegate.mvi.mvi
-import com.canerture.ui.delegate.navigator.NavigationClient
-import com.canerture.ui.delegate.navigator.navigationClient
+import com.canerture.hogwartia.ui.delegate.mvi.MVI
+import com.canerture.hogwartia.ui.delegate.mvi.mvi
+import com.canerture.hogwartia.ui.delegate.navigator.NavigationClient
+import com.canerture.hogwartia.ui.delegate.navigator.navigationClient
 import com.cnrture.hogwartia.feature.dishdetail.DishDetailContract.UiAction
 import com.cnrture.hogwartia.feature.dishdetail.DishDetailContract.UiEffect
 import com.cnrture.hogwartia.feature.dishdetail.DishDetailContract.UiState

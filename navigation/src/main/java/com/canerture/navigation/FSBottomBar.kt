@@ -24,9 +24,9 @@ import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.runtime.rememberSaveableStateHolderNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
+import com.canerture.hogwartia.ui.navigation.BottomBarScreen
+import com.canerture.hogwartia.ui.theme.FSTheme
 import com.canerture.home.feature.home.navigation.HomeRoute
-import com.canerture.ui.navigation.BottomBarScreen
-import com.canerture.ui.theme.FSTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

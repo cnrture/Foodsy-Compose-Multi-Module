@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.sp
-import com.canerture.ui.extensions.collectWithLifecycle
+import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
 import com.cnrture.hogwartia.feature.orders.OrdersContract.UiAction
 import com.cnrture.hogwartia.feature.orders.OrdersContract.UiEffect
 import com.cnrture.hogwartia.feature.orders.OrdersContract.UiState

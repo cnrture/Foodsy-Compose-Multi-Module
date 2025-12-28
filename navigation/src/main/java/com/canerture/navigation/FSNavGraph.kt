@@ -15,8 +15,8 @@ import com.canerture.hogwartia.feature.login.navigation.LoginRoute
 import com.canerture.hogwartia.feature.onboarding.navigation.OnboardingRoute
 import com.canerture.hogwartia.feature.register.navigation.RegisterRoute
 import com.canerture.hogwartia.feature.splash.navigation.SplashRoute
-import com.canerture.ui.delegate.navigator.RememberBackStack
-import com.canerture.ui.navigation.Screen
+import com.canerture.hogwartia.ui.delegate.navigator.RememberBackStack
+import com.canerture.hogwartia.ui.navigation.Screen
 import com.cnrture.hogwartia.feature.cart.navigation.CartRoute
 import com.cnrture.hogwartia.feature.categories.navigation.CategoriesRoute
 import com.cnrture.hogwartia.feature.confirmorder.navigation.ConfirmOrderRoute

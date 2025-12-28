@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.canerture.core.ui"
+    namespace = "com.canerture.core.hogwartia.ui"
 }
 
 dependencies {

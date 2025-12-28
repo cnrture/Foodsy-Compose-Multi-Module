@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.canerture.core.network"
+    namespace = "com.canerture.core.hogwartia.network"
 
     defaultConfig {
         buildFeatures {

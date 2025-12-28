@@ -5,11 +5,11 @@ import androidx.lifecycle.viewModelScope
 import com.canerture.hogwartia.feature.login.LoginContract.UiAction
 import com.canerture.hogwartia.feature.login.LoginContract.UiEffect
 import com.canerture.hogwartia.feature.login.LoginContract.UiState
-import com.canerture.ui.delegate.mvi.MVI
-import com.canerture.ui.delegate.mvi.mvi
-import com.canerture.ui.delegate.navigator.NavigationClient
-import com.canerture.ui.delegate.navigator.navigationClient
-import com.canerture.ui.navigation.Screen
+import com.canerture.hogwartia.ui.delegate.mvi.MVI
+import com.canerture.hogwartia.ui.delegate.mvi.mvi
+import com.canerture.hogwartia.ui.delegate.navigator.NavigationClient
+import com.canerture.hogwartia.ui.delegate.navigator.navigationClient
+import com.canerture.hogwartia.ui.navigation.Screen
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

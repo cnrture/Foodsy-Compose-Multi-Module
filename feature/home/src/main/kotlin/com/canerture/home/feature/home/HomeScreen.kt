@@ -24,17 +24,17 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import com.canerture.hogwartia.feature.home.R
+import com.canerture.hogwartia.ui.components.FSFoodCard
+import com.canerture.hogwartia.ui.components.FSIcon
+import com.canerture.hogwartia.ui.components.FSLoading
+import com.canerture.hogwartia.ui.components.FSSpacer
+import com.canerture.hogwartia.ui.components.FSText
+import com.canerture.hogwartia.ui.components.FSToolbar
+import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
+import com.canerture.hogwartia.ui.theme.FSTheme
 import com.canerture.home.feature.home.HomeContract.UiAction
 import com.canerture.home.feature.home.HomeContract.UiEffect
 import com.canerture.home.feature.home.HomeContract.UiState
-import com.canerture.ui.components.FSFoodCard
-import com.canerture.ui.components.FSIcon
-import com.canerture.ui.components.FSLoading
-import com.canerture.ui.components.FSSpacer
-import com.canerture.ui.components.FSText
-import com.canerture.ui.components.FSToolbar
-import com.canerture.ui.extensions.collectWithLifecycle
-import com.canerture.ui.theme.FSTheme
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 

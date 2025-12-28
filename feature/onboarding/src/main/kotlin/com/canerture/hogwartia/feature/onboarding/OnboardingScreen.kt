@@ -32,12 +32,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.feature.onboarding.OnboardingContract.UiAction
 import com.canerture.hogwartia.feature.onboarding.OnboardingContract.UiEffect
-import com.canerture.ui.components.FSButton
-import com.canerture.ui.components.FSButtonType
-import com.canerture.ui.components.FSSpacer
-import com.canerture.ui.components.FSText
-import com.canerture.ui.extensions.collectWithLifecycle
-import com.canerture.ui.theme.FSTheme
+import com.canerture.hogwartia.ui.components.FSButton
+import com.canerture.hogwartia.ui.components.FSButtonType
+import com.canerture.hogwartia.ui.components.FSSpacer
+import com.canerture.hogwartia.ui.components.FSText
+import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
+import com.canerture.hogwartia.ui.theme.FSTheme
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 

@@ -1,6 +1,6 @@
 package com.canerture.navigation
 
-import com.canerture.ui.navigation.Screen
+import com.canerture.hogwartia.ui.navigation.Screen
 
 sealed class NavigationItem(
     var route: Screen,

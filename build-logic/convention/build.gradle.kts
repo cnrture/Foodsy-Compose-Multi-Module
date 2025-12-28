@@ -25,43 +25,43 @@ gradlePlugin {
     plugins {
         register("androidApplicationCompose") {
             id = libs.plugins.hogwartia.android.application.compose.get().pluginId
-            implementationClass = "com.canerture.convention.AndroidApplicationComposeConventionPlugin"
+            implementationClass = "com.canerture.hogwartia.convention.AndroidApplicationComposeConventionPlugin"
         }
         register("androidApplication") {
             id = libs.plugins.hogwartia.android.application.asProvider().get().pluginId
-            implementationClass = "com.canerture.convention.AndroidApplicationConventionPlugin"
+            implementationClass = "com.canerture.hogwartia.convention.AndroidApplicationConventionPlugin"
         }
         register("androidLibraryCompose") {
             id = libs.plugins.hogwartia.android.library.compose.get().pluginId
-            implementationClass = "com.canerture.convention.AndroidLibraryComposeConventionPlugin"
+            implementationClass = "com.canerture.hogwartia.convention.AndroidLibraryComposeConventionPlugin"
         }
         register("androidLibrary") {
             id = libs.plugins.hogwartia.android.library.asProvider().get().pluginId
-            implementationClass = "com.canerture.convention.AndroidLibraryConventionPlugin"
+            implementationClass = "com.canerture.hogwartia.convention.AndroidLibraryConventionPlugin"
         }
         register("androidFeature") {
             id = libs.plugins.hogwartia.android.feature.get().pluginId
-            implementationClass = "com.canerture.convention.AndroidFeatureConventionPlugin"
+            implementationClass = "com.canerture.hogwartia.convention.AndroidFeatureConventionPlugin"
         }
         register("hilt") {
             id = libs.plugins.hogwartia.hilt.get().pluginId
-            implementationClass = "com.canerture.convention.HiltConventionPlugin"
+            implementationClass = "com.canerture.hogwartia.convention.HiltConventionPlugin"
         }
         register("androidFirebase") {
             id = libs.plugins.hogwartia.android.firebase.get().pluginId
-            implementationClass = "com.canerture.convention.AndroidApplicationFirebaseConventionPlugin"
+            implementationClass = "com.canerture.hogwartia.convention.AndroidApplicationFirebaseConventionPlugin"
         }
         register("jvmLibrary") {
             id = libs.plugins.hogwartia.jvm.library.get().pluginId
-            implementationClass = "com.canerture.convention.JvmLibraryConventionPlugin"
+            implementationClass = "com.canerture.hogwartia.convention.JvmLibraryConventionPlugin"
         }
         register("detekt") {
             id = libs.plugins.hogwartia.detekt.get().pluginId
-            implementationClass = "com.canerture.convention.DetektConventionPlugin"
+            implementationClass = "com.canerture.hogwartia.convention.DetektConventionPlugin"
         }
         register("retrofit") {
             id = libs.plugins.hogwartia.retrofit.get().pluginId
-            implementationClass = "com.canerture.convention.RetrofitConventionPlugin"
+            implementationClass = "com.canerture.hogwartia.convention.RetrofitConventionPlugin"
         }
     }
 }
