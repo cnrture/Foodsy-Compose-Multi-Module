@@ -1,8 +1,11 @@
 package com.canerture.hogwartia.ui.components
 
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -13,32 +16,29 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
 import com.canerture.hogwartia.ui.theme.HWTheme
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
 @Composable
-fun <T> HWScreen(
+fun HWScreen(
     isLoading: Boolean = false,
-    uiEffect: Flow<T>? = null,
-    collectEffect: ((T) -> Unit)? = null,
-    content: @Composable () -> Unit,
+    content: @Composable (PaddingValues) -> Unit,
 ) {
-    uiEffect?.collectWithLifecycle {
-        collectEffect?.invoke(it)
-    }
+    Scaffold(
+        modifier = Modifier.fillMaxSize(),
+        containerColor = HWTheme.colors.blue,
+        content = { paddingValues ->
+            content(paddingValues)
+        }
+    )
 
-    content()
     if (isLoading) HWLoading()
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun <T> HWScreenWithSheet(
+fun HWScreenWithSheet(
     isLoading: Boolean = false,
-    uiEffect: Flow<T>? = null,
-    collectEffect: ((T) -> Unit)? = null,
     isSheetOpen: Boolean = false,
     skipPartiallyExpanded: Boolean = false,
     containerColor: Color = HWTheme.colors.white,
@@ -46,10 +46,6 @@ fun <T> HWScreenWithSheet(
     onDismissSheet: () -> Unit,
     content: @Composable () -> Unit,
 ) {
-    uiEffect?.collectWithLifecycle {
-        collectEffect?.invoke(it)
-    }
-
     var openBottomSheet by rememberSaveable { mutableStateOf(false) }
     val bottomSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = skipPartiallyExpanded)
     val coroutineScope = rememberCoroutineScope()
