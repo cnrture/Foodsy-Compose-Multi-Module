@@ -4,5 +4,5 @@ plugins {
 }
 
 android {
-    namespace = "com.canerture.hogwartia.feature.orders"
+    namespace = "com.canerture.hogwartia.feature.spells"
 }

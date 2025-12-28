@@ -46,7 +46,7 @@ sealed interface Screen : NavKey {
     data object MovieDetail : Screen
 
     @Serializable
-    data object Orders : Screen
+    data object Spells : Screen
 
     @Serializable
     data object Profile : Screen

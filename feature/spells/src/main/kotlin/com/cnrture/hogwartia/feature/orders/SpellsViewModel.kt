@@ -6,15 +6,15 @@ import com.canerture.hogwartia.ui.delegate.mvi.MVI
 import com.canerture.hogwartia.ui.delegate.mvi.mvi
 import com.canerture.hogwartia.ui.delegate.navigator.NavigationClient
 import com.canerture.hogwartia.ui.delegate.navigator.navigationClient
-import com.cnrture.hogwartia.feature.orders.OrdersContract.UiAction
-import com.cnrture.hogwartia.feature.orders.OrdersContract.UiEffect
-import com.cnrture.hogwartia.feature.orders.OrdersContract.UiState
+import com.cnrture.hogwartia.feature.orders.SpellsContract.UiAction
+import com.cnrture.hogwartia.feature.orders.SpellsContract.UiEffect
+import com.cnrture.hogwartia.feature.orders.SpellsContract.UiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class OrdersViewModel @Inject constructor() :
+class SpellsViewModel @Inject constructor() :
     ViewModel(),
     MVI<UiState, UiAction, UiEffect> by mvi(UiState()),
     NavigationClient by navigationClient() {

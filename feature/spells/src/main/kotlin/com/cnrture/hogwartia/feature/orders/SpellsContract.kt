@@ -1,6 +1,6 @@
 package com.cnrture.hogwartia.feature.orders
 
-object OrdersContract {
+object SpellsContract {
     data class UiState(
         val isLoading: Boolean = false,
         val list: List<String> = emptyList(),

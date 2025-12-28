@@ -10,21 +10,21 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
-import com.cnrture.hogwartia.feature.orders.OrdersContract.UiAction
-import com.cnrture.hogwartia.feature.orders.OrdersContract.UiEffect
-import com.cnrture.hogwartia.feature.orders.OrdersContract.UiState
+import com.cnrture.hogwartia.feature.orders.SpellsContract.UiAction
+import com.cnrture.hogwartia.feature.orders.SpellsContract.UiEffect
+import com.cnrture.hogwartia.feature.orders.SpellsContract.UiState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 
 @Composable
-fun OrdersScreen(
+fun SpellsScreen(
     uiState: UiState,
     uiEffect: Flow<UiEffect>,
     onAction: (UiAction) -> Unit,
 ) {
     uiEffect.collectWithLifecycle {}
 
-    OrdersContent(
+    SpellsContent(
         modifier = Modifier.fillMaxSize(),
         uiState = uiState,
         onAction = onAction,
@@ -32,7 +32,7 @@ fun OrdersScreen(
 }
 
 @Composable
-fun OrdersContent(
+fun SpellsContent(
     modifier: Modifier = Modifier,
     uiState: UiState,
     onAction: (UiAction) -> Unit,
@@ -42,7 +42,7 @@ fun OrdersContent(
         contentAlignment = Alignment.Center,
     ) {
         Text(
-            text = "Orders Content",
+            text = "Spells Content",
             fontSize = 24.sp,
         )
     }
@@ -50,10 +50,10 @@ fun OrdersContent(
 
 @Preview(showBackground = true)
 @Composable
-fun OrdersScreenPreview(
-    @PreviewParameter(OrdersScreenPreviewProvider::class) uiState: UiState,
+fun SpellsScreenPreview(
+    @PreviewParameter(SpellsScreenPreviewProvider::class) uiState: UiState,
 ) {
-    OrdersScreen(
+    SpellsScreen(
         uiState = uiState,
         uiEffect = emptyFlow(),
         onAction = {},
