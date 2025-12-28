@@ -56,7 +56,7 @@ fun HWTextField(
                     .size(24.dp)
                     .clickable { visibility = !visibility },
                 vector = if (visibility) HWTheme.icons.visibilityOn else HWTheme.icons.visibilityOff,
-                tint = HWTheme.colors.brown,
+                tint = HWTheme.colors.purple,
                 contentDescription = label,
             )
         }
@@ -65,7 +65,7 @@ fun HWTextField(
             HWIcon(
                 modifier = Modifier.size(20.dp),
                 vector = icon,
-                tint = HWTheme.colors.brown,
+                tint = HWTheme.colors.purple,
                 contentDescription = label,
             )
         }
@@ -80,7 +80,7 @@ fun HWTextField(
             .clip(RoundedCornerShape(16.dp))
             .border(
                 width = 1.dp,
-                color = HWTheme.colors.beige,
+                color = HWTheme.colors.purple,
                 shape = RoundedCornerShape(16.dp),
             ),
         value = value,
@@ -91,10 +91,10 @@ fun HWTextField(
         textStyle = TextStyle(
             fontSize = 14.sp,
             fontWeight = FontWeight.Normal,
-            color = HWTheme.colors.brown,
+            color = HWTheme.colors.purple,
         ),
         singleLine = isSingleLine,
-        cursorBrush = SolidColor(value = HWTheme.colors.brown),
+        cursorBrush = SolidColor(value = HWTheme.colors.purple),
         decorationBox = {
             Box(
                 modifier = Modifier
@@ -119,9 +119,9 @@ fun HWTextField(
                                 style = TextStyle(
                                     fontSize = 14.sp,
                                     fontWeight = FontWeight.Normal,
-                                    color = HWTheme.colors.brown,
+                                    color = HWTheme.colors.purple,
                                 ),
-                                color = HWTheme.colors.brown.copy(alpha = 0.5f)
+                                color = HWTheme.colors.purple.copy(alpha = 0.5f)
                             )
                         } else {
                             it()

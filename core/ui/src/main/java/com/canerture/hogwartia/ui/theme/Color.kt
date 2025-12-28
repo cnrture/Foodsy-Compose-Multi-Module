@@ -10,92 +10,48 @@ internal val LocalLightColors = staticCompositionLocalOf { lightColors() }
 internal val LocalDarkColors = staticCompositionLocalOf { darkColors() }
 
 internal fun lightColors(
-    brown: Color = Color(0xFF3F2D20),
-    green: Color = Color(0xFF84BD93),
-    orange: Color = Color(0xFFEF8829),
-    darkBrown: Color = Color(0xFF73665C),
-    lightBrown: Color = Color(0xFFD3BBAA),
-    beige: Color = Color(0xFFE6DCCD),
-    lightOrange: Color = Color(0xFFFFE2CD),
-    lightYellow: Color = Color(0xFFFFF5E0),
+    gold: Color = Color(0xFFC5A059),
+    black: Color = Color(0xFF050810),
+    blue: Color = Color(0xFF1A2234),
+    purple: Color = Color(0xFF7C3AED),
     white: Color = Color(0xFFFFFAF0),
-    softPink: Color = Color(0xFFF5D3BB),
 ): HWColor = HWColor(
-    brown = brown,
-    green = green,
-    orange = orange,
-    darkBrown = darkBrown,
-    lightBrown = lightBrown,
-    beige = beige,
-    lightOrange = lightOrange,
-    lightYellow = lightYellow,
+    gold = gold,
+    black = black,
+    blue = blue,
+    purple = purple,
     white = white,
-    softPink = softPink,
 )
 
 internal fun darkColors(
-    brown: Color = Color(0xFF3F2D20),
-    green: Color = Color(0xFF84BD93),
-    orange: Color = Color(0xFFEF8829),
-    darkBrown: Color = Color(0xFF73665C),
-    lightBrown: Color = Color(0xFFD3BBAA),
-    beige: Color = Color(0xFFE6DCCD),
-    lightOrange: Color = Color(0xFFFFE2CD),
-    lightYellow: Color = Color(0xFFFFF5E0),
+    gold: Color = Color(0xFFC5A059),
+    black: Color = Color(0xFF050810),
+    blue: Color = Color(0xFF1A2234),
+    purple: Color = Color(0xFF7C3AED),
     white: Color = Color(0xFFFFFAF0),
-    softPink: Color = Color(0xFFF5D3BB),
 ): HWColor = HWColor(
-    brown = brown,
-    green = green,
-    orange = orange,
-    darkBrown = darkBrown,
-    lightBrown = lightBrown,
-    beige = beige,
-    lightOrange = lightOrange,
-    lightYellow = lightYellow,
+    gold = gold,
+    black = black,
+    blue = blue,
+    purple = purple,
     white = white,
-    softPink = softPink,
 )
 
 class HWColor(
-    brown: Color,
-    green: Color,
-    orange: Color,
-    darkBrown: Color,
-    lightBrown: Color,
-    beige: Color,
-    lightOrange: Color,
-    lightYellow: Color,
+    gold: Color,
+    black: Color,
+    blue: Color,
+    purple: Color,
     white: Color,
-    softPink: Color,
 ) {
-    private var _brown: Color by mutableStateOf(brown)
-    val brown: Color = _brown
-
-    private var _green: Color by mutableStateOf(green)
-    val green: Color = _green
-
-    private var _orange: Color by mutableStateOf(orange)
-    val orange: Color = _orange
-
-    private var _darkBrown: Color by mutableStateOf(darkBrown)
-    val darkBrown: Color = _darkBrown
-
-    private var _lightBrown: Color by mutableStateOf(lightBrown)
-    val lightBrown: Color = _lightBrown
-
-    private var _beige: Color by mutableStateOf(beige)
-    val beige: Color = _beige
-
-    private var _lightOrange: Color by mutableStateOf(lightOrange)
-    val lightOrange: Color = _lightOrange
-
-    private var _lightYellow: Color by mutableStateOf(lightYellow)
-    val lightYellow: Color = _lightYellow
-
-    private var _white: Color by mutableStateOf(white)
-    val white: Color = _white
-
-    private var _softPink: Color by mutableStateOf(softPink)
-    val softPink: Color = _softPink
+    var gold by mutableStateOf(gold)
+        internal set
+    var black by mutableStateOf(black)
+        internal set
+    var blue by mutableStateOf(blue)
+        internal set
+    var purple by mutableStateOf(purple)
+        internal set
+    var white by mutableStateOf(white)
+        internal set
 }

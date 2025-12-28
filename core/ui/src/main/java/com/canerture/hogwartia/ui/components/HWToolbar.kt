@@ -40,19 +40,19 @@ fun HWToolbar(
             style = TextStyle(
                 fontSize = 30.sp,
                 fontWeight = FontWeight.Normal,
-                color = HWTheme.colors.brown,
+                color = HWTheme.colors.purple,
             ),
             spanStyle = SpanStyle(
                 fontSize = 30.sp,
                 fontWeight = FontWeight.Bold,
-                color = HWTheme.colors.brown,
+                color = HWTheme.colors.purple,
             )
         )
         Box(
             modifier = Modifier
                 .size(46.dp)
                 .background(
-                    color = HWTheme.colors.softPink,
+                    color = HWTheme.colors.purple,
                     shape = RoundedCornerShape(16.dp),
                 ),
             contentAlignment = Alignment.Center,

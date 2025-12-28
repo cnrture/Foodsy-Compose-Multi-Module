@@ -18,7 +18,7 @@ fun HWLoading() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(HWTheme.colors.brown.copy(alpha = 0.4f))
+            .background(HWTheme.colors.purple.copy(alpha = 0.4f))
             .clickable(
                 indication = null,
                 interactionSource = remember { MutableInteractionSource() }
@@ -26,7 +26,7 @@ fun HWLoading() {
         contentAlignment = Alignment.Center,
     ) {
         CircularProgressIndicator(
-            color = HWTheme.colors.brown,
+            color = HWTheme.colors.purple,
             strokeCap = StrokeCap.Round,
         )
     }

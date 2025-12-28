@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.ui.R
 import com.canerture.hogwartia.ui.theme.HWTheme
 
-enum class HWButtonType { PRIMARY, SECONDARY, OUTLINED }
+enum class HWButtonType { PRIMARY, SECONDARY }
 
 enum class HWButtonSize { SMALL, MEDIUM }
 
@@ -37,6 +37,8 @@ fun HWButton(
     type: HWButtonType = HWButtonType.PRIMARY,
     size: HWButtonSize = HWButtonSize.MEDIUM,
     icon: ImageVector? = null,
+    containerColor: Color = HWTheme.colors.purple,
+    contentColor: Color = HWTheme.colors.white,
     onClick: () -> Unit,
 ) {
     val textStyle = when (size) {
@@ -80,8 +82,8 @@ fun HWButton(
                 onClick = onClick,
                 enabled = isEnable,
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = HWTheme.colors.green,
-                    disabledContainerColor = HWTheme.colors.green.copy(alpha = 0.2f),
+                    containerColor = containerColor,
+                    disabledContainerColor = containerColor.copy(alpha = 0.2f),
                 ),
                 shape = RoundedCornerShape(16.dp),
                 contentPadding = paddingValues,
@@ -97,7 +99,7 @@ fun HWButton(
                 }
                 HWText(
                     text = text,
-                    color = HWTheme.colors.white,
+                    color = contentColor,
                     style = textStyle,
                 )
             }
@@ -110,42 +112,14 @@ fun HWButton(
                     .then(modifier),
                 onClick = onClick,
                 enabled = isEnable,
-                colors = ButtonDefaults.buttonColors(HWTheme.colors.orange),
-                shape = RoundedCornerShape(16.dp),
-                contentPadding = paddingValues,
-            ) {
-                icon?.let {
-                    Icon(
-                        modifier = Modifier.size(14.dp),
-                        imageVector = icon,
-                        tint = Color.Unspecified,
-                        contentDescription = text,
-                    )
-                    Spacer(modifier = Modifier.width(14.dp))
-                }
-                HWText(
-                    text = text,
-                    color = HWTheme.colors.white,
-                    style = textStyle,
-                )
-            }
-        }
-
-        HWButtonType.OUTLINED -> {
-            Button(
-                modifier = Modifier
-                    .height(height)
-                    .then(modifier),
-                onClick = onClick,
-                enabled = isEnable,
                 colors = ButtonDefaults.buttonColors(Color.Transparent),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(width = 1.dp, color = HWTheme.colors.beige),
+                border = BorderStroke(width = 1.dp, color = containerColor),
                 contentPadding = paddingValues,
             ) {
                 HWText(
                     text = text,
-                    color = HWTheme.colors.brown,
+                    color = contentColor,
                     style = textStyle,
                 )
             }
@@ -166,13 +140,6 @@ private fun HWButtonPreview() {
             )
             Spacer(modifier = Modifier.height(16.dp))
             HWButton(
-                text = "Outlined Button",
-                type = HWButtonType.OUTLINED,
-                size = HWButtonSize.SMALL,
-                onClick = { }
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-            HWButton(
                 text = "Primary Button",
                 type = HWButtonType.PRIMARY,
                 size = HWButtonSize.MEDIUM,
@@ -180,25 +147,19 @@ private fun HWButtonPreview() {
             )
             Spacer(modifier = Modifier.height(16.dp))
             HWButton(
-                text = "Primary Button",
+                text = "Secondary Button",
                 type = HWButtonType.SECONDARY,
                 size = HWButtonSize.SMALL,
+                contentColor = HWTheme.colors.purple,
                 onClick = { }
             )
             Spacer(modifier = Modifier.height(16.dp))
             HWButton(
-                text = "Outlined Button",
-                type = HWButtonType.OUTLINED,
-                size = HWButtonSize.SMALL,
-                icon = HWTheme.icons.google,
-                onClick = { }
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-            HWButton(
-                text = "Primary Button",
+                text = "Secondary Button",
                 type = HWButtonType.SECONDARY,
                 size = HWButtonSize.MEDIUM,
                 icon = HWTheme.icons.google,
+                contentColor = HWTheme.colors.purple,
                 onClick = { }
             )
         }

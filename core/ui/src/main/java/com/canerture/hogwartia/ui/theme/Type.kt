@@ -29,7 +29,7 @@ class HWTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = HWTheme.colors.brown
+            color = HWTheme.colors.purple
         )
     val heading2: TextStyle
         @Composable
@@ -41,7 +41,7 @@ class HWTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = HWTheme.colors.brown
+            color = HWTheme.colors.purple
         )
     val heading3: TextStyle
         @Composable
@@ -53,7 +53,7 @@ class HWTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = HWTheme.colors.brown
+            color = HWTheme.colors.purple
         )
     val heading4: TextStyle
         @Composable
@@ -65,7 +65,7 @@ class HWTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = HWTheme.colors.brown
+            color = HWTheme.colors.purple
         )
     val heading5: TextStyle
         @Composable
@@ -77,7 +77,7 @@ class HWTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = HWTheme.colors.brown
+            color = HWTheme.colors.purple
         )
     val heading6: TextStyle
         @Composable
@@ -89,7 +89,7 @@ class HWTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = HWTheme.colors.brown
+            color = HWTheme.colors.purple
         )
     val heading7: TextStyle
         @Composable
@@ -101,7 +101,7 @@ class HWTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = HWTheme.colors.brown
+            color = HWTheme.colors.purple
         )
     val subheading1: TextStyle
         @Composable
@@ -113,7 +113,7 @@ class HWTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = HWTheme.colors.brown
+            color = HWTheme.colors.purple
         )
     val subheading2: TextStyle
         @Composable
@@ -125,7 +125,7 @@ class HWTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = HWTheme.colors.brown
+            color = HWTheme.colors.purple
         )
     val subheading3: TextStyle
         @Composable
@@ -137,7 +137,7 @@ class HWTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = HWTheme.colors.brown
+            color = HWTheme.colors.purple
         )
     val paragraph1: TextStyle
         @Composable
@@ -149,7 +149,7 @@ class HWTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = HWTheme.colors.brown
+            color = HWTheme.colors.purple
         )
     val paragraph2: TextStyle
         @Composable
@@ -161,7 +161,7 @@ class HWTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = HWTheme.colors.brown
+            color = HWTheme.colors.purple
         )
     val paragraph3: TextStyle
         @Composable
@@ -173,7 +173,7 @@ class HWTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = HWTheme.colors.brown
+            color = HWTheme.colors.purple
         )
     val paragraph4: TextStyle
         @Composable
@@ -185,6 +185,6 @@ class HWTypography {
                 alignment = LineHeightStyle.Alignment.Center,
                 trim = LineHeightStyle.Trim.None,
             ),
-            color = HWTheme.colors.brown
+            color = HWTheme.colors.purple
         )
 }

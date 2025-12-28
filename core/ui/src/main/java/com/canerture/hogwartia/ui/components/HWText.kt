@@ -22,7 +22,7 @@ import com.canerture.hogwartia.ui.theme.HWTheme
 fun HWText(
     modifier: Modifier = Modifier,
     text: String,
-    color: Color = HWTheme.colors.brown,
+    color: Color = HWTheme.colors.purple,
     style: TextStyle = LocalTextStyle.current,
     overflow: TextOverflow = TextOverflow.Clip,
     maxLines: Int = Int.MAX_VALUE,
@@ -50,7 +50,7 @@ fun HWText(
     modifier: Modifier = Modifier,
     fullText: String,
     spanText: String,
-    color: Color = HWTheme.colors.brown,
+    color: Color = HWTheme.colors.purple,
     style: TextStyle = LocalTextStyle.current,
     spanStyle: SpanStyle = SpanStyle(),
     textAlign: TextAlign? = null,

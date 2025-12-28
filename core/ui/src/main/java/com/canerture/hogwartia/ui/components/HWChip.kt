@@ -34,17 +34,17 @@ fun HWChip(
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Medium,
                 ),
-                color = if (selected) HWTheme.colors.white else HWTheme.colors.darkBrown,
+                color = if (selected) HWTheme.colors.white else HWTheme.colors.purple,
             )
         },
         shape = RoundedCornerShape(16.dp),
         border = BorderStroke(
             width = 1.dp,
-            color = if (selected) HWTheme.colors.green else HWTheme.colors.lightBrown,
+            color = if (selected) HWTheme.colors.purple else HWTheme.colors.purple,
         ),
         colors = FilterChipDefaults.filterChipColors(
             containerColor = Color.Transparent,
-            selectedContainerColor = HWTheme.colors.green,
+            selectedContainerColor = HWTheme.colors.purple,
         ),
     )
 }
