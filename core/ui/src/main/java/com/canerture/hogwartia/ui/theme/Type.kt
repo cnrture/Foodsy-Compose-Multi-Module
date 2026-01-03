@@ -1,7 +1,6 @@
 package com.canerture.hogwartia.ui.theme
 
 import androidx.compose.material3.Typography
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -15,36 +14,35 @@ val Noto = FontFamily(
     Font(R.font.noto_bold, FontWeight.Bold),
 )
 
-val HWTypography: Typography
-    @Composable get() = Typography(
-        bodyLarge = TextStyle(
-            fontFamily = Noto,
-            fontWeight = FontWeight.Normal,
-            fontSize = 17.sp,
-            lineHeight = 24.sp
-        ),
-        bodyMedium = TextStyle(
-            fontFamily = Noto,
-            fontWeight = FontWeight.Medium,
-            fontSize = 15.sp,
-            lineHeight = 20.sp
-        ),
-        bodySmall = TextStyle(
-            fontFamily = Noto,
-            fontWeight = FontWeight.Normal,
-            fontSize = 15.sp,
-            lineHeight = 20.sp
-        ),
-        titleLarge = TextStyle(
-            fontFamily = Noto,
-            fontWeight = FontWeight.Bold,
-            fontSize = 32.sp,
-            lineHeight = 36.sp
-        ),
-        titleSmall = TextStyle(
-            fontFamily = Noto,
-            fontWeight = FontWeight.Medium,
-            fontSize = 17.sp,
-            lineHeight = 24.sp
-        ),
-    )
+val HWTypography: Typography = Typography(
+    bodyLarge = TextStyle(
+        fontFamily = Noto,
+        fontWeight = FontWeight.Normal,
+        fontSize = 17.sp,
+        lineHeight = 24.sp
+    ),
+    bodyMedium = TextStyle(
+        fontFamily = Noto,
+        fontWeight = FontWeight.Medium,
+        fontSize = 15.sp,
+        lineHeight = 20.sp
+    ),
+    bodySmall = TextStyle(
+        fontFamily = Noto,
+        fontWeight = FontWeight.Normal,
+        fontSize = 15.sp,
+        lineHeight = 20.sp
+    ),
+    titleLarge = TextStyle(
+        fontFamily = Noto,
+        fontWeight = FontWeight.Bold,
+        fontSize = 32.sp,
+        lineHeight = 36.sp
+    ),
+    titleSmall = TextStyle(
+        fontFamily = Noto,
+        fontWeight = FontWeight.Medium,
+        fontSize = 17.sp,
+        lineHeight = 24.sp
+    ),
+)
