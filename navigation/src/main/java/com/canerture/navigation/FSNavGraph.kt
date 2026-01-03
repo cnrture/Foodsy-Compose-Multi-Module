@@ -56,7 +56,7 @@ fun HWNavGraph() {
                 }
             }
         },
-        Screen.BottomBar
+        Screen.Splash
     )
 
     RememberBackStack(backStack) {
