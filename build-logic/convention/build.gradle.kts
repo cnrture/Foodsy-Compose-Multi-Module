@@ -47,10 +47,6 @@ gradlePlugin {
             id = libs.plugins.hogwartia.hilt.get().pluginId
             implementationClass = "com.canerture.hogwartia.convention.HiltConventionPlugin"
         }
-        register("androidFirebase") {
-            id = libs.plugins.hogwartia.android.firebase.get().pluginId
-            implementationClass = "com.canerture.hogwartia.convention.AndroidApplicationFirebaseConventionPlugin"
-        }
         register("jvmLibrary") {
             id = libs.plugins.hogwartia.jvm.library.get().pluginId
             implementationClass = "com.canerture.hogwartia.convention.JvmLibraryConventionPlugin"

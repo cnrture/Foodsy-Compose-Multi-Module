@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.hogwartia.android.application)
     alias(libs.plugins.hogwartia.android.application.compose)
-    alias(libs.plugins.hogwartia.android.firebase)
     alias(libs.plugins.hogwartia.hilt)
     alias(libs.plugins.kotlinx.serialization.plugin)
 }

@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.hogwartia.android.library)
     alias(libs.plugins.hogwartia.hilt)
-    alias(libs.plugins.hogwartia.android.firebase)
     alias(libs.plugins.hogwartia.retrofit)
 }
 
