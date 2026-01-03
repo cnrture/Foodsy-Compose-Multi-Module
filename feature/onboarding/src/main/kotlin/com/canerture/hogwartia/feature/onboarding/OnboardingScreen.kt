@@ -1,7 +1,6 @@
 package com.canerture.hogwartia.feature.onboarding
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -33,7 +32,6 @@ import androidx.compose.ui.unit.sp
 import com.canerture.hogwartia.feature.onboarding.OnboardingContract.UiAction
 import com.canerture.hogwartia.feature.onboarding.OnboardingContract.UiEffect
 import com.canerture.hogwartia.ui.components.HWButton
-import com.canerture.hogwartia.ui.components.HWButtonType
 import com.canerture.hogwartia.ui.components.HWSpacer
 import com.canerture.hogwartia.ui.components.HWText
 import com.canerture.hogwartia.ui.extensions.collectWithLifecycle
@@ -51,7 +49,6 @@ fun OnboardingScreen(
     OnboardingContent(
         modifier = Modifier
             .fillMaxSize()
-            .background(HWTheme.colors.lightYellow)
             .padding(vertical = 36.dp),
         onAction = onAction,
     )
@@ -86,7 +83,6 @@ fun OnboardingContent(
         Spacer(Modifier.weight(1f))
         HWButton(
             text = stringResource(id = R.string.skip),
-            type = HWButtonType.OUTLINED,
             onClick = { onAction(UiAction.OnSkipClick) },
         )
     }
@@ -140,9 +136,6 @@ private fun Indicators(modifier: Modifier = Modifier, size: Int, index: Int) {
                     .height(5.dp)
                     .width(if (it == index) 22.dp else 5.dp)
                     .clip(shape = CircleShape)
-                    .background(
-                        if (it == index) HWTheme.colors.green else HWTheme.colors.green.copy(0.5f)
-                    )
             )
         }
     }

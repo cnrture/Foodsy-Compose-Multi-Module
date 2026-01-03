@@ -11,18 +11,16 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.canerture.hogwartia.ui.R
 import com.canerture.hogwartia.ui.theme.HWTheme
 
 enum class HWButtonType { PRIMARY, SECONDARY }
@@ -37,8 +35,8 @@ fun HWButton(
     type: HWButtonType = HWButtonType.PRIMARY,
     size: HWButtonSize = HWButtonSize.MEDIUM,
     icon: ImageVector? = null,
-    containerColor: Color = HWTheme.colors.purple,
-    contentColor: Color = HWTheme.colors.white,
+    containerColor: Color = MaterialTheme.colorScheme.primary,
+    contentColor: Color = MaterialTheme.colorScheme.onPrimary,
     onClick: () -> Unit,
 ) {
     val textStyle = when (size) {
@@ -140,7 +138,6 @@ private fun HWButtonPreview() {
                 text = "Secondary Button",
                 type = HWButtonType.SECONDARY,
                 size = HWButtonSize.SMALL,
-                contentColor = HWTheme.colors.purple,
                 onClick = { }
             )
             Spacer(modifier = Modifier.height(16.dp))
@@ -149,7 +146,6 @@ private fun HWButtonPreview() {
                 type = HWButtonType.SECONDARY,
                 size = HWButtonSize.MEDIUM,
                 icon = HWTheme.icons.google,
-                contentColor = HWTheme.colors.purple,
                 onClick = { }
             )
         }

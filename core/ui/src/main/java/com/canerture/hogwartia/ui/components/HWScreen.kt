@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.rememberModalBottomSheetState
@@ -16,7 +17,6 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.canerture.hogwartia.ui.theme.HWTheme
 import kotlinx.coroutines.launch
 
 @Composable
@@ -26,7 +26,7 @@ fun HWScreen(
 ) {
     Scaffold(
         modifier = Modifier.fillMaxSize(),
-        containerColor = HWTheme.colors.blue,
+        containerColor = MaterialTheme.colorScheme.background,
         content = { paddingValues ->
             content(paddingValues)
         }
@@ -41,7 +41,7 @@ fun HWScreenWithSheet(
     isLoading: Boolean = false,
     isSheetOpen: Boolean = false,
     skipPartiallyExpanded: Boolean = false,
-    containerColor: Color = HWTheme.colors.white,
+    containerColor: Color = MaterialTheme.colorScheme.background,
     sheetContent: @Composable () -> Unit,
     onDismissSheet: () -> Unit,
     content: @Composable () -> Unit,

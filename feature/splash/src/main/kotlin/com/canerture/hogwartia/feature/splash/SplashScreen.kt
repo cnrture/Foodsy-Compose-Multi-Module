@@ -1,6 +1,5 @@
 package com.canerture.hogwartia.feature.splash
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -29,9 +28,7 @@ fun SplashScreen(
     uiEffect.collectWithLifecycle {}
 
     SplashContent(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(HWTheme.colors.lightYellow),
+        modifier = Modifier.fillMaxSize(),
     )
 }
 
@@ -63,7 +60,6 @@ internal fun SplashContent(
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Bold,
             ),
-            color = HWTheme.colors.orange,
         )
     }
 }

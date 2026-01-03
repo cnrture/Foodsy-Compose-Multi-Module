@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -40,19 +41,19 @@ fun HWToolbar(
             style = TextStyle(
                 fontSize = 30.sp,
                 fontWeight = FontWeight.Normal,
-                color = HWTheme.colors.purple,
+                color = MaterialTheme.colorScheme.onBackground,
             ),
             spanStyle = SpanStyle(
                 fontSize = 30.sp,
                 fontWeight = FontWeight.Bold,
-                color = HWTheme.colors.purple,
+                color = MaterialTheme.colorScheme.onBackground,
             )
         )
         Box(
             modifier = Modifier
                 .size(46.dp)
                 .background(
-                    color = HWTheme.colors.purple,
+                    color = MaterialTheme.colorScheme.primaryContainer,
                     shape = RoundedCornerShape(16.dp),
                 ),
             contentAlignment = Alignment.Center,

@@ -1,6 +1,5 @@
 package com.canerture.hogwartia.feature.register
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -48,7 +47,6 @@ fun RegisterScreen(
     RegisterContent(
         modifier = Modifier
             .fillMaxSize()
-            .background(HWTheme.colors.lightYellow)
             .verticalScroll(rememberScrollState())
             .padding(36.dp),
         uiState = uiState,
@@ -142,7 +140,6 @@ fun RegisterContent(
             fullText = stringResource(R.string.login_text),
             spanText = stringResource(R.string.login_text_span),
             spanStyle = SpanStyle(
-                color = HWTheme.colors.green,
                 fontWeight = FontWeight.SemiBold,
             ),
         )

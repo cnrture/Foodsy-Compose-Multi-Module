@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -34,17 +35,17 @@ fun HWChip(
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Medium,
                 ),
-                color = if (selected) HWTheme.colors.white else HWTheme.colors.purple,
+                color = if (selected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.primary,
             )
         },
         shape = RoundedCornerShape(16.dp),
         border = BorderStroke(
             width = 1.dp,
-            color = if (selected) HWTheme.colors.purple else HWTheme.colors.purple,
+            color = if (selected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
         ),
         colors = FilterChipDefaults.filterChipColors(
             containerColor = Color.Transparent,
-            selectedContainerColor = HWTheme.colors.purple,
+            selectedContainerColor = MaterialTheme.colorScheme.primary,
         ),
     )
 }

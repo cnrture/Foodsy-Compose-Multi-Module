@@ -6,19 +6,19 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.StrokeCap
-import com.canerture.hogwartia.ui.theme.HWTheme
 
 @Composable
 fun HWLoading() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(HWTheme.colors.purple.copy(alpha = 0.4f))
+            .background(MaterialTheme.colorScheme.background.copy(alpha = 0.5f))
             .clickable(
                 indication = null,
                 interactionSource = remember { MutableInteractionSource() }
@@ -26,7 +26,7 @@ fun HWLoading() {
         contentAlignment = Alignment.Center,
     ) {
         CircularProgressIndicator(
-            color = HWTheme.colors.purple,
+            color = MaterialTheme.colorScheme.primary,
             strokeCap = StrokeCap.Round,
         )
     }

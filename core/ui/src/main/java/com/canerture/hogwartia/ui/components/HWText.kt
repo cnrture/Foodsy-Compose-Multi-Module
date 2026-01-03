@@ -1,6 +1,7 @@
 package com.canerture.hogwartia.ui.components
 
 import androidx.compose.material3.LocalTextStyle
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -16,13 +17,12 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import com.canerture.hogwartia.ui.R
-import com.canerture.hogwartia.ui.theme.HWTheme
 
 @Composable
 fun HWText(
     modifier: Modifier = Modifier,
     text: String,
-    color: Color = HWTheme.colors.purple,
+    color: Color = MaterialTheme.colorScheme.onBackground,
     style: TextStyle = LocalTextStyle.current,
     overflow: TextOverflow = TextOverflow.Clip,
     maxLines: Int = Int.MAX_VALUE,
@@ -50,7 +50,7 @@ fun HWText(
     modifier: Modifier = Modifier,
     fullText: String,
     spanText: String,
-    color: Color = HWTheme.colors.purple,
+    color: Color = MaterialTheme.colorScheme.onBackground,
     style: TextStyle = LocalTextStyle.current,
     spanStyle: SpanStyle = SpanStyle(),
     textAlign: TextAlign? = null,

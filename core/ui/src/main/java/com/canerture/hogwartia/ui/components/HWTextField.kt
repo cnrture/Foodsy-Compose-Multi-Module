@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -56,7 +57,7 @@ fun HWTextField(
                     .size(24.dp)
                     .clickable { visibility = !visibility },
                 vector = if (visibility) HWTheme.icons.visibilityOn else HWTheme.icons.visibilityOff,
-                tint = HWTheme.colors.purple,
+                tint = MaterialTheme.colorScheme.onBackground,
                 contentDescription = label,
             )
         }
@@ -65,7 +66,7 @@ fun HWTextField(
             HWIcon(
                 modifier = Modifier.size(20.dp),
                 vector = icon,
-                tint = HWTheme.colors.purple,
+                tint = MaterialTheme.colorScheme.onBackground,
                 contentDescription = label,
             )
         }
@@ -80,7 +81,7 @@ fun HWTextField(
             .clip(RoundedCornerShape(16.dp))
             .border(
                 width = 1.dp,
-                color = HWTheme.colors.purple,
+                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.2f),
                 shape = RoundedCornerShape(16.dp),
             ),
         value = value,
@@ -91,10 +92,10 @@ fun HWTextField(
         textStyle = TextStyle(
             fontSize = 14.sp,
             fontWeight = FontWeight.Normal,
-            color = HWTheme.colors.purple,
+            color = MaterialTheme.colorScheme.onBackground,
         ),
         singleLine = isSingleLine,
-        cursorBrush = SolidColor(value = HWTheme.colors.purple),
+        cursorBrush = SolidColor(value = MaterialTheme.colorScheme.primary),
         decorationBox = {
             Box(
                 modifier = Modifier
@@ -119,9 +120,9 @@ fun HWTextField(
                                 style = TextStyle(
                                     fontSize = 14.sp,
                                     fontWeight = FontWeight.Normal,
-                                    color = HWTheme.colors.purple,
+                                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
                                 ),
-                                color = HWTheme.colors.purple.copy(alpha = 0.5f)
+                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
                             )
                         } else {
                             it()

@@ -1,6 +1,5 @@
 package com.canerture.home.feature.home
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
@@ -8,8 +7,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.pager.HorizontalPager
-import androidx.compose.foundation.pager.PageSize
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -24,7 +21,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import com.canerture.hogwartia.feature.home.R
-import com.canerture.hogwartia.ui.components.HWFoodCard
 import com.canerture.hogwartia.ui.components.HWIcon
 import com.canerture.hogwartia.ui.components.HWLoading
 import com.canerture.hogwartia.ui.components.HWSpacer
@@ -53,12 +49,10 @@ fun HomeScreen(
                 titleSpan = stringResource(R.string.title_span),
             )
         },
-        containerColor = HWTheme.colors.lightYellow,
     ) { paddingValues ->
         HomeContent(
             modifier = Modifier
                 .fillMaxSize()
-                .background(HWTheme.colors.lightYellow)
                 .padding(paddingValues)
                 .verticalScroll(rememberScrollState())
                 .padding(vertical = 24.dp),
@@ -104,22 +98,6 @@ fun HomeContent(
         }
 
         HWSpacer(32)
-
-        HorizontalPager(
-            state = pagerState,
-            pageSize = PageSize.Fill,
-            contentPadding = PaddingValues(horizontal = 48.dp),
-            pageSpacing = 20.dp,
-        ) {
-            HWFoodCard(
-                title = "Specials Sushi",
-                price = "$${38 + it * 2}.00",
-                icon = HWTheme.icons.logo,
-                isFavorite = it == 1,
-                onFavoriteClick = {},
-                onAddClick = {},
-            )
-        }
     }
 }
 

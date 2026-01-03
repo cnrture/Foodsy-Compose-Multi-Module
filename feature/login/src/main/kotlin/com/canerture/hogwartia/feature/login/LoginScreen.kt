@@ -1,6 +1,5 @@
 package com.canerture.hogwartia.feature.login
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -48,7 +47,6 @@ fun LoginScreen(
     LoginContent(
         modifier = Modifier
             .fillMaxSize()
-            .background(HWTheme.colors.lightYellow)
             .verticalScroll(rememberScrollState())
             .padding(36.dp),
         uiState = uiState,
@@ -133,7 +131,6 @@ fun LoginContent(
             fullText = stringResource(R.string.register_text),
             spanText = stringResource(R.string.register_text_span),
             spanStyle = SpanStyle(
-                color = HWTheme.colors.green,
                 fontWeight = FontWeight.SemiBold,
             ),
         )

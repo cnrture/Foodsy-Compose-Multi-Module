@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
@@ -25,7 +26,6 @@ import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.runtime.rememberSaveableStateHolderNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import com.canerture.hogwartia.ui.navigation.BottomBarScreen
-import com.canerture.hogwartia.ui.theme.HWTheme
 import com.canerture.home.feature.home.navigation.HomeRoute
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -48,7 +48,7 @@ fun HWBottomBar() {
     Scaffold(
         bottomBar = {
             NavigationBar(
-                containerColor = HWTheme.colors.lightYellow,
+                containerColor = MaterialTheme.colorScheme.surface,
             ) {
                 bottomBarItems.forEach { destination ->
                     val isSelected = currentBottomBarScreen == destination
@@ -56,9 +56,9 @@ fun HWBottomBar() {
                     NavigationBarItem(
                         selected = isSelected,
                         colors = NavigationBarItemDefaults.colors(
-                            selectedIconColor = HWTheme.colors.brown,
-                            unselectedIconColor = HWTheme.colors.brown,
-                            indicatorColor = HWTheme.colors.lightYellow,
+                            selectedIconColor = MaterialTheme.colorScheme.primary,
+                            unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                            indicatorColor = MaterialTheme.colorScheme.surface,
                         ),
                         icon = {
                             Icon(
