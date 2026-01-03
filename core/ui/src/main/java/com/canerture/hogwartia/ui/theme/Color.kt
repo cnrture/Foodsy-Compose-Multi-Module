@@ -10,45 +10,45 @@ internal val LocalLightColors = staticCompositionLocalOf { lightColors() }
 internal val LocalDarkColors = staticCompositionLocalOf { darkColors() }
 
 internal fun lightColors(
-    gold: Color = Color(0xFFC5A059),
-    black: Color = Color(0xFF050810),
-    blue: Color = Color(0xFF1A2234),
-    purple: Color = Color(0xFF7C3AED),
-    white: Color = Color(0xFFFFFAF0),
+    yellow: Color = Color(0xFFD4AF36),
+    black: Color = Color(0xFF202020),
+    gray: Color = Color(0xFFB6B6B7),
+    purple: Color = Color(0xFF161116),
+    white: Color = Color(0xFFFEFEFE),
 ): HWColor = HWColor(
-    gold = gold,
+    yellow = yellow,
     black = black,
-    blue = blue,
+    gray = gray,
     purple = purple,
     white = white,
 )
 
 internal fun darkColors(
-    gold: Color = Color(0xFFC5A059),
-    black: Color = Color(0xFF050810),
-    blue: Color = Color(0xFF1A2234),
-    purple: Color = Color(0xFF7C3AED),
-    white: Color = Color(0xFFFFFAF0),
+    yellow: Color = Color(0xFFD4AF36),
+    black: Color = Color(0xFF202020),
+    gray: Color = Color(0xFFB6B6B7),
+    purple: Color = Color(0xFF161116),
+    white: Color = Color(0xFFFEFEFE),
 ): HWColor = HWColor(
-    gold = gold,
+    yellow = yellow,
     black = black,
-    blue = blue,
+    gray = gray,
     purple = purple,
     white = white,
 )
 
 class HWColor(
-    gold: Color,
+    yellow: Color,
     black: Color,
-    blue: Color,
+    gray: Color,
     purple: Color,
     white: Color,
 ) {
-    var gold by mutableStateOf(gold)
+    var yellow by mutableStateOf(yellow)
         internal set
     var black by mutableStateOf(black)
         internal set
-    var blue by mutableStateOf(blue)
+    var gray by mutableStateOf(gray)
         internal set
     var purple by mutableStateOf(purple)
         internal set
